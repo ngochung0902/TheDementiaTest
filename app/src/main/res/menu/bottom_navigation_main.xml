@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:icon="@mipmap/tab_homeoff_h"
+        android:title="@string/home"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/action_author"
+        android:enabled="true"
+        android:icon="@mipmap/tab_authoroff_h"
+        android:title="@string/author"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_tool"
+        android:enabled="true"
+        android:icon="@mipmap/tab_tooloff_h"
+        android:title="@string/tool"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_instruction"
+        android:enabled="true"
+        android:icon="@mipmap/tab_instructionoff_h"
+        android:title="@string/instruction"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_list"
+        android:enabled="true"
+        android:icon="@mipmap/tab_listoff_h"
+        android:title="@string/list"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">TheDementiaTest</string>
+    <string name="home">Home</string>
+    <string name="author">Author</string>
+    <string name="tool">Tool</string>
+    <string name="instruction">Instruction</string>
+    <string name="list">List</string>
+    <string name="examination">EXAMINATION</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+
+    <string name="name">Name: </string>
+    <string name="IsPersonAlert">Is Person Alert?</string>
+    <string name="Dateofbirth">Date of birth: </string>
+    <string name="LevelofEducation">Level of \n Education: </string>
+    <string name="sex">Sex: </string>
+    <string name="Ethnicity">Ethnicity: </string>
+    <string name="Age">Age: </string>
+    <string name="work">Work: </string>
+
+    <string name="orientation">ORIENTATION</string>
+    <string name="whatday">What day of the week is this?</string>
+    <string name="whatmonth">What Month?</string>
+    <string name="year">Year? </string>
+    <string name="whatsate">What State are we in? </string>
+    <string name="Whoisthe">Who is the current \n President of the United Stated</string>
+
+    <string name="ATTENTION">ATTENTION</string>
+    <string name="Iamgoing">I’m going to say some \n numbers. Repeat them \n just as I said them. 3 2 \n 9 6 5</string>
+    <string name="Nowsay">Now say these \n numbers backwards 8 \n 5 3</string>
+    <string name="Serialsevens">Serial Sevens—Subtract 7 from 100, then \n subtract 7 from that answer, and \n continue subtracting 7 from each answer \n until I tell you to stop.</string>
+
+    <string name="IMMEDIATERECALL">IMMEDIATE RECALL</string>
+    <string name="listento">Listen to these words, Then \n Repeat them after me, &amp;\n remember them.  I’ll ask for\n them later: LAMP, PHONE,\n CAR, HOUSE (Repeat after\n only one time?)</string>
+</resources>

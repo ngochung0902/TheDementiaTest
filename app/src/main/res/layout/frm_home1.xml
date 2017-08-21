@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.company.qts.thedementiatest.fragment.FrmHome1">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark">
+        <ImageView
+            android:layout_margin="@dimen/s5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/btn_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:textSize="@dimen/s16"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/s10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/orientation"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s18"
+            android:id="@+id/textView" />
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:textSize="@dimen/s16"
+            android:textColor="@color/white"
+            />
+        <ImageView
+            android:id="@+id/img_next"
+            android:layout_margin="@dimen/s5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/btn_next"/>
+    </LinearLayout>
+    <LinearLayout
+        android:background="@mipmap/bg_main_h"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/s20"
+            android:layout_marginLeft="@dimen/s10"
+            android:layout_marginRight="@dimen/s10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/s10"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/whatday"
+                android:textSize="@dimen/s16" />
+
+            <Switch
+                android:layout_marginLeft="@dimen/s100"
+                android:layout_gravity="center|right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="@dimen/s10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/s10"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/whatmonth"
+                android:textSize="@dimen/s16" />
+
+            <Switch
+                android:layout_marginLeft="@dimen/s100"
+                android:layout_gravity="center|right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch2" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_margin="@dimen/s10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/s10"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/year"
+                android:textSize="@dimen/s16" />
+
+            <Switch
+                android:layout_marginLeft="@dimen/s100"
+                android:layout_gravity="center|right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch3" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_margin="@dimen/s10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/s10"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/whatsate"
+                android:textSize="@dimen/s16" />
+
+            <Switch
+                android:layout_marginLeft="@dimen/s100"
+                android:layout_gravity="center|right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch4" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_margin="@dimen/s10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/s10"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/Whoisthe"
+                android:textSize="@dimen/s16" />
+
+            <Switch
+                android:layout_marginLeft="@dimen/s100"
+                android:layout_gravity="center|right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch5" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
