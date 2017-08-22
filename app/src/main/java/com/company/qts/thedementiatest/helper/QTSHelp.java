@@ -97,7 +97,7 @@ public class QTSHelp {
         view.getLayoutParams().height = height;
     }
     //dialog
-    public static void ShowpopupMessage(Activity activity, String message) {
+    public static void showpPopupMessage(Activity activity, String message) {
         AlertDialog.Builder dialog = new AlertDialog.Builder(activity);
         dialog.setMessage(message);
         dialog.setNegativeButton("OK", new DialogInterface.OnClickListener() {
@@ -433,5 +433,503 @@ public class QTSHelp {
                 + "([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
                 + "[0-9]{1,2}|25[0-5]|2[0-4][0-9])){1}|"
                 + "([a-zA-Z]+[\\w-]+\\.)+[a-zA-Z]{2,4})$").matcher(email).matches();
+    }
+//Examination
+    //Name
+    public static void setName(Context context, String name) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("name", name);
+        editor.commit();
+    }
+    public static String getName(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getString("name", "null");
+    }
+    //Is Person Alert
+    public static void setIsPerSon(Context context, int isperson) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("isperson", isperson);
+        editor.commit();
+    }
+    public static int getIsPerSon(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("isperson", -1);
+    }
+    //date of birth
+    public static void setDateOfBirth(Context context, String date) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("date", date);
+        editor.commit();
+    }
+    public static String getDateOfBirth(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getString("date", "null");
+    }
+    //leve of education
+    public static void setLevelOfEducation(Context context, String lv) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("lv", lv);
+        editor.commit();
+    }
+    public static String getLevelOfEducation(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getString("lv", "null");
+    }
+    //Sex
+    public static void setSex(Context context, int sex) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("sex", sex);
+        editor.commit();
+    }
+    public static int getSex(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("sex", -1);
+    }
+    //Age
+    public static void setAge(Context context, String age) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("age", age);
+        editor.commit();
+    }
+    public static String getAge(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getString("age", "null");
+    }
+    //Work
+    public static void setWork(Context context, String work) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("work", work);
+        editor.commit();
+    }
+    public static String getWork(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getString("work", "null");
+    }
+    //Ethnicity
+    public static void setEthnicity(Context context, String ethnicity) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("ethnicity", ethnicity);
+        editor.commit();
+    }
+    public static String getEthnicity(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getString("ethnicity", "null");
+    }
+//orientation
+    //what day
+    public static void setWhatday(Context context, int whatday) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("whatday", whatday);
+        editor.commit();
+    }
+    public static int getWhatday(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("whatday", -1);
+    }
+    //what month
+    public static void setWhatMonth(Context context, int whatmonth) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("whatmonth", whatmonth);
+        editor.commit();
+    }
+    public static int getWhatMonth(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("whatmonth", -1);
+    }
+    //year
+    public static void setYear(Context context, int year) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("year", year);
+        editor.commit();
+    }
+    public static int getYear(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("year", -1);
+    }
+    //what sate
+    public static void setWhatSate(Context context, int whatsate) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("whatsate", whatsate);
+        editor.commit();
+    }
+    public static int getWhatSate(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("whatsate", -1);
+    }
+    //who is
+    public static void setWhois(Context context, int whois) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("whois", whois);
+        editor.commit();
+    }
+    public static int getWhois(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("whois", -1);
+    }
+//Attention
+    //Imgoing
+    public static void setImGoing(Context context, int imgoing) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("imgoing", imgoing);
+        editor.commit();
+    }
+    public static int getImGoing(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("imgoing", -1);
+    }
+    //nowsay
+    public static void setNowSay(Context context, int nowsay) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("nowsay", nowsay);
+        editor.commit();
+    }
+    public static int getNowSay(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("nowsay", -1);
+    }
+    //93
+    public static void set93(Context context, int chinba) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("chinba", chinba);
+        editor.commit();
+    }
+    public static int get93(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("chinba", -1);
+    }
+    //72
+    public static void set72(Context context, int bayhai) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("bayhai", bayhai);
+        editor.commit();
+    }
+    public static int get72(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("bayhai", -1);
+    }
+    //86
+    public static void set86(Context context, int tamsau) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("tamsau", tamsau);
+        editor.commit();
+    }
+    public static int get86(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("tamsau", -1);
+    }
+    //65
+    public static void set65(Context context, int saulam) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("saulam", saulam);
+        editor.commit();
+    }
+    public static int get65(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("saulam", -1);
+    }
+    //79
+    public static void set79(Context context, int baychin) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("baychin", baychin);
+        editor.commit();
+    }
+    public static int get79(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("baychin", -1);
+    }
+//IMMEDIATE RECALL
+    //listento
+    public static void setListento(Context context, int listento) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("listento", listento);
+        editor.commit();
+    }
+    public static int getListento(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("listento", -1);
+    }
+//Language
+    //beginningwith
+    public static void setBeginningWith(Context context, int beginningwith) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("beginningwith", beginningwith);
+        editor.commit();
+    }
+    public static int getBeginningWith(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("beginningwith", -1);
+    }
+    //thecat
+    public static void setTheCat(Context context, int thecat) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("thecat", thecat);
+        editor.commit();
+    }
+    public static int getTheCat(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("thecat", -1);
+    }
+    //steveis
+    public static void setSteveis(Context context, int steveis) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("steveis", steveis);
+        editor.commit();
+    }
+    public static int getSteveis(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("steveis", -1);
+    }
+//Fluidity
+    //animals04
+    public static void setAnimals04(Context context, int animals04) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("animals04", animals04);
+        editor.commit();
+    }
+    public static int getAnimals04(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("animals04", -1);
+    }
+    //animals59
+    public static void setAnimals59(Context context, int animals59) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("animals59", animals59);
+        editor.commit();
+    }
+    public static int getAnimals59(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("animals59", -1);
+    }
+    //animals1015
+    public static void setAnimals1015(Context context, int animals1015) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("animals1015", animals1015);
+        editor.commit();
+    }
+    public static int getAnimals1015(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("animals1015", -1);
+    }
+//Caculation
+    //tamhai
+    public static void setTamHai(Context context, int tamhai) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("tamhai", tamhai);
+        editor.commit();
+    }
+    public static int getTamHai(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("tamhai", -1);
+    }
+    //add6
+    public static void setAdd6(Context context, int add6) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("add6", add6);
+        editor.commit();
+    }
+    public static int getAdd6(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("add6", -1);
+    }
+    //take
+    public static void setTake(Context context, int take) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("take", take);
+        editor.commit();
+    }
+    public static int getTake(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("take", -1);
+    }
+//Delayed Recall
+    //lamp
+    public static void setLamp(Context context, int lamp) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("lamp", lamp);
+        editor.commit();
+    }
+    public static int getLamp(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("lamp", -1);
+    }
+    //phone
+    public static void setPhone(Context context, int phone) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("phone", phone);
+        editor.commit();
+    }
+    public static int getPhone(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("phone", -1);
+    }
+    //chair
+    public static void setChair(Context context, int chair) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("chair", chair);
+        editor.commit();
+    }
+    public static int getChair(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("chair", -1);
+    }
+    //car
+    public static void setCar(Context context, int car) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("car", car);
+        editor.commit();
+    }
+    public static int getCar(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("car", -1);
+    }
+    //house
+    public static void setHouse(Context context, int house) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("house", house);
+        editor.commit();
+    }
+    public static int getHouse(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("house", -1);
     }
 }

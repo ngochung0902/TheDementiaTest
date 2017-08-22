@@ -7,7 +7,9 @@
     <dimen name="s10">10dp</dimen>
     <dimen name="s16">16dp</dimen>
     <dimen name="s20">20dp</dimen>
+    <dimen name="s25">25dp</dimen>
     <dimen name="s30">30dp</dimen>
     <dimen name="s40">40dp</dimen>
     <dimen name="s100">100dp</dimen>
+    <dimen name="s15">15dp</dimen>
 </resources>

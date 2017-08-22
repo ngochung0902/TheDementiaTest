@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="education">
+        <item>Pre-school playgroup</item>
+        <item>Kindergarten</item>
+        <item>First grade</item>
+        <item>Second grade</item>
+        <item>Third grade</item>
+        <item>Fourth grade</item>
+        <item>Fifth grade</item>
+        <item>Sixth grade</item>
+        <item>Seventh grade</item>
+        <item>Eighth grade</item>
+        <item>Ninth grade</item>
+        <item>Tenth grade</item>
+        <item>Eleventh grade</item>
+        <item>Twelfth grade</item>
+        <item>University</item>
+        <item>College</item>
+    </string-array>
+</resources>

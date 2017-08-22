@@ -19,7 +19,18 @@
         <activity android:name=".fragment.FrmHome" />
         <activity android:name=".fragment.FrmHome1" />
         <activity android:name=".fragment.FrmHome2" />
-        <activity android:name=".fragment.FrmHome3"></activity>
+        <activity android:name=".fragment.FrmHome3" />
+        <activity android:name=".fragment.FrmHome4" />
+        <activity android:name=".fragment.FrmHome5" />
+        <activity android:name=".fragment.FrmHome6" />
+        <activity android:name=".fragment.FrmHome7" />
+        <activity android:name=".fragment.FrmHome8" />
+        <activity android:name=".fragment.FrmHome9" />
+        <activity android:name=".fragment.FrmHome10" />
+        <activity android:name=".fragment.FrmAuthor" />
+        <activity android:name=".fragment.FrmInstructions" />
+        <activity android:name=".fragment.FrmTool" />
+        <activity android:name=".fragment.FrmList"></activity>
     </application>
 
 </manifest>

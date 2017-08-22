@@ -62,6 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
                 android:layout_width="120dp"
@@ -70,6 +71,11 @@
                 android:text="@string/name"
                 android:textSize="@dimen/s16" />
             <EditText
+                android:id="@+id/edt_name"
+                android:hint="Name"
+                android:textColor="@color/black"
+                android:gravity="center|left"
+                android:padding="@dimen/s5"
                 android:textSize="@dimen/s16"
                 android:layout_margin="@dimen/s10"
                 android:layout_width="match_parent"
@@ -98,7 +104,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/switch1" />
+                android:id="@+id/sw_person" />
         </LinearLayout>
 
         <LinearLayout
@@ -114,6 +120,10 @@
                 android:text="@string/Dateofbirth"
                 android:textSize="@dimen/s16" />
             <TextView
+                android:hint="@string/Dateofbirth"
+                android:textColor="@color/black"
+                android:gravity="center|left"
+                android:id="@+id/tv_dateofbirth"
                 android:textSize="@dimen/s16"
                 android:layout_margin="@dimen/s10"
                 android:layout_width="match_parent"
@@ -136,6 +146,10 @@
                 android:text="@string/LevelofEducation"
                 android:textSize="@dimen/s16" />
             <TextView
+                android:hint="Level of Education"
+                android:textColor="@color/black"
+                android:gravity="center|left"
+                android:id="@+id/tv_Levelofeducation"
                 android:textSize="@dimen/s16"
                 android:layout_margin="@dimen/s10"
                 android:layout_width="match_parent"
@@ -162,8 +176,9 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/switch2" />
+                android:id="@+id/sw_sex" />
             <TextView
+                android:id="@+id/tv_sex"
                 android:layout_marginTop="@dimen/s10"
                 android:layout_marginBottom="@dimen/s10"
                 android:layout_marginLeft="@dimen/s10"
@@ -189,6 +204,10 @@
                 android:text="@string/Ethnicity"
                 android:textSize="@dimen/s16" />
             <TextView
+                android:hint="@string/Ethnicity"
+                android:textColor="@color/black"
+                android:gravity="center|left"
+                android:id="@+id/tv_ethnicity"
                 android:textSize="@dimen/s16"
                 android:layout_margin="@dimen/s10"
                 android:layout_width="match_parent"
@@ -211,6 +230,11 @@
                 android:text="@string/Age"
                 android:textSize="@dimen/s16" />
             <EditText
+                android:id="@+id/edt_age"
+                android:hint="@string/Age"
+                android:textColor="@color/black"
+                android:gravity="center|left"
+                android:padding="@dimen/s5"
                 android:textSize="@dimen/s16"
                 android:layout_margin="@dimen/s10"
                 android:layout_width="match_parent"
@@ -234,6 +258,10 @@
                 android:text="@string/work"
                 android:textSize="@dimen/s16" />
             <TextView
+                android:hint="@string/work"
+                android:textColor="@color/black"
+                android:gravity="center|left"
+                android:id="@+id/tv_work"
                 android:textSize="@dimen/s16"
                 android:layout_margin="@dimen/s10"
                 android:layout_width="match_parent"

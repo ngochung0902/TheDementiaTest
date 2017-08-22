@@ -11,7 +11,11 @@ import android.view.MenuItem;
 import android.widget.TabHost;
 
 import com.company.qts.thedementiatest.R;
+import com.company.qts.thedementiatest.fragment.FrmAuthor;
 import com.company.qts.thedementiatest.fragment.FrmHome;
+import com.company.qts.thedementiatest.fragment.FrmInstructions;
+import com.company.qts.thedementiatest.fragment.FrmList;
+import com.company.qts.thedementiatest.fragment.FrmTool;
 
 public class ActHome extends AppCompatActivity {
     private TabHost tabHost;
@@ -35,12 +39,16 @@ public class ActHome extends AppCompatActivity {
                         fragment = new FrmHome();
                         break;
                     case R.id.action_author:
+                        fragment = new FrmAuthor();
                         break;
                     case R.id.action_tool:
+                        fragment = new FrmTool();
                         break;
                     case R.id.action_instruction:
+                        fragment = new FrmInstructions();
                         break;
                     case R.id.action_list:
+                        fragment = new FrmList();
                         break;
                 }
                 final FragmentTransaction transaction = fragmentManager.beginTransaction();

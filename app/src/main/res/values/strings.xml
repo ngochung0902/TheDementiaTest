@@ -1,9 +1,9 @@
 <resources>
+    <!-- Home  -->
     <string name="app_name">TheDementiaTest</string>
     <string name="home">Home</string>
     <string name="author">Author</string>
-    <string name="tool">Tool</string>
-    <string name="instruction">Instruction</string>
+    <string name="instruction">Instructions</string>
     <string name="list">List</string>
     <string name="examination">EXAMINATION</string>
     <string name="next">Next</string>
@@ -31,5 +31,78 @@
     <string name="Serialsevens">Serial Sevens—Subtract 7 from 100, then \n subtract 7 from that answer, and \n continue subtracting 7 from each answer \n until I tell you to stop.</string>
 
     <string name="IMMEDIATERECALL">IMMEDIATE RECALL</string>
-    <string name="listento">Listen to these words, Then \n Repeat them after me, &amp;\n remember them.  I’ll ask for\n them later: LAMP, PHONE,\n CAR, HOUSE (Repeat after\n only one time?)</string>
+    <string name="listento">Listen to these words, Then Repeat them after me, &amp;\n remember them.  I’ll ask for\n them later: LAMP, PHONE,\n CAR, HOUSE (Repeat after\n only one time?)</string>
+
+    <string name="Beginning">Beginning with Sunday, say\n all the days of the week\n Backwards.</string>
+    <string name="repeat"><b>Repeat:</b> </string>
+    <string name="thecatalways">The cat always drank his\n milk when the people left\n the room.</string>
+    <string name="steveisthe">Steve is the one coming\n tomorrow for supper.</string>
+    <string name="language">LANGUAGE</string>
+
+    <string name="FLUIDITY">FLUIDITY</string>
+    <string name="Iwantyouto">I want you to name as many animals as you can in one minute.  Please, name any animal in the air, on the ground, or in the sea.  Go!</string>
+    <string name="animals04">0-4 animals</string>
+    <string name="animals59">5-9 Animals</string>
+    <string name="animals1015">10-15+ Animals</string>
+
+    <string name="CALCULATION">CALCULATION</string>
+    <string name="Iamgoingtoask">I am going to ask you to solve some problems listen to these and give me the right answer. Take your time.</string>
+    <string name="c82">8+2=?</string>
+    <string name="add6to">Add 6 to that answer</string>
+    <string name="takeaway5">Take away 5</string>
+
+    <string name="DelayedRecall">DELAYED RECALL</string>
+    <string name="whatwerethe">What were the words I asked you to remember?</string>
+    <string name="LAMP">LAMP</string>
+    <string name="PHONE">PHONE</string>
+    <string name="CHAIR">CHAIR</string>
+    <string name="CAR">CAR</string>
+    <string name="HOUSE">HOUSE</string>
+
+    <string name="JUDGMENT">JUDGMENT</string>
+    <string name="whatwouldyoucamehome">What would you do if you came home and the toilet had backed up and water was running into the house?</string>
+    <string name="whatwouldyoufound">What would you do if you found yourself stranded in the Dallas Airport with only $1 in your pocket? </string>
+
+    <string name="ABSTRACT">ABSTRACT REASONING</string>
+    <string name="anorange">An orange and a banana are both fruits, right?  So then, </string>
+    <string name="aquarter">A quarter and a nickel are both</string>
+    <string name="awatchand">A Watch and a Ruler are both </string>
+    <string name="calculatescore">CALCULATE SCORE</string>
+
+    <string name="score">SCORE</string>
+    <string name="NoImpairmentNoted26">No Impairment Noted, Person is within normal cognitive limits;  Additional testing may be of use to detect subtle deficits, if any.  If you have a concern, please see a psychologist or your healthcare provider</string>
+    <string name="Personisdiminished2025">Person is diminished but functional, additional testing is likely warranted. Please see a psychologist or your healthcare provider.</string>
+    <string name="ModerateCognitive1520">Moderate Cognitive Impairment, additional testing is strongly encouraged.  This person may have a dementia disorder or another neurological or psychological concern.  Please see a psychologist or your healthcare provider</string>
+    <string name="SeriousCognitiveImpairment15">Serious Cognitive Impairment of  Possible Organic origin, additional testing is strongly encouraged.  Person likely is experiencing a dementia like disorder or another neurological concern. please see a psychologist or your healthcare provider.</string>
+    <string name="yourscore"><b>Your Score is</b></string>
+
+    <!-- Author  -->
+
+    <string name="Author">AUTHOR</string>
+    <string name="wstevensaunders">W. Steven Saunders, Psy.D. is a Licensed Psychologist, Associate Lecturer at the University of Central Florida, and Neuropsychologist for Central Florida Health Alliance in Lake County, Florida where he maintains a private practice.</string>
+
+    <!-- instructions  -->
+
+    <string name="instructions">INSTRUCTIONS</string>
+    <string name="ForORIENTATION"> For ORIENTATION, ATTENTION, IMMEDIATE RECALL, LANGUAGE, FLUIDITY of SPEECH / RECALL,  CALCULATION, SHORT TERM MEMORY (Delayed Recall), Please Ask the questions, check the box for 1 point after each correct answer.\n
+    JUDGMENT: Please Ask the questions, check the box for 1 point after each correct answer.  Answers should demonstrate the appropriate action that would solve the problem.  For Example, to the question, “What would you do if you came home and the toilet had backed up and water was running into the house?” , The answer should be “Turn the water off and call a plumber” or “Call for help and turn the water off.”  Answers that do not demonstrate the need for help or that the water should be turned off, should not be counted.  For the question, “What would you do if you found yourself stranded in the Dallas Airport with only $1 in your pocket?”  The answer should be “Use the dollar to call for help.  Or ask for help from (some appropriate authority”  Answers that question why they are in Dallas or “this would never happen to me” etc., should not be scored.  Answers that are confused or incoherent should not be scored correct.\n
+    ABSTRACT REASONING: Please Ask the questions, check the box for 1 point after each correct answer.  1. A quarter and a nickel are both (Coins or Money)  A Watch and a Ruler are both (Measurement instruments or ways to measure time and distance).  Answers that are not abstract or simply define each term should not be scored correct.\n\n</string>
+
+    <!-- Tool  -->
+
+    <string name="tool">Tool</string>
+    <string name="thisisasc">About This Tool: This is a screening instrument based upon current psychology and neuroscience research as well as the extensive clinical experience of the author. A pilot study (Saunders, W. S. (2010). The Consice Cognitive Status Examination: Mental Status Examination with a Smart-Phone Application. The Florida Psychologist Vol. 60, No. 3, pp. 15-22) was conducted to determine the reliabilty and validity of this tool. This tool demonstrated reliability and validity when compared to other mental status examination screening instruments that measure broad cognitive abilities. This tool is meant as a beginning screening test to start a conversation with your loved ones. Give the test with an attitude of compassion and love. You will get better results that way. You should consider consulting an experienced professional in conjunction with a physical examination, a biopsychosocial history, and other psychological, cognitive, and neuropsychological testing for the most accurate diagnosis. This screening instrument should never be relied upon as the sole basis for making any determination about a person. This screening instrument should be used as a general guide for helping to make a competent clinical judgment within the context of a full Neuropsychogical examination.\n\n</string>
+
+    <!-- List  -->
+
+    <string name="LIST">LIST</string>
+
+    <!-- error -->
+
+    <string name="nameerror">Name is invalid !!!</string>
+    <string name="dateofbirtherror">Date of birth invalid !!!</string>
+    <string name="LevelofEducationerror">Level of Education invalid !!!</string>
+    <string name="Ethnicityerror">Ethnicity invalid !!!</string>
+    <string name="ageerror">Age invalid !!!</string>
+    <string name="workerror">Work invalid !!!</string>
 </resources>

@@ -12,12 +12,14 @@
         android:gravity="center"
         android:background="@color/colorPrimaryDark">
         <ImageView
+            android:id="@+id/img_back"
             android:layout_margin="@dimen/s5"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@mipmap/btn_back"/>
 
         <TextView
+            android:id="@+id/tv_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/back"
@@ -31,7 +33,7 @@
             android:layout_marginLeft="@dimen/s10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/orientation"
+            android:text="@string/ATTENTION"
             android:textColor="@color/white"
             android:textSize="@dimen/s18"
             android:id="@+id/textView" />
@@ -72,11 +74,11 @@
                 android:textSize="@dimen/s16" />
 
             <Switch
-                android:layout_marginLeft="@dimen/s100"
+                android:layout_marginLeft="@dimen/s40"
                 android:layout_gravity="center|right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/switch1"/>
+                android:id="@+id/sw_imgoing"/>
         </LinearLayout>
 
 
@@ -97,11 +99,11 @@
                 android:textSize="@dimen/s16" />
 
             <Switch
-                android:layout_marginLeft="@dimen/s100"
+                android:layout_marginLeft="@dimen/s40"
                 android:layout_gravity="center|right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/switch2"/>
+                android:id="@+id/sw_nowsay"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="@dimen/s10"
@@ -139,7 +141,7 @@
                 android:text="93"
                 android:textSize="@dimen/s16"
                 android:layout_margin="@dimen/s10"
-                android:id="@+id/switch7" />
+                android:id="@+id/sw_93" />
 
             <Switch
                 android:textSize="@dimen/s16"
@@ -147,7 +149,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="86"
-                android:id="@+id/switch8" />
+                android:id="@+id/sw_86" />
 
             <Switch
                 android:textSize="@dimen/s16"
@@ -155,10 +157,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="79"
-                android:id="@+id/switch6" />
+                android:id="@+id/sw_79" />
         </LinearLayout>
         <LinearLayout
-            android:gravity="center"
+            android:gravity="center|top"
             android:layout_weight="1"
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -168,16 +170,16 @@
                 android:layout_margin="@dimen/s10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="86"
-                android:id="@+id/switch10" />
+                android:text="72"
+                android:id="@+id/sw_72" />
 
             <Switch
                 android:textSize="@dimen/s16"
                 android:layout_margin="@dimen/s10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="79"
-                android:id="@+id/switch9" />
+                android:text="65"
+                android:id="@+id/sw_65" />
         </LinearLayout>
         </LinearLayout>
 
