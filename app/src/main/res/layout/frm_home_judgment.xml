@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.company.qts.thedementiatest.fragment.FrmHome8">
+    tools:context=".fragment.FrmHome_Judgment">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -78,7 +78,7 @@
                 android:layout_gravity="center|right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/switch1"/>
+                android:id="@+id/sw_whatwould1"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="@dimen/s5"
@@ -101,7 +101,7 @@
                 android:layout_gravity="center|right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/switch2"/>
+                android:id="@+id/sw_whatwould2"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

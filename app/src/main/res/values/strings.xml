@@ -1,6 +1,6 @@
 <resources>
     <!-- Home  -->
-    <string name="app_name">TheDementiaTest</string>
+    <string name="app_name">The Dementia Test</string>
     <string name="home">Home</string>
     <string name="author">Author</string>
     <string name="instruction">Instructions</string>
@@ -12,7 +12,7 @@
     <string name="name">Name: </string>
     <string name="IsPersonAlert">Is Person Alert?</string>
     <string name="Dateofbirth">Date of birth: </string>
-    <string name="LevelofEducation">Level of \n Education: </string>
+    <string name="LevelofEducation">Level of Education:</string>
     <string name="sex">Sex: </string>
     <string name="Ethnicity">Ethnicity: </string>
     <string name="Age">Age: </string>
@@ -23,20 +23,20 @@
     <string name="whatmonth">What Month?</string>
     <string name="year">Year? </string>
     <string name="whatsate">What State are we in? </string>
-    <string name="Whoisthe">Who is the current \n President of the United Stated</string>
+    <string name="Whoisthe">Who is the current \nPresident of the United Stated</string>
 
     <string name="ATTENTION">ATTENTION</string>
-    <string name="Iamgoing">I’m going to say some \n numbers. Repeat them \n just as I said them. 3 2 \n 9 6 5</string>
-    <string name="Nowsay">Now say these \n numbers backwards 8 \n 5 3</string>
-    <string name="Serialsevens">Serial Sevens—Subtract 7 from 100, then \n subtract 7 from that answer, and \n continue subtracting 7 from each answer \n until I tell you to stop.</string>
+    <string name="Iamgoing">I’m going to say some \nnumbers. Repeat them \njust as I said them. 3 2 \n9 6 5</string>
+    <string name="Nowsay">Now say these \nnumbers backwards 8 \n5 3</string>
+    <string name="Serialsevens">Serial Sevens—Subtract 7 from 100, then \nsubtract 7 from that answer, and \ncontinue subtracting 7 from each answer \nuntil I tell you to stop.</string>
 
     <string name="IMMEDIATERECALL">IMMEDIATE RECALL</string>
-    <string name="listento">Listen to these words, Then Repeat them after me, &amp;\n remember them.  I’ll ask for\n them later: LAMP, PHONE,\n CAR, HOUSE (Repeat after\n only one time?)</string>
+    <string name="listento">Listen to these words, Then Repeat them after me, &amp;\nremember them.  I’ll ask for\nthem later: LAMP, PHONE,\nCAR, HOUSE (Repeat after\nonly one time?)</string>
 
-    <string name="Beginning">Beginning with Sunday, say\n all the days of the week\n Backwards.</string>
+    <string name="Beginning">Beginning with Sunday, say\nall the days of the week\nBackwards.</string>
     <string name="repeat"><b>Repeat:</b> </string>
-    <string name="thecatalways">The cat always drank his\n milk when the people left\n the room.</string>
-    <string name="steveisthe">Steve is the one coming\n tomorrow for supper.</string>
+    <string name="thecatalways">The cat always drank his\nmilk when the people left\nthe room.</string>
+    <string name="steveisthe">Steve is the one coming\ntomorrow for supper.</string>
     <string name="language">LANGUAGE</string>
 
     <string name="FLUIDITY">FLUIDITY</string>
@@ -84,9 +84,7 @@
     <!-- instructions  -->
 
     <string name="instructions">INSTRUCTIONS</string>
-    <string name="ForORIENTATION"> For ORIENTATION, ATTENTION, IMMEDIATE RECALL, LANGUAGE, FLUIDITY of SPEECH / RECALL,  CALCULATION, SHORT TERM MEMORY (Delayed Recall), Please Ask the questions, check the box for 1 point after each correct answer.\n
-    JUDGMENT: Please Ask the questions, check the box for 1 point after each correct answer.  Answers should demonstrate the appropriate action that would solve the problem.  For Example, to the question, “What would you do if you came home and the toilet had backed up and water was running into the house?” , The answer should be “Turn the water off and call a plumber” or “Call for help and turn the water off.”  Answers that do not demonstrate the need for help or that the water should be turned off, should not be counted.  For the question, “What would you do if you found yourself stranded in the Dallas Airport with only $1 in your pocket?”  The answer should be “Use the dollar to call for help.  Or ask for help from (some appropriate authority”  Answers that question why they are in Dallas or “this would never happen to me” etc., should not be scored.  Answers that are confused or incoherent should not be scored correct.\n
-    ABSTRACT REASONING: Please Ask the questions, check the box for 1 point after each correct answer.  1. A quarter and a nickel are both (Coins or Money)  A Watch and a Ruler are both (Measurement instruments or ways to measure time and distance).  Answers that are not abstract or simply define each term should not be scored correct.\n\n</string>
+    <string name="ForORIENTATION"> For ORIENTATION, ATTENTION, IMMEDIATE RECALL, LANGUAGE, FLUIDITY of SPEECH / RECALL,  CALCULATION, SHORT TERM MEMORY (Delayed Recall), Please Ask the questions, check the box for 1 point after each correct answer.\nJUDGMENT: Please Ask the questions, check the box for 1 point after each correct answer.  Answers should demonstrate the appropriate action that would solve the problem.  For Example, to the question, “What would you do if you came home and the toilet had backed up and water was running into the house?” , The answer should be “Turn the water off and call a plumber” or “Call for help and turn the water off.”  Answers that do not demonstrate the need for help or that the water should be turned off, should not be counted.  For the question, “What would you do if you found yourself stranded in the Dallas Airport with only $1 in your pocket?”  The answer should be “Use the dollar to call for help.  Or ask for help from (some appropriate authority”  Answers that question why they are in Dallas or “this would never happen to me” etc., should not be scored.  Answers that are confused or incoherent should not be scored correct.\nABSTRACT REASONING: Please Ask the questions, check the box for 1 point after each correct answer.  1. A quarter and a nickel are both (Coins or Money)  A Watch and a Ruler are both (Measurement instruments or ways to measure time and distance).  Answers that are not abstract or simply define each term should not be scored correct.\n\n</string>
 
     <!-- Tool  -->
 

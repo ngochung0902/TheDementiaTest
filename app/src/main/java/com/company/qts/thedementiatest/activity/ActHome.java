@@ -12,7 +12,7 @@ import android.widget.TabHost;
 
 import com.company.qts.thedementiatest.R;
 import com.company.qts.thedementiatest.fragment.FrmAuthor;
-import com.company.qts.thedementiatest.fragment.FrmHome;
+import com.company.qts.thedementiatest.fragment.FrmHome_Examination;
 import com.company.qts.thedementiatest.fragment.FrmInstructions;
 import com.company.qts.thedementiatest.fragment.FrmList;
 import com.company.qts.thedementiatest.fragment.FrmTool;
@@ -28,7 +28,7 @@ public class ActHome extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.bottom_navigation);
         fragmentManager = getSupportFragmentManager();
-        fragment = new FrmHome();
+        fragment = new FrmHome_Examination();
         final FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.main_container, fragment).commit();
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -36,7 +36,7 @@ public class ActHome extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_home:
-                        fragment = new FrmHome();
+                        fragment = new FrmHome_Examination();
                         break;
                     case R.id.action_author:
                         fragment = new FrmAuthor();

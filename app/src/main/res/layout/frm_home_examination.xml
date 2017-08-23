@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".fragment.FrmHome">
+    tools:context=".fragment.FrmHome_Examination">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -83,7 +83,7 @@
                 android:background="@mipmap/bg_textfield_h"
                 android:imeOptions="actionDone"
                 android:maxLines="1"
-                android:inputType="text"/>
+                android:inputType="textPersonName|textCapWords"/>
         </LinearLayout>
 
         <LinearLayout
@@ -129,7 +129,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@mipmap/bg_textfield_h"
-                android:drawableRight="@drawable/ic_dropdown"
+                android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
                 android:padding="@dimen/s5"/>
         </LinearLayout>
 
@@ -155,7 +155,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@mipmap/bg_textfield_h"
-                android:drawableRight="@drawable/ic_dropdown"
+                android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
                 android:padding="@dimen/s5"/>
         </LinearLayout>
 
@@ -213,7 +213,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@mipmap/bg_textfield_h"
-                android:drawableRight="@drawable/ic_dropdown"
+                android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
                 android:padding="@dimen/s5"/>
         </LinearLayout>
 
@@ -267,7 +267,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@mipmap/bg_textfield_h"
-                android:drawableRight="@drawable/ic_dropdown"
+                android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
                 android:padding="@dimen/s5"
                 />
         </LinearLayout>

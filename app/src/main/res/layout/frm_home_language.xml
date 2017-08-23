@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.company.qts.thedementiatest.fragment.FrmHome2">
+    tools:context=".fragment.FrmHome_Language">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
             android:layout_marginLeft="@dimen/s10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ATTENTION"
+            android:text="@string/language"
             android:textColor="@color/white"
             android:textSize="@dimen/s18"
             android:id="@+id/textView" />
@@ -67,23 +67,21 @@
             <TextView
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="180dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="@string/Iamgoing"
+                android:text="@string/Beginning"
                 android:textSize="@dimen/s16" />
 
             <Switch
-                android:layout_marginLeft="@dimen/s40"
+                android:layout_marginLeft="@dimen/s10"
                 android:layout_gravity="center|right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/sw_imgoing"/>
+                android:id="@+id/sw_beginningwith"/>
         </LinearLayout>
-
-
         <LinearLayout
-            android:layout_marginTop="@dimen/s10"
+            android:layout_marginTop="@dimen/s20"
             android:layout_marginLeft="@dimen/s10"
             android:layout_marginRight="@dimen/s10"
             android:orientation="horizontal"
@@ -92,97 +90,57 @@
             <TextView
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="180dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="@string/Nowsay"
+                android:text="@string/repeat"
                 android:textSize="@dimen/s16" />
-
-            <Switch
-                android:layout_marginLeft="@dimen/s40"
-                android:layout_gravity="center|right"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/sw_nowsay"/>
         </LinearLayout>
         <LinearLayout
-            android:layout_marginTop="@dimen/s10"
+            android:layout_marginTop="@dimen/s5"
             android:layout_marginLeft="@dimen/s10"
             android:layout_marginRight="@dimen/s10"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/s16"
-                android:text="@string/Serialsevens"
-                android:textColor="@color/black"
+                android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                />
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/thecatalways"
+                android:textSize="@dimen/s16" />
+
+            <Switch
+                android:layout_marginLeft="@dimen/s10"
+                android:layout_gravity="center|right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sw_thecat"/>
         </LinearLayout>
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/s20"
+            android:layout_marginTop="@dimen/s5"
             android:layout_marginLeft="@dimen/s10"
             android:layout_marginRight="@dimen/s10"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/s10"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/steveisthe"
+                android:textSize="@dimen/s16" />
 
             <Switch
+                android:layout_marginLeft="@dimen/s10"
+                android:layout_gravity="center|right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="93"
-                android:textSize="@dimen/s16"
-                android:layout_margin="@dimen/s10"
-                android:id="@+id/sw_93" />
-
-            <Switch
-                android:textSize="@dimen/s16"
-                android:layout_margin="@dimen/s10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="86"
-                android:id="@+id/sw_86" />
-
-            <Switch
-                android:textSize="@dimen/s16"
-                android:layout_margin="@dimen/s10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="79"
-                android:id="@+id/sw_79" />
+                android:id="@+id/sw_steveis"/>
         </LinearLayout>
-        <LinearLayout
-            android:gravity="center|top"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <Switch
-                android:textSize="@dimen/s16"
-                android:layout_margin="@dimen/s10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="72"
-                android:id="@+id/sw_72" />
-
-            <Switch
-                android:textSize="@dimen/s16"
-                android:layout_margin="@dimen/s10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="65"
-                android:id="@+id/sw_65" />
-        </LinearLayout>
-        </LinearLayout>
-
-
     </LinearLayout>
 </LinearLayout>

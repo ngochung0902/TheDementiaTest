@@ -932,4 +932,76 @@ public class QTSHelp {
                 QTSConstrains.SHAREPRE_ID, mode);
         return sharedPreferences.getInt("house", -1);
     }
+//Judgment
+    //whatwould1
+    public static void setWhatWould1(Context context, int whatwould1) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("whatwould1", whatwould1);
+        editor.commit();
+    }
+    public static int getWhatWould1(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("whatwould1", -1);
+    }
+    //whatwould2
+    public static void setWhatWould2(Context context, int whatwould2) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("whatwould2", whatwould2);
+        editor.commit();
+    }
+    public static int getWhatWould2(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("whatwould2", -1);
+    }
+//Delayed recall
+    //aqua
+    public static void setAqua(Context context, int aqua) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("aqua", aqua);
+        editor.commit();
+    }
+    public static int getAqua(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("aqua", -1);
+    }
+    //awatch
+    public static void setAwatch(Context context, int awatch) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("awatch", awatch);
+        editor.commit();
+    }
+    public static int getAwatch(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getInt("awatch", -1);
+    }
+    //number count
+    public static void setNumberCount(Context context, String numbercount) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("numbercount", numbercount);
+        editor.commit();
+    }
+    public static String getNumberCount(Context context) {
+        int mode = Activity.MODE_PRIVATE;
+        SharedPreferences sharedPreferences = context.getSharedPreferences(
+                QTSConstrains.SHAREPRE_ID, mode);
+        return sharedPreferences.getString("numbercount", "null");
+    }
 }

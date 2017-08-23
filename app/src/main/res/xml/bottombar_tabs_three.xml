@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/action_home"
+        icon="@mipmap/tab_homeoff_h"
+        title="Favorites" />
+    <tab
+        id="@+id/action_author"
+        icon="@mipmap/tab_authoroff_h"
+        title="Nearby" />
+    <tab
+        id="@+id/action_tool"
+        icon="@mipmap/tab_tooloff_h"
+        title="Friends" />
+    <tab
+        id="@+id/action_instruction"
+        icon="@mipmap/tab_instructionoff_h"
+        title="Nearby" />
+    <tab
+        id="@+id/action_list"
+        icon="@mipmap/tab_listoff_h"
+        title="Friends" />
+</tabs>

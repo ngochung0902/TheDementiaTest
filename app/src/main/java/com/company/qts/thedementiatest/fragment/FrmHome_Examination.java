@@ -24,7 +24,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class FrmHome extends Fragment {
+public class FrmHome_Examination extends Fragment {
     private ImageView img_next;
     private TextView tv_next,tv_dateofbirth,tv_Levelofeducation,tv_sex,tv_ethnicity,tv_work;
     private Switch sw_sex,sw_person;
@@ -36,7 +36,7 @@ public class FrmHome extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.frm_home, container, false);
+        View view = inflater.inflate(R.layout.frm_home_examination, container, false);
         img_next = (ImageView) view.findViewById(R.id.img_next);
         tv_next = (TextView) view.findViewById(R.id.tv_next);
         tv_dateofbirth = (TextView) view.findViewById(R.id.tv_dateofbirth);
@@ -99,7 +99,7 @@ public class FrmHome extends Fragment {
                                     }
                                     else
                                     {
-                                        FrmHome1 fragment1 = new FrmHome1();
+                                        FrmHome_Orientation fragment1 = new FrmHome_Orientation();
                                         FragmentManager fragmentManager = getFragmentManager();
                                         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                                         fragmentTransaction.replace(R.id.main_container, fragment1);
@@ -128,41 +128,41 @@ public class FrmHome extends Fragment {
             public void onClick(View v) {
                 if (edt_name.getText().toString().trim().length()==0)
                 {
-                    QTSHelp.showpPopupMessage(getActivity(), String.valueOf(R.string.nameerror));
+                    QTSHelp.showpPopupMessage(getActivity(), getResources().getString(R.string.nameerror));
                 }
                 else
                 {
                     if(tv_dateofbirth.getText().toString().trim().length()==0)
                     {
-                        QTSHelp.showpPopupMessage(getActivity(), String.valueOf(R.string.dateofbirtherror));
+                        QTSHelp.showpPopupMessage(getActivity(), getResources().getString(R.string.dateofbirtherror));
                     }
                     else
                     {
                         if (tv_Levelofeducation.getText().toString().trim().length()==0)
                         {
-                            QTSHelp.showpPopupMessage(getActivity(), String.valueOf(R.string.LevelofEducationerror));
+                            QTSHelp.showpPopupMessage(getActivity(), getResources().getString(R.string.LevelofEducationerror));
                         }
                         else
                         {
                             if (tv_ethnicity.getText().toString().trim().length()==0)
                             {
-                                QTSHelp.showpPopupMessage(getActivity(), String.valueOf(R.string.Ethnicityerror));
+                                QTSHelp.showpPopupMessage(getActivity(), getResources().getString(R.string.Ethnicityerror));
                             }
                             else
                             {
                                 if (tv_work.getText().toString().trim().length()==0)
                                 {
-                                    QTSHelp.showpPopupMessage(getActivity(), String.valueOf(R.string.workerror));
+                                    QTSHelp.showpPopupMessage(getActivity(), getResources().getString(R.string.workerror));
                                 }
                                 else
                                 {
                                     if (edt_age.getText().toString().trim().length()==0)
                                     {
-                                        QTSHelp.showpPopupMessage(getActivity(), String.valueOf(R.string.ageerror));
+                                        QTSHelp.showpPopupMessage(getActivity(), getResources().getString(R.string.ageerror));
                                     }
                                     else
                                     {
-                                        FrmHome1 fragment1 = new FrmHome1();
+                                        FrmHome_Orientation fragment1 = new FrmHome_Orientation();
                                         FragmentManager fragmentManager = getFragmentManager();
                                         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                                         fragmentTransaction.replace(R.id.main_container, fragment1);
@@ -251,21 +251,17 @@ public class FrmHome extends Fragment {
         if (sw_sex.isChecked()==true){
             tv_sex.setText("Male");
             sex = 1;
-            QTSHelp.showToast(getActivity(),sex+"sex");
         }else if (sw_sex.isChecked()==false){
             tv_sex.setText("Female");
             sex = 0;
-            QTSHelp.showToast(getActivity(),sex+"sex");
         }
     }
 
     private void isPerson(){
         if (sw_person.isChecked()==true){
             ispeson = 1;
-            QTSHelp.showToast(getActivity(),ispeson+"ispeson");
         }else if (sw_person.isChecked()==false){
             ispeson = 0;
-            QTSHelp.showToast(getActivity(),ispeson+"ispeson");
         }
     }
 

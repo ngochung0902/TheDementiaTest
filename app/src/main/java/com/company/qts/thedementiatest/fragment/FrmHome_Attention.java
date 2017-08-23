@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.company.qts.thedementiatest.R;
 import com.company.qts.thedementiatest.helper.QTSHelp;
 
-public class FrmHome2 extends Fragment {
+public class FrmHome_Attention extends Fragment {
     private TextView tv_next,tv_back;
     private ImageView img_next,img_back;
     private Switch sw_imgoing,sw_nowsay,sw_93,sw_72,sw_86,sw_65,sw_79;
@@ -23,7 +23,7 @@ public class FrmHome2 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.frm_home2, container, false);
+        View view = inflater.inflate(R.layout.frm_home_attention, container, false);
         tv_next = (TextView) view.findViewById(R.id.tv_next);
         img_next = (ImageView) view.findViewById(R.id.img_next);
         tv_back = (TextView) view.findViewById(R.id.tv_back);
@@ -41,7 +41,7 @@ public class FrmHome2 extends Fragment {
         tv_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FrmHome3 fragment3 = new FrmHome3();
+                FrmHome_Immediate_Recall fragment3 = new FrmHome_Immediate_Recall();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment3);
@@ -60,7 +60,7 @@ public class FrmHome2 extends Fragment {
         img_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FrmHome3 fragment3 = new FrmHome3();
+                FrmHome_Immediate_Recall fragment3 = new FrmHome_Immediate_Recall();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment3);
@@ -79,7 +79,7 @@ public class FrmHome2 extends Fragment {
         tv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FrmHome1 fragment1 = new FrmHome1();
+                FrmHome_Orientation fragment1 = new FrmHome_Orientation();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment1);
@@ -90,7 +90,7 @@ public class FrmHome2 extends Fragment {
         img_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FrmHome1 fragment1 = new FrmHome1();
+                FrmHome_Orientation fragment1 = new FrmHome_Orientation();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment1);

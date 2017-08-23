@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.company.qts.thedementiatest.fragment.FrmHome10">
+    tools:context=".fragment.FrmHome_Score">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -79,6 +79,7 @@
                     android:textSize="@dimen/s18"
                     />
                 <TextView
+                    android:id="@+id/tv_number"
                     android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -96,6 +97,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:id="@+id/tv_showtext"
                     android:textColor="@color/black"
                     android:layout_marginLeft="@dimen/s10"
                     android:layout_marginRight="@dimen/s10"
@@ -113,6 +115,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <Button
+                    android:id="@+id/bt_save"
                     android:layout_margin="@dimen/s20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -121,11 +124,12 @@
                     android:background="@drawable/custom_button_calculatescore"
                     />
                 <Button
+                    android:id="@+id/bt_share"
                     android:layout_margin="@dimen/s20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:text="Email"
+                    android:text="Share"
                     android:background="@drawable/custom_button_calculatescore"
                     />
             </LinearLayout>

@@ -27,6 +27,54 @@ public class ActSplash extends AppCompatActivity {
                             wait(QTSConstrains.Splash_Time);
                             Intent intent = new Intent(ActSplash.this, ActHome.class);
                             startActivity(intent);
+                        QTSHelp.setName(ActSplash.this,"");
+                        QTSHelp.setIsPerSon(ActSplash.this,-1);
+                        QTSHelp.setDateOfBirth(ActSplash.this,"");
+                        QTSHelp.setLevelOfEducation(ActSplash.this,"");
+                        QTSHelp.setSex(ActSplash.this,-1);
+                        QTSHelp.setEthnicity(ActSplash.this,"");
+                        QTSHelp.setAge(ActSplash.this,"");
+                        QTSHelp.setWork(ActSplash.this,"");
+
+                        QTSHelp.setWhatday(ActSplash.this,-1);
+                        QTSHelp.setWhatMonth(ActSplash.this,-1);
+                        QTSHelp.setYear(ActSplash.this,-1);
+                        QTSHelp.setWhatSate(ActSplash.this,-1);
+                        QTSHelp.setWhois(ActSplash.this,-1);
+
+                        QTSHelp.setImGoing(ActSplash.this,-1);
+                        QTSHelp.setNowSay(ActSplash.this,-1);
+                        QTSHelp.set93(ActSplash.this,-1);
+                        QTSHelp.set72(ActSplash.this,-1);
+                        QTSHelp.set86(ActSplash.this,-1);
+                        QTSHelp.set65(ActSplash.this,-1);
+                        QTSHelp.set79(ActSplash.this,-1);
+
+                        QTSHelp.setListento(ActSplash.this,-1);
+
+                        QTSHelp.setBeginningWith(ActSplash.this,-1);
+                        QTSHelp.setTheCat(ActSplash.this,-1);
+                        QTSHelp.setSteveis(ActSplash.this,-1);
+
+                        QTSHelp.setAnimals04(ActSplash.this,-1);
+                        QTSHelp.setAnimals59(ActSplash.this,-1);
+                        QTSHelp.setAnimals1015(ActSplash.this,-1);
+
+                        QTSHelp.setTamHai(ActSplash.this,-1);
+                        QTSHelp.setAdd6(ActSplash.this,-1);
+                        QTSHelp.setTake(ActSplash.this,-1);
+
+                        QTSHelp.setLamp(ActSplash.this,-1);
+                        QTSHelp.setPhone(ActSplash.this,-1);
+                        QTSHelp.setChair(ActSplash.this,-1);
+                        QTSHelp.setCar(ActSplash.this,-1);
+                        QTSHelp.setHouse(ActSplash.this,-1);
+
+                        QTSHelp.setWhatWould1(ActSplash.this,-1);
+                        QTSHelp.setWhatWould2(ActSplash.this,-1);
+
+                        QTSHelp.setAqua(ActSplash.this,-1);
+                        QTSHelp.setAwatch(ActSplash.this,-1);
                             finish();
                     }
                 } catch (InterruptedException ex) {

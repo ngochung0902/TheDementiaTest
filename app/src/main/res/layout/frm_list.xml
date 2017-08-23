@@ -23,6 +23,8 @@
             android:id="@+id/textView" />
     </LinearLayout>
     <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ListView
@@ -31,5 +33,16 @@
             android:id="@+id/lv_list"
             android:background="@mipmap/bg_main_h">
         </ListView>
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/tv_noitem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:text="No Item"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s20"
+            />
     </LinearLayout>
 </LinearLayout>

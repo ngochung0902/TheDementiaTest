@@ -15,62 +15,58 @@ import android.widget.TextView;
 import com.company.qts.thedementiatest.R;
 import com.company.qts.thedementiatest.helper.QTSHelp;
 
-public class FrmHome4 extends Fragment {
+public class FrmHome_Calculation extends Fragment {
     private TextView tv_next,tv_back;
     private ImageView img_next,img_back;
-    private Switch sw_beginningwith,sw_thecat,sw_steveis;
-    private int beginningwith,thecat,steveis;
+    private Switch sw_tamhai,sw_add6,sw_take;
+    private int tamhai,add6,take;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.frm_home4, container, false);
+        View view = inflater.inflate(R.layout.frm_home_calculation, container, false);
         tv_next = (TextView) view.findViewById(R.id.tv_next);
         img_next = (ImageView) view.findViewById(R.id.img_next);
         tv_back = (TextView) view.findViewById(R.id.tv_back);
         img_back = (ImageView) view.findViewById(R.id.img_back);
-        sw_steveis = (Switch) view.findViewById(R.id.sw_steveis);
-        sw_thecat = (Switch) view.findViewById(R.id.sw_thecat);
-        sw_beginningwith = (Switch) view.findViewById(R.id.sw_beginningwith);
+        sw_tamhai = (Switch) view.findViewById(R.id.sw_tamhai);
+        sw_add6 = (Switch) view.findViewById(R.id.sw_add6);
+        sw_take = (Switch) view.findViewById(R.id.sw_take);
 
         backFrm();
 
         tv_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FrmHome5 fragment5 = new FrmHome5();
+                FrmHome_Delayed_Recall fragment7 = new FrmHome_Delayed_Recall();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.main_container, fragment5);
+                fragmentTransaction.replace(R.id.main_container, fragment7);
                 fragmentTransaction.commit();
 
-                QTSHelp.setBeginningWith(getActivity(),beginningwith);
-                QTSHelp.setTheCat(getActivity(),thecat);
-                QTSHelp.setSteveis(getActivity(),steveis);
+                QTSHelp.setTamHai(getActivity(),tamhai);
+                QTSHelp.setAdd6(getActivity(),add6);
+                QTSHelp.setTake(getActivity(),take);
             }
         });
 
         img_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FrmHome5 fragment5 = new FrmHome5();
+                FrmHome_Delayed_Recall fragment7 = new FrmHome_Delayed_Recall();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.main_container, fragment5);
+                fragmentTransaction.replace(R.id.main_container, fragment7);
                 fragmentTransaction.commit();
-
-                QTSHelp.setBeginningWith(getActivity(),beginningwith);
-                QTSHelp.setTheCat(getActivity(),thecat);
-                QTSHelp.setSteveis(getActivity(),steveis);
             }
         });
 
         tv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FrmHome3 fragment3 = new FrmHome3();
+                FrmHome_Fluidity fragment5 = new FrmHome_Fluidity();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.main_container, fragment3);
+                fragmentTransaction.replace(R.id.main_container, fragment5);
                 fragmentTransaction.commit();
             }
         });
@@ -78,90 +74,94 @@ public class FrmHome4 extends Fragment {
         img_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FrmHome3 fragment3 = new FrmHome3();
+                FrmHome_Fluidity fragment5 = new FrmHome_Fluidity();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.main_container, fragment3);
+                fragmentTransaction.replace(R.id.main_container, fragment5);
                 fragmentTransaction.commit();
             }
         });
 
-        sw_beginningwith.setOnClickListener(new View.OnClickListener() {
+        sw_tamhai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                checkBeginningWith();
+                checkTamHai();
             }
         });
 
-        sw_thecat.setOnClickListener(new View.OnClickListener() {
+        sw_add6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                checkTheCat();
+                checkAdd6();
             }
         });
 
-        sw_steveis.setOnClickListener(new View.OnClickListener() {
+        sw_take.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                checkSteveis();
+                checkTake();
             }
         });
 
         return view;
     }
-    private void checkBeginningWith(){
-        if (sw_beginningwith.isChecked()==true){
-            beginningwith = 1;
-        }else if (sw_beginningwith.isChecked()==false){
-            beginningwith = 0;
+
+    private void checkTamHai(){
+        if (sw_tamhai.isChecked()==true){
+            tamhai = 1;
+        }else if (sw_tamhai.isChecked()==false){
+            tamhai = 0;
         }
     }
-    private void checkTheCat(){
-        if (sw_thecat.isChecked()==true){
-            thecat = 1;
-        }else if (sw_thecat.isChecked()==false){
-            thecat = 0;
+
+    private void checkAdd6(){
+        if (sw_add6.isChecked()==true){
+            add6 = 1;
+        }else if (sw_add6.isChecked()==false){
+            add6 = 0;
         }
     }
-    private void checkSteveis(){
-        if (sw_steveis.isChecked()==true){
-            steveis = 1;
-        }else if (sw_steveis.isChecked()==false){
-            steveis = 0;
+
+    private void checkTake(){
+        if (sw_take.isChecked()==true){
+            take = 1;
+        }else if (sw_take.isChecked()==false){
+            take = 0;
         }
     }
+
     private void backFrm(){
-        if (QTSHelp.getBeginningWith(getActivity())==1)
+        if (QTSHelp.getTamHai(getActivity())==1)
         {
-            sw_beginningwith.setChecked(true);
-            beginningwith=1;
+            sw_tamhai.setChecked(true);
+            tamhai=1;
         }
-        if (QTSHelp.getBeginningWith(getActivity())==0)
+        if (QTSHelp.getTamHai(getActivity())==0)
         {
-            sw_beginningwith.setChecked(false);
-            beginningwith=0;
-        }
-
-        if (QTSHelp.getTheCat(getActivity())==1)
-        {
-            sw_thecat.setChecked(true);
-            thecat=1;
-        }
-        if (QTSHelp.getTheCat(getActivity())==0)
-        {
-            sw_thecat.setChecked(false);
-            thecat=0;
+            sw_tamhai.setChecked(false);
+            tamhai=0;
         }
 
-        if (QTSHelp.getSteveis(getActivity())==1)
+        if (QTSHelp.getAdd6(getActivity())==1)
         {
-            sw_steveis.setChecked(true);
-            steveis=1;
+            sw_add6.setChecked(true);
+            add6=1;
         }
-        if (QTSHelp.getSteveis(getActivity())==0)
+        if (QTSHelp.getAdd6(getActivity())==0)
         {
-            sw_steveis.setChecked(false);
-            steveis=0;
+            sw_add6.setChecked(false);
+            add6=0;
+        }
+
+        if (QTSHelp.getTake(getActivity())==1)
+        {
+            sw_take.setChecked(true);
+            take=1;
+        }
+        if (QTSHelp.getTake(getActivity())==0)
+        {
+            sw_take.setChecked(false);
+            take=0;
         }
     }
 }

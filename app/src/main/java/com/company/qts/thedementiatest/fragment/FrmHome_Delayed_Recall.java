@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.company.qts.thedementiatest.R;
 import com.company.qts.thedementiatest.helper.QTSHelp;
 
-public class FrmHome7 extends Fragment {
+public class FrmHome_Delayed_Recall extends Fragment {
     private TextView tv_next,tv_back;
     private ImageView img_next,img_back;
     private Switch sw_lamp,sw_phone,sw_chair,sw_car,sw_house;
@@ -23,7 +23,7 @@ public class FrmHome7 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.frm_home7, container, false);
+        View view = inflater.inflate(R.layout.frm_home_delayed_recall, container, false);
         tv_next = (TextView) view.findViewById(R.id.tv_next);
         img_next = (ImageView) view.findViewById(R.id.img_next);
         tv_back = (TextView) view.findViewById(R.id.tv_back);
@@ -34,10 +34,12 @@ public class FrmHome7 extends Fragment {
         sw_car = (Switch) view.findViewById(R.id.sw_car);
         sw_house = (Switch) view.findViewById(R.id.sw_house);
 
+        backFrm();
+
         tv_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FrmHome8 fragment8 = new FrmHome8();
+                FrmHome_Judgment fragment8 = new FrmHome_Judgment();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment8);
@@ -54,18 +56,24 @@ public class FrmHome7 extends Fragment {
         img_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FrmHome8 fragment8 = new FrmHome8();
+                FrmHome_Judgment fragment8 = new FrmHome_Judgment();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment8);
                 fragmentTransaction.commit();
+
+                QTSHelp.setLamp(getActivity(),lamp);
+                QTSHelp.setPhone(getActivity(),phone);
+                QTSHelp.setChair(getActivity(),chair);
+                QTSHelp.setCar(getActivity(),car);
+                QTSHelp.setHouse(getActivity(),house);
             }
         });
 
         tv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FrmHome6 fragment6 = new FrmHome6();
+                FrmHome_Calculation fragment6 = new FrmHome_Calculation();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment6);
@@ -76,7 +84,7 @@ public class FrmHome7 extends Fragment {
         img_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FrmHome6 fragment6 = new FrmHome6();
+                FrmHome_Calculation fragment6 = new FrmHome_Calculation();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment6);

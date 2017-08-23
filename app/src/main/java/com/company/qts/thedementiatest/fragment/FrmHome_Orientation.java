@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.company.qts.thedementiatest.R;
 import com.company.qts.thedementiatest.helper.QTSHelp;
 
-public class FrmHome1 extends Fragment {
+public class FrmHome_Orientation extends Fragment {
     private TextView tv_next,tv_back;
     private ImageView img_next,img_back;
     private Switch sw_whatday,sw_whatmonth,sw_year,sw_whatstate,sw_whois;
@@ -23,7 +23,7 @@ public class FrmHome1 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.frm_home1, container, false);
+        View view = inflater.inflate(R.layout.frm_home_orientation, container, false);
         tv_next = (TextView) view.findViewById(R.id.tv_next);
         img_next = (ImageView) view.findViewById(R.id.img_next);
         tv_back = (TextView) view.findViewById(R.id.tv_back);
@@ -40,7 +40,7 @@ public class FrmHome1 extends Fragment {
         tv_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FrmHome2 fragment2 = new FrmHome2();
+                FrmHome_Attention fragment2 = new FrmHome_Attention();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment2);
@@ -57,7 +57,7 @@ public class FrmHome1 extends Fragment {
         img_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FrmHome2 fragment2 = new FrmHome2();
+                FrmHome_Attention fragment2 = new FrmHome_Attention();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment2);
@@ -74,7 +74,7 @@ public class FrmHome1 extends Fragment {
         tv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FrmHome fragment = new FrmHome();
+                FrmHome_Examination fragment = new FrmHome_Examination();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment);
@@ -85,7 +85,7 @@ public class FrmHome1 extends Fragment {
         img_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FrmHome fragment = new FrmHome();
+                FrmHome_Examination fragment = new FrmHome_Examination();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment);
