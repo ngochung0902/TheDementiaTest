@@ -12,6 +12,7 @@
         android:gravity="center"
         android:background="@color/colorPrimaryDark">
         <ImageView
+            android:background="@drawable/custom_button_nextback"
             android:id="@+id/img_back"
             android:layout_margin="@dimen/s5"
             android:layout_width="wrap_content"
@@ -19,9 +20,11 @@
             android:src="@mipmap/btn_back"/>
 
         <TextView
+            android:background="@drawable/custom_button_nextback"
             android:id="@+id/tv_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
             android:text="@string/back"
             android:textSize="@dimen/s16"
             android:textColor="@color/white"
@@ -36,11 +39,11 @@
             android:text="@string/score"
             android:textColor="@color/white"
             android:textSize="@dimen/s18"
-            android:id="@+id/textView" />
+            android:id="@+id/tv_score" />
         <TextView
             android:visibility="invisible"
             android:id="@+id/tv_next"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:text="@string/next"
             android:textSize="@dimen/s16"
@@ -69,6 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:id="@+id/tv_your"
                     android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -110,27 +114,27 @@
             </LinearLayout>
             <LinearLayout
                 android:gravity="center"
-                android:layout_marginTop="@dimen/s100"
+                android:layout_marginTop="100dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <Button
                     android:id="@+id/bt_save"
-                    android:layout_margin="@dimen/s20"
+                    android:layout_margin="@dimen/s10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="SAVE"
                     android:textColor="@color/white"
-                    android:text="Save"
-                    android:background="@drawable/custom_button_calculatescore"
+                    android:background="@drawable/custom_button"
                     />
                 <Button
                     android:id="@+id/bt_share"
-                    android:layout_margin="@dimen/s20"
+                    android:layout_margin="@dimen/s10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
                     android:text="Share"
-                    android:background="@drawable/custom_button_calculatescore"
+                    android:textColor="@color/white"
+                    android:background="@drawable/custom_button"
                     />
             </LinearLayout>
         </LinearLayout>

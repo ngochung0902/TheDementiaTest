@@ -6,8 +6,8 @@
     <string name="instruction">Instructions</string>
     <string name="list">List</string>
     <string name="examination">EXAMINATION</string>
-    <string name="next">Next</string>
-    <string name="back">Back</string>
+    <string name="next"> Next </string>
+    <string name="back"> Back </string>
 
     <string name="name">Name: </string>
     <string name="IsPersonAlert">Is Person Alert?</string>
@@ -23,20 +23,20 @@
     <string name="whatmonth">What Month?</string>
     <string name="year">Year? </string>
     <string name="whatsate">What State are we in? </string>
-    <string name="Whoisthe">Who is the current \nPresident of the United Stated</string>
+    <string name="Whoisthe">Who is the current President of the United Stated</string>
 
     <string name="ATTENTION">ATTENTION</string>
-    <string name="Iamgoing">I’m going to say some \nnumbers. Repeat them \njust as I said them. 3 2 \n9 6 5</string>
-    <string name="Nowsay">Now say these \nnumbers backwards 8 \n5 3</string>
-    <string name="Serialsevens">Serial Sevens—Subtract 7 from 100, then \nsubtract 7 from that answer, and \ncontinue subtracting 7 from each answer \nuntil I tell you to stop.</string>
+    <string name="Iamgoing">I’m going to say some numbers. Repeat them just as I said them. 3 2 9 6 5</string>
+    <string name="Nowsay">Now say these numbers backwards 8 5 3</string>
+    <string name="Serialsevens">Serial Sevens-Subtract 7 from 100, then subtract 7 from that answer, and continue subtracting 7 from each answer until I tell you to stop.</string>
 
-    <string name="IMMEDIATERECALL">IMMEDIATE RECALL</string>
-    <string name="listento">Listen to these words, Then Repeat them after me, &amp;\nremember them.  I’ll ask for\nthem later: LAMP, PHONE,\nCAR, HOUSE (Repeat after\nonly one time?)</string>
+    <string name="IMMEDIATERECALL">RECALL</string>
+    <string name="listento">Listen to these words, then repeat them after me, &amp; remember them.  I’ll ask for them later: LAMP, PHONE, CHAIR, CAR, HOUSE (Ask the person to repeat the words to you twice. Ask the person to Say them again until they can repeat at least once perfectly in any order. Do not ask them to repeat the words if they can not repeat them after 5 attempts.)</string>
 
-    <string name="Beginning">Beginning with Sunday, say\nall the days of the week\nBackwards.</string>
+    <string name="Beginning">Beginning with Sunday, say all the days of the week Backwards.</string>
     <string name="repeat"><b>Repeat:</b> </string>
-    <string name="thecatalways">The cat always drank his\nmilk when the people left\nthe room.</string>
-    <string name="steveisthe">Steve is the one coming\ntomorrow for supper.</string>
+    <string name="thecatalways">The cat always drank his milk when the people left the room.</string>
+    <string name="steveisthe">Steve is the one coming tomorrow for supper.</string>
     <string name="language">LANGUAGE</string>
 
     <string name="FLUIDITY">FLUIDITY</string>
@@ -65,9 +65,9 @@
 
     <string name="ABSTRACT">ABSTRACT REASONING</string>
     <string name="anorange">An orange and a banana are both fruits, right?  So then, </string>
-    <string name="aquarter">A quarter and a nickel are both</string>
-    <string name="awatchand">A Watch and a Ruler are both </string>
-    <string name="calculatescore">CALCULATE SCORE</string>
+    <string name="aquarter">A quarter and a nickel are both (the answer is "'"they are both coins"'")</string>
+    <string name="awatchand">A Watch and a Ruler are both (They both measure)</string>
+    <string name="calculatescore">CALCULATE    SCORE</string>
 
     <string name="score">SCORE</string>
     <string name="NoImpairmentNoted26">No Impairment Noted, Person is within normal cognitive limits;  Additional testing may be of use to detect subtle deficits, if any.  If you have a concern, please see a psychologist or your healthcare provider</string>
@@ -79,17 +79,17 @@
     <!-- Author  -->
 
     <string name="Author">AUTHOR</string>
-    <string name="wstevensaunders">W. Steven Saunders, Psy.D. is a Licensed Psychologist, Associate Lecturer at the University of Central Florida, and Neuropsychologist for Central Florida Health Alliance in Lake County, Florida where he maintains a private practice.</string>
+    <string name="wstevensaunders">W. Steven Saunders, Psy.D. is a Licensed Psychologist and an Associate Lecturer at the University of Central Florida. He is the staff Neuropsychologist for the local hospital. Dr. Saunders maintains a private practice in Lake County, Florida. He can be contacted at wstevensaunders@gmail.com. His website is CentralFloridaPsychology.com.</string>
 
     <!-- instructions  -->
 
     <string name="instructions">INSTRUCTIONS</string>
-    <string name="ForORIENTATION"> For ORIENTATION, ATTENTION, IMMEDIATE RECALL, LANGUAGE, FLUIDITY of SPEECH / RECALL,  CALCULATION, SHORT TERM MEMORY (Delayed Recall), Please Ask the questions, check the box for 1 point after each correct answer.\nJUDGMENT: Please Ask the questions, check the box for 1 point after each correct answer.  Answers should demonstrate the appropriate action that would solve the problem.  For Example, to the question, “What would you do if you came home and the toilet had backed up and water was running into the house?” , The answer should be “Turn the water off and call a plumber” or “Call for help and turn the water off.”  Answers that do not demonstrate the need for help or that the water should be turned off, should not be counted.  For the question, “What would you do if you found yourself stranded in the Dallas Airport with only $1 in your pocket?”  The answer should be “Use the dollar to call for help.  Or ask for help from (some appropriate authority”  Answers that question why they are in Dallas or “this would never happen to me” etc., should not be scored.  Answers that are confused or incoherent should not be scored correct.\nABSTRACT REASONING: Please Ask the questions, check the box for 1 point after each correct answer.  1. A quarter and a nickel are both (Coins or Money)  A Watch and a Ruler are both (Measurement instruments or ways to measure time and distance).  Answers that are not abstract or simply define each term should not be scored correct.\n\n</string>
+    <string name="ForORIENTATION">The Dementia Test is designed to be given verbally from one person to another. The administrator, the person giving the test, asks the questions. The test taker, the person taking the test, answers the questions. You, the administrator, should not show the screen to the test taker. Generally, the questions are very common sense and easy to give. Read the questions and mark each correct answer with a point by click the buttons provided.\n\nFor ORIENTATION, ATTENTION, IMMEDIATE RECALL, LANGUAGE, FLUIDITY of SPEECH / RECALL, CALCULATION, SHORT TERM MEMORY (Delayed Recall), Please Ask the questions, check the box for 1 point after each correct answer.\n\nJUDGMENT: Please Ask the questions, check the box for 1 point after each correct answer.  Answers should demonstrate the appropriate action that would solve the problem.  For Example, to the question, “What would you do if you came home and the toilet had backed up and water was running into the house?” , The answer should be “Turn the water off and call a plumber” or “Call for help and turn the water off.”  Answers that do not demonstrate the need for help or that the water should be turned off, should not be counted.  For the question, “What would you do if you found yourself stranded in the Dallas Airport with only $1 in your pocket?”  The answer should be “Use the dollar to call for help.  Or ask for help from (some appropriate authority”  Answers that question why they are in Dallas or “this would never happen to me” etc., should not be scored.  Answers that are confused or incoherent should not be scored correct.\n\nABSTRACT REASONING: Please Ask the questions, check the box for 1 point after each correct answer.  1. A quarter and a nickel are both (Coins or Money)  A Watch and a Ruler are both (Measurement instruments or ways to measure time and distance).  Answers that are not abstract or simply define each term should not be scored correct.\n\n</string>
 
     <!-- Tool  -->
 
-    <string name="tool">Tool</string>
-    <string name="thisisasc">About This Tool: This is a screening instrument based upon current psychology and neuroscience research as well as the extensive clinical experience of the author. A pilot study (Saunders, W. S. (2010). The Consice Cognitive Status Examination: Mental Status Examination with a Smart-Phone Application. The Florida Psychologist Vol. 60, No. 3, pp. 15-22) was conducted to determine the reliabilty and validity of this tool. This tool demonstrated reliability and validity when compared to other mental status examination screening instruments that measure broad cognitive abilities. This tool is meant as a beginning screening test to start a conversation with your loved ones. Give the test with an attitude of compassion and love. You will get better results that way. You should consider consulting an experienced professional in conjunction with a physical examination, a biopsychosocial history, and other psychological, cognitive, and neuropsychological testing for the most accurate diagnosis. This screening instrument should never be relied upon as the sole basis for making any determination about a person. This screening instrument should be used as a general guide for helping to make a competent clinical judgment within the context of a full Neuropsychogical examination.\n\n</string>
+    <string name="tool">TOOL</string>
+    <string name="thisisasc">About This Tool: This is a screening instrument based upon current psychology and neuroscience research as well as the extensive clinical experience of the author. A pilot study (Saunders, W. S. (2010). The Consice Cognitive Status Examination: Mental Status Examination with a Smart-Phone Application. The Florida Psychologist Vol. 60, No. 3, pp. 15-22) was conducted to determine the reliabilty and validity of this tool. \n\nThis tool demonstrated reliability and validity when compared to other mental status examination screening instruments that measure broad cognitive abilities. This tool is meant as a beginning screening test to start a conversation with your loved ones. Give the test with an attitude of compassion and love. You will get better results that way. You should consider consulting an experienced professional in conjunction with a physical examination, a biopsychosocial history, and other psychological, cognitive, and neuropsychological testing for the most accurate diagnosis. This screening instrument should never be relied upon as the sole basis for making any determination about a person. This screening instrument should be used as a general guide for helping to make a competent clinical judgment within the context of a full Neuropsychogical examination.\n\n</string>
 
     <!-- List  -->
 
@@ -97,10 +97,18 @@
 
     <!-- error -->
 
-    <string name="nameerror">Name is invalid !!!</string>
-    <string name="dateofbirtherror">Date of birth invalid !!!</string>
-    <string name="LevelofEducationerror">Level of Education invalid !!!</string>
-    <string name="Ethnicityerror">Ethnicity invalid !!!</string>
-    <string name="ageerror">Age invalid !!!</string>
-    <string name="workerror">Work invalid !!!</string>
+    <string name="nameerror">Name is invalid !</string>
+    <string name="dateofbirtherror">Date of birth is invalid !</string>
+    <string name="LevelofEducationerror">Level of Education is invalid !</string>
+    <string name="Ethnicityerror">Ethnicity is invalid !</string>
+    <string name="ageerror">Age is invalid !</string>
+    <string name="workerror">Work is invalid !</string>
+
+    <!-- Text -->
+    <string name="textex">Ask the person taking the test the following questions.</string>
+    <string name="textor">Ask the following questions. If the person is correct, click the button.</string>
+    <string name="textla">Ask the person the following questions, click the button if they give a correct answer.</string>
+    <string name="textrepeat"><i>Repeat the following sentences. (Click the button if they repeat perfect the first time. Do not click if even one word is incorrect)</i>.</string>
+    <string name="clickthebutton"><i>(Click the button if the answer is correct)</i></string>
+    <string name="textju"><i>(See instructions for correct answers. Generally, any answer that is a common sense response such as "Turn off the water and get help" for the first question is correct. For the second question, any common sense response where the person asks someone in authority for help, such as "I would go to the airline desk and ask to make a phone call.")</i></string>
 </resources>

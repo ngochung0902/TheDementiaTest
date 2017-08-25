@@ -20,31 +20,28 @@
             android:text="@string/instructions"
             android:textColor="@color/white"
             android:textSize="@dimen/s18"
-            android:id="@+id/textView" />
+            android:id="@+id/tv_in" />
     </LinearLayout>
     <LinearLayout
         android:background="@mipmap/bg_main_h"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
-            android:layout_margin="@dimen/s15"
-            android:background="@mipmap/bg_transfer_h"
+            android:layout_margin="@dimen/s20"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_bg_score">
             <ScrollView
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
+                android:overScrollMode="never"
+                android:scrollbars="none"
                 android:layout_width="wrap_content"
-                android:layout_height="440dp">
+                android:layout_height="match_parent">
                     <TextView
                         android:textColor="@color/black"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/ForORIENTATION"
                         android:textSize="@dimen/s16"
-                        android:layout_marginLeft="@dimen/s30"
-                        android:layout_marginRight="@dimen/s30"
-                        android:layout_marginBottom="@dimen/s30"
                         android:layout_marginTop="@dimen/s10"/>
             </ScrollView>
         </LinearLayout>

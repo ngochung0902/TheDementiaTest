@@ -20,24 +20,27 @@
             android:text="@string/Author"
             android:textColor="@color/white"
             android:textSize="@dimen/s18"
-            android:id="@+id/textView" />
+            android:id="@+id/tv_author" />
     </LinearLayout>
     <LinearLayout
         android:background="@mipmap/bg_main_h"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
-            android:layout_margin="@dimen/s15"
+            android:layout_margin="@dimen/s20"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@mipmap/bg_transfer_h">
+            android:background="@drawable/custom_bg_score">
             <TextView
+                android:textColorLink="@color/colorPrimaryDark"
+                android:autoLink="email|web"
+                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/wstevensaunders"
                 android:textSize="@dimen/s16"
-                android:layout_margin="@dimen/s25"
+                android:layout_margin="@dimen/s10"
                 />
         </LinearLayout>
     </LinearLayout>

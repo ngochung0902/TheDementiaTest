@@ -1,5 +1,6 @@
 package com.company.qts.thedementiatest.fragment;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,10 +14,11 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.company.qts.thedementiatest.R;
+import com.company.qts.thedementiatest.helper.QTSConstrains;
 import com.company.qts.thedementiatest.helper.QTSHelp;
 
 public class FrmHome_Language extends Fragment {
-    private TextView tv_next,tv_back;
+    private TextView tv_next,tv_back,tv_language,tv_la,tv_begin,tv_repeat1,tv_repeat2,tv_thecat,tv_steve;
     private ImageView img_next,img_back;
     private Switch sw_beginningwith,sw_thecat,sw_steveis;
     private int beginningwith,thecat,steveis;
@@ -26,14 +28,37 @@ public class FrmHome_Language extends Fragment {
         View view = inflater.inflate(R.layout.frm_home_language, container, false);
         tv_next = (TextView) view.findViewById(R.id.tv_next);
         img_next = (ImageView) view.findViewById(R.id.img_next);
+        tv_language = (TextView) view.findViewById(R.id.tv_language);
+
+        tv_la = (TextView) view.findViewById(R.id.tv_la);
+        tv_begin = (TextView) view.findViewById(R.id.tv_begin);
+        tv_repeat1 = (TextView) view.findViewById(R.id.tv_repeat1);
+        tv_repeat2 = (TextView) view.findViewById(R.id.tv_repeat2);
+        tv_thecat = (TextView) view.findViewById(R.id.tv_thecat);
+        tv_steve = (TextView) view.findViewById(R.id.tv_steve);
+
+        Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),"fonts/Lato_Bold.ttf");
+        tv_language.setTypeface(customFontBold);
         tv_back = (TextView) view.findViewById(R.id.tv_back);
         img_back = (ImageView) view.findViewById(R.id.img_back);
         sw_steveis = (Switch) view.findViewById(R.id.sw_steveis);
         sw_thecat = (Switch) view.findViewById(R.id.sw_thecat);
         sw_beginningwith = (Switch) view.findViewById(R.id.sw_beginningwith);
 
-        sw_steveis.setVisibility(View.INVISIBLE);
-        sw_thecat.setVisibility(View.INVISIBLE);
+        QTSHelp.setFontTV(getActivity(),tv_back, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_next, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_la, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_begin, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_repeat1, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_repeat2, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_thecat, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_steve, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_beginningwith, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_steveis, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_thecat, QTSConstrains.FONT_LATO_REGULAR);
+
+//        sw_steveis.setVisibility(View.INVISIBLE);
+//        sw_thecat.setVisibility(View.INVISIBLE);
 
         backFrm();
 
@@ -93,23 +118,23 @@ public class FrmHome_Language extends Fragment {
             @Override
             public void onClick(View v) {
                 checkBeginningWith();
-                if (sw_beginningwith.isChecked()==true)
-                {
-                    sw_steveis.setVisibility(View.VISIBLE);
-                    sw_thecat.setVisibility(View.VISIBLE);
-                }
-                else
-                {
-                    if (sw_beginningwith.isChecked()==false)
-                    {
-                        sw_steveis.setChecked(false);
-                        sw_thecat.setChecked(false);
-                        sw_steveis.setVisibility(View.INVISIBLE);
-                        sw_thecat.setVisibility(View.INVISIBLE);
-                        steveis=0;
-                        thecat=0;
-                    }
-                }
+//                if (sw_beginningwith.isChecked()==true)
+//                {
+//                    sw_steveis.setVisibility(View.VISIBLE);
+//                    sw_thecat.setVisibility(View.VISIBLE);
+//                }
+//                else
+//                {
+//                    if (sw_beginningwith.isChecked()==false)
+//                    {
+//                        sw_steveis.setChecked(false);
+//                        sw_thecat.setChecked(false);
+//                        sw_steveis.setVisibility(View.INVISIBLE);
+//                        sw_thecat.setVisibility(View.INVISIBLE);
+//                        steveis=0;
+//                        thecat=0;
+//                    }
+//                }
             }
         });
 
@@ -156,8 +181,8 @@ public class FrmHome_Language extends Fragment {
         {
             sw_beginningwith.setChecked(true);
             beginningwith=1;
-            sw_steveis.setVisibility(View.VISIBLE);
-            sw_thecat.setVisibility(View.VISIBLE);
+//            sw_steveis.setVisibility(View.VISIBLE);
+//            sw_thecat.setVisibility(View.VISIBLE);
         }
         if (QTSHelp.getBeginningWith(getActivity())==0)
         {

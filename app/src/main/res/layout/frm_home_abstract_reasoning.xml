@@ -13,15 +13,17 @@
         android:background="@color/colorPrimaryDark">
         <ImageView
             android:id="@+id/img_back"
-            android:layout_margin="@dimen/s5"
+            android:layout_margin="5dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@mipmap/btn_back"/>
 
         <TextView
+            android:background="@drawable/custom_button_nextback"
             android:id="@+id/tv_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
             android:text="@string/back"
             android:textSize="@dimen/s16"
             android:textColor="@color/white"
@@ -36,11 +38,11 @@
             android:text="@string/ABSTRACT"
             android:textColor="@color/white"
             android:textSize="@dimen/s18"
-            android:id="@+id/textView" />
+            android:id="@+id/tv_abs" />
         <TextView
             android:visibility="invisible"
             android:id="@+id/tv_next"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:text="@string/next"
             android:textSize="@dimen/s16"
@@ -67,6 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/tv_ab"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
                 android:layout_width="match_parent"
@@ -83,16 +86,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/tv_quater"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="200dp"
+                android:layout_width="217dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/aquarter"
                 android:textSize="@dimen/s16" />
 
             <Switch
-                android:layout_marginLeft="@dimen/s10"
+                android:textOn="Yes"
+                android:textOff="No"
                 android:layout_gravity="center|right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -106,20 +111,38 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/tv_awatch"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="200dp"
+                android:layout_width="217dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/awatchand"
                 android:textSize="@dimen/s16" />
 
             <Switch
-                android:layout_marginLeft="@dimen/s10"
+                android:textOn="Yes"
+                android:textOff="No"
                 android:layout_gravity="center|right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/sw_awatch"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="@dimen/s20"
+            android:layout_marginLeft="@dimen/s16"
+            android:layout_marginRight="@dimen/s16"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_click"
+                android:gravity="center"
+                android:layout_margin="@dimen/s10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/clickthebutton"
+                android:textSize="@dimen/s16" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"

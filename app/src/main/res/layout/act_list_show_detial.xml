@@ -12,6 +12,7 @@
         android:gravity="center"
         android:background="@color/colorPrimaryDark">
         <ImageView
+            android:background="@drawable/custom_button_nextback"
             android:id="@+id/img_back"
             android:layout_margin="@dimen/s5"
             android:layout_width="wrap_content"
@@ -19,15 +20,18 @@
             android:src="@mipmap/btn_back"/>
 
         <TextView
+            android:background="@drawable/custom_button_nextback"
             android:id="@+id/tv_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
             android:text="@string/back"
             android:textSize="@dimen/s16"
             android:textColor="@color/white"
             />
 
         <TextView
+            android:visibility="invisible"
             android:layout_weight="1"
             android:gravity="center"
             android:layout_marginLeft="@dimen/s10"
@@ -36,13 +40,13 @@
             android:text="Detail"
             android:textColor="@color/white"
             android:textSize="@dimen/s18"
-            android:id="@+id/textView" />
+            android:id="@+id/tv" />
         <TextView
-            android:visibility="invisible"
-            android:id="@+id/tv_next"
+            android:id="@+id/tv_share"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/next"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Share"
             android:textSize="@dimen/s16"
             android:textColor="@color/white"
             />
@@ -64,19 +68,24 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/s15"
-            android:layout_marginRight="@dimen/s15"
-            android:layout_marginTop="@dimen/s15"
-            android:background="@mipmap/bg_transfer_h">
+            android:layout_marginLeft="@dimen/s20"
+            android:layout_marginRight="@dimen/s20"
+            android:layout_marginTop="@dimen/s20"
+            android:layout_marginBottom="@dimen/s10"
+            android:background="@drawable/custom_bg_score">
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:layout_weight="1"
+                    android:id="@+id/tv_1"
+                    android:layout_weight="0.8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/s15"
+                    android:layout_marginLeft="@dimen/s15"
+                    android:layout_marginRight="@dimen/s15"
+                    android:layout_marginBottom="@dimen/s5"
+                    android:layout_marginTop="@dimen/s8"
                     android:textSize="@dimen/s16"
                     android:textColor="@color/black"
                     android:text="@string/name"/>
@@ -85,7 +94,10 @@
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/s15"
+                    android:layout_marginLeft="@dimen/s15"
+                    android:layout_marginRight="@dimen/s15"
+                    android:layout_marginBottom="@dimen/s5"
+                    android:layout_marginTop="@dimen/s8"
                     android:textSize="@dimen/s16"
                     android:textColor="@color/black"
                     android:text="@string/name"/>
@@ -95,10 +107,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:layout_weight="1"
+                    android:id="@+id/tv_2"
+                    android:layout_weight="0.8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/s15"
+                    android:layout_marginLeft="@dimen/s15"
+                    android:layout_marginRight="@dimen/s15"
+                    android:layout_marginBottom="@dimen/s5"
+                    android:layout_marginTop="@dimen/s8"
                     android:textSize="@dimen/s16"
                     android:textColor="@color/black"
                     android:text="@string/IsPersonAlert"/>
@@ -107,7 +123,10 @@
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/s15"
+                    android:layout_marginLeft="@dimen/s15"
+                    android:layout_marginRight="@dimen/s15"
+                    android:layout_marginBottom="@dimen/s5"
+                    android:layout_marginTop="@dimen/s8"
                     android:textSize="@dimen/s16"
                     android:textColor="@color/black"
                     android:text="@string/name"/>
@@ -117,10 +136,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:layout_weight="1"
+                    android:id="@+id/tv_3"
+                    android:layout_weight="0.8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/s15"
+                    android:layout_marginLeft="@dimen/s15"
+                    android:layout_marginRight="@dimen/s15"
+                    android:layout_marginBottom="@dimen/s5"
+                    android:layout_marginTop="@dimen/s8"
                     android:textSize="@dimen/s16"
                     android:textColor="@color/black"
                     android:text="@string/Dateofbirth"/>
@@ -129,7 +152,10 @@
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/s15"
+                    android:layout_marginLeft="@dimen/s15"
+                    android:layout_marginRight="@dimen/s15"
+                    android:layout_marginBottom="@dimen/s5"
+                    android:layout_marginTop="@dimen/s8"
                     android:textSize="@dimen/s16"
                     android:textColor="@color/black"
                     android:text="@string/name"/>
@@ -139,19 +165,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:layout_weight="1"
+                    android:id="@+id/tv_4"
+                    android:layout_weight="0.8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/s15"
+                    android:layout_marginLeft="@dimen/s15"
+                    android:layout_marginRight="@dimen/s15"
+                    android:layout_marginBottom="@dimen/s5"
+                    android:layout_marginTop="@dimen/s8"
                     android:textSize="@dimen/s16"
                     android:textColor="@color/black"
-                    android:text="@string/LevelofEducation"/>
+                    android:text="Level of Education: "/>
                 <TextView
                     android:id="@+id/tv_education"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/s15"
+                    android:layout_marginLeft="@dimen/s15"
+                    android:layout_marginRight="@dimen/s15"
+                    android:layout_marginBottom="@dimen/s5"
+                    android:layout_marginTop="@dimen/s8"
                     android:textSize="@dimen/s16"
                     android:textColor="@color/black"
                     android:text="@string/name"/>
@@ -161,10 +194,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:layout_weight="1"
+                    android:id="@+id/tv_5"
+                    android:layout_weight="0.8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/s15"
+                    android:layout_marginLeft="@dimen/s15"
+                    android:layout_marginRight="@dimen/s15"
+                    android:layout_marginBottom="@dimen/s5"
+                    android:layout_marginTop="@dimen/s8"
                     android:textSize="@dimen/s16"
                     android:textColor="@color/black"
                     android:text="@string/sex"/>
@@ -173,7 +210,10 @@
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/s15"
+                    android:layout_marginLeft="@dimen/s15"
+                    android:layout_marginRight="@dimen/s15"
+                    android:layout_marginBottom="@dimen/s5"
+                    android:layout_marginTop="@dimen/s8"
                     android:textSize="@dimen/s16"
                     android:textColor="@color/black"
                     android:text="@string/sex"/>
@@ -183,10 +223,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:layout_weight="1"
+                    android:id="@+id/tv_6"
+                    android:layout_weight="0.8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/s15"
+                    android:layout_marginLeft="@dimen/s15"
+                    android:layout_marginRight="@dimen/s15"
+                    android:layout_marginBottom="@dimen/s5"
+                    android:layout_marginTop="@dimen/s8"
                     android:textSize="@dimen/s16"
                     android:textColor="@color/black"
                     android:text="@string/Ethnicity"/>
@@ -195,7 +239,10 @@
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/s15"
+                    android:layout_marginLeft="@dimen/s15"
+                    android:layout_marginRight="@dimen/s15"
+                    android:layout_marginBottom="@dimen/s5"
+                    android:layout_marginTop="@dimen/s8"
                     android:textSize="@dimen/s16"
                     android:textColor="@color/black"
                     android:text="@string/Ethnicity"/>
@@ -205,10 +252,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:layout_weight="1"
+                    android:id="@+id/tv_7"
+                    android:layout_weight="0.8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/s15"
+                    android:layout_marginLeft="@dimen/s15"
+                    android:layout_marginRight="@dimen/s15"
+                    android:layout_marginBottom="@dimen/s5"
+                    android:layout_marginTop="@dimen/s8"
                     android:textSize="@dimen/s16"
                     android:textColor="@color/black"
                     android:text="@string/Age"/>
@@ -217,7 +268,10 @@
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/s15"
+                    android:layout_marginLeft="@dimen/s15"
+                    android:layout_marginRight="@dimen/s15"
+                    android:layout_marginBottom="@dimen/s5"
+                    android:layout_marginTop="@dimen/s8"
                     android:textSize="@dimen/s16"
                     android:textColor="@color/black"
                     android:text="@string/Age"/>
@@ -227,10 +281,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:layout_weight="1"
+                    android:id="@+id/tv_8"
+                    android:layout_weight="0.8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/s15"
+                    android:layout_marginLeft="@dimen/s15"
+                    android:layout_marginRight="@dimen/s15"
+                    android:layout_marginBottom="@dimen/s5"
+                    android:layout_marginTop="@dimen/s8"
                     android:textSize="@dimen/s16"
                     android:textColor="@color/black"
                     android:text="@string/work"/>
@@ -239,25 +297,33 @@
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/s15"
+                    android:layout_marginLeft="@dimen/s15"
+                    android:layout_marginRight="@dimen/s15"
+                    android:layout_marginBottom="@dimen/s5"
+                    android:layout_marginTop="@dimen/s8"
                     android:textSize="@dimen/s16"
                     android:textColor="@color/black"
                     android:text="@string/work"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
-            android:layout_weight="4"
+            android:layout_weight="1.5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginRight="@dimen/s15"
-            android:layout_marginBottom="@dimen/s15"
-            android:layout_marginLeft="@dimen/s15"
-            android:background="@mipmap/bg_transfer_h">
+            android:layout_marginRight="@dimen/s20"
+            android:layout_marginBottom="@dimen/s20"
+            android:layout_marginLeft="@dimen/s20"
+            android:background="@drawable/custom_bg_score">
             <TextView
+                android:textSize="@dimen/s16"
+                android:textColor="@color/black"
                 android:id="@+id/tv_textcount"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/s15"
+                android:layout_marginLeft="@dimen/s15"
+                android:layout_marginTop="@dimen/s5"
+                android:layout_marginBottom="@dimen/s5"
+                android:layout_marginRight="@dimen/s15"
                 />
         </LinearLayout>
     </LinearLayout>

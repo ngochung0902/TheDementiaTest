@@ -1,5 +1,6 @@
 package com.company.qts.thedementiatest.fragment;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,10 +14,12 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.company.qts.thedementiatest.R;
+import com.company.qts.thedementiatest.helper.QTSConstrains;
 import com.company.qts.thedementiatest.helper.QTSHelp;
 
 public class FrmHome_Orientation extends Fragment {
-    private TextView tv_next,tv_back;
+    private TextView tv_next,tv_back,tv_orientation,
+            tv_ori,tv_whatday,tv_whatmonth,tv_year,tv_whatstate,tv_whois;
     private ImageView img_next,img_back;
     private Switch sw_whatday,sw_whatmonth,sw_year,sw_whatstate,sw_whois;
     private int whatday,whatmonth,year,whatsate,whois;
@@ -28,12 +31,36 @@ public class FrmHome_Orientation extends Fragment {
         img_next = (ImageView) view.findViewById(R.id.img_next);
         tv_back = (TextView) view.findViewById(R.id.tv_back);
         img_back = (ImageView) view.findViewById(R.id.img_back);
+        tv_orientation = (TextView) view.findViewById(R.id.tv_orientation);
+        tv_ori = (TextView) view.findViewById(R.id.tv_ori);
+        tv_whatday = (TextView) view.findViewById(R.id.tv_whatday);
+        tv_whatmonth = (TextView) view.findViewById(R.id.tv_whatmonth);
+        tv_year = (TextView) view.findViewById(R.id.tv_year);
+        tv_whatstate = (TextView) view.findViewById(R.id.tv_whatstate);
+        tv_whois = (TextView) view.findViewById(R.id.tv_whois);
+
+        Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),"fonts/Lato_Bold.ttf");
+        tv_orientation.setTypeface(customFontBold);
 
         sw_whatday = (Switch) view.findViewById(R.id.sw_whatday);
         sw_whatmonth = (Switch) view.findViewById(R.id.sw_whatmonth);
         sw_year = (Switch) view.findViewById(R.id.sw_year);
         sw_whatstate = (Switch) view.findViewById(R.id.sw_whatstate);
         sw_whois = (Switch) view.findViewById(R.id.sw_whois);
+
+        QTSHelp.setFontTV(getActivity(),tv_ori, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_next, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_back, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_whatday, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_whatmonth, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_year, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_whatstate, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_whois, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_whatday, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_whatmonth, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_whatstate, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_whois, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_year, QTSConstrains.FONT_LATO_REGULAR);
 
         backFrm();
 

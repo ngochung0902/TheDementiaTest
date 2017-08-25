@@ -1,5 +1,6 @@
 package com.company.qts.thedementiatest.fragment;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,10 +14,11 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.company.qts.thedementiatest.R;
+import com.company.qts.thedementiatest.helper.QTSConstrains;
 import com.company.qts.thedementiatest.helper.QTSHelp;
 
 public class FrmHome_Delayed_Recall extends Fragment {
-    private TextView tv_next,tv_back;
+    private TextView tv_next,tv_back,tv_delayedrecall,tv_de,tv_lamp,tv_phone,tv_chair,tv_car,tv_house,tv_click;
     private ImageView img_next,img_back;
     private Switch sw_lamp,sw_phone,sw_chair,sw_car,sw_house;
     private int lamp,phone,chair,car,house;
@@ -27,12 +29,38 @@ public class FrmHome_Delayed_Recall extends Fragment {
         tv_next = (TextView) view.findViewById(R.id.tv_next);
         img_next = (ImageView) view.findViewById(R.id.img_next);
         tv_back = (TextView) view.findViewById(R.id.tv_back);
+        tv_de = (TextView) view.findViewById(R.id.tv_de);
+        tv_lamp = (TextView) view.findViewById(R.id.tv_lamp);
+        tv_phone = (TextView) view.findViewById(R.id.tv_phone);
+        tv_chair = (TextView) view.findViewById(R.id.tv_chair);
+        tv_car = (TextView) view.findViewById(R.id.tv_car);
+        tv_house = (TextView) view.findViewById(R.id.tv_house);
+        tv_click = (TextView) view.findViewById(R.id.tv_click);
+        tv_delayedrecall = (TextView) view.findViewById(R.id.tv_delayedrecall);
+
+        Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),"fonts/Lato_Bold.ttf");
+        tv_delayedrecall.setTypeface(customFontBold);
         img_back = (ImageView) view.findViewById(R.id.img_back);
         sw_lamp = (Switch) view.findViewById(R.id.sw_lamp);
         sw_phone = (Switch) view.findViewById(R.id.sw_phone);
         sw_chair = (Switch) view.findViewById(R.id.sw_chair);
         sw_car = (Switch) view.findViewById(R.id.sw_car);
         sw_house = (Switch) view.findViewById(R.id.sw_house);
+
+        QTSHelp.setFontTV(getActivity(),tv_back, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_next, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_de, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_lamp, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_phone, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_chair, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_car, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_house, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_click, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_car, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_chair, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_house, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_lamp, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_phone, QTSConstrains.FONT_LATO_REGULAR);
 
         backFrm();
 

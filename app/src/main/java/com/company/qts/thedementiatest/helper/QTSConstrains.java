@@ -11,8 +11,8 @@ public class QTSConstrains
 {
     public static int Splash_Time = 3000;
     public static String SHAREPRE_ID = "hungQTS";
-
     public static Bitmap bmAvatar = null;
     public static File pictureFile = null;
-    public static String FONT_SANSPRO_LIGHT = "fonts/ProximaNovaBold.otf";
+    public static String FONT_LATO_REGULAR = "fonts/Lato_Regular.ttf";
+    public static String FONT_LATO_BOLD = "fonts/Lato_Bold.ttf";
 }

@@ -12,6 +12,7 @@
         android:gravity="center"
         android:background="@color/colorPrimaryDark">
         <ImageView
+            android:background="@drawable/custom_button_nextback"
             android:id="@+id/img_back"
             android:layout_margin="@dimen/s5"
             android:layout_width="wrap_content"
@@ -19,9 +20,11 @@
             android:src="@mipmap/btn_back"/>
 
         <TextView
+            android:background="@drawable/custom_button_nextback"
             android:id="@+id/tv_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
             android:text="@string/back"
             android:textSize="@dimen/s16"
             android:textColor="@color/white"
@@ -36,16 +39,19 @@
             android:text="@string/ATTENTION"
             android:textColor="@color/white"
             android:textSize="@dimen/s18"
-            android:id="@+id/textView" />
+            android:id="@+id/tv_attention" />
         <TextView
+            android:background="@drawable/custom_button_nextback"
             android:id="@+id/tv_next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center|right"
             android:text="@string/next"
             android:textSize="@dimen/s16"
             android:textColor="@color/white"
             />
         <ImageView
+            android:background="@drawable/custom_button_nextback"
             android:id="@+id/img_next"
             android:layout_margin="@dimen/s5"
             android:layout_width="wrap_content"
@@ -65,16 +71,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/tv_imgoing"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="180dp"
+                android:layout_width="210dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/Iamgoing"
                 android:textSize="@dimen/s16" />
 
             <Switch
-                android:layout_marginLeft="@dimen/s40"
+                android:textOn="Yes"
+                android:textOff="No"
+                android:layout_marginLeft="@dimen/s10"
                 android:layout_gravity="center|right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -90,16 +99,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/tv_nowsay"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="180dp"
+                android:layout_width="210dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/Nowsay"
                 android:textSize="@dimen/s16" />
 
             <Switch
-                android:layout_marginLeft="@dimen/s40"
+                android:textOn="Yes"
+                android:textOff="No"
+                android:layout_marginLeft="@dimen/s10"
                 android:layout_gravity="center|right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -112,6 +124,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/tv_serial"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/s16"
@@ -136,6 +149,8 @@
             android:layout_height="match_parent">
 
             <Switch
+                android:textOn="Yes"
+                android:textOff="No"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="93"
@@ -144,6 +159,8 @@
                 android:id="@+id/sw_93" />
 
             <Switch
+                android:textOn="Yes"
+                android:textOff="No"
                 android:textSize="@dimen/s16"
                 android:layout_margin="@dimen/s10"
                 android:layout_width="wrap_content"
@@ -152,6 +169,8 @@
                 android:id="@+id/sw_86" />
 
             <Switch
+                android:textOn="Yes"
+                android:textOff="No"
                 android:textSize="@dimen/s16"
                 android:layout_margin="@dimen/s10"
                 android:layout_width="wrap_content"
@@ -166,6 +185,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <Switch
+                android:textOn="Yes"
+                android:textOff="No"
                 android:textSize="@dimen/s16"
                 android:layout_margin="@dimen/s10"
                 android:layout_width="wrap_content"
@@ -174,6 +195,8 @@
                 android:id="@+id/sw_72" />
 
             <Switch
+                android:textOn="Yes"
+                android:textOff="No"
                 android:textSize="@dimen/s16"
                 android:layout_margin="@dimen/s10"
                 android:layout_width="wrap_content"

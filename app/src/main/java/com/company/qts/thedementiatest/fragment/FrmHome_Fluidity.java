@@ -1,5 +1,6 @@
 package com.company.qts.thedementiatest.fragment;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,10 +14,11 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.company.qts.thedementiatest.R;
+import com.company.qts.thedementiatest.helper.QTSConstrains;
 import com.company.qts.thedementiatest.helper.QTSHelp;
 
 public class FrmHome_Fluidity extends Fragment {
-    private TextView tv_next,tv_back;
+    private TextView tv_next,tv_back,tv_fluidity,tv_fl,tv_04,tv_59,tv_1015;
     private ImageView img_next,img_back;
     private Switch sw_04animals,sw_59animals,sw_1015animals;
     private int animals04,animals59,animals1015;
@@ -27,10 +29,28 @@ public class FrmHome_Fluidity extends Fragment {
         tv_next = (TextView) view.findViewById(R.id.tv_next);
         img_next = (ImageView) view.findViewById(R.id.img_next);
         tv_back = (TextView) view.findViewById(R.id.tv_back);
+        tv_fluidity = (TextView) view.findViewById(R.id.tv_fluidity);
+        tv_fl = (TextView) view.findViewById(R.id.tv_fl);
+        tv_04 = (TextView) view.findViewById(R.id.tv_04);
+        tv_59 = (TextView) view.findViewById(R.id.tv_59);
+        tv_1015 = (TextView) view.findViewById(R.id.tv_1015);
+
+        Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),"fonts/Lato_Bold.ttf");
+        tv_fluidity.setTypeface(customFontBold);
         img_back = (ImageView) view.findViewById(R.id.img_back);
         sw_04animals = (Switch) view.findViewById(R.id.sw_04animals);
         sw_59animals = (Switch) view.findViewById(R.id.sw_59animals);
         sw_1015animals = (Switch) view.findViewById(R.id.sw_1015animals);
+
+        QTSHelp.setFontTV(getActivity(),tv_back, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_next, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_fl, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_04, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_59, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_1015, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_04animals, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_59animals, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_1015animals, QTSConstrains.FONT_LATO_REGULAR);
 
         backFrm();
 
@@ -86,6 +106,13 @@ public class FrmHome_Fluidity extends Fragment {
             @Override
             public void onClick(View v) {
                 checkAnimals04();
+                if (sw_04animals.isChecked()==true)
+                {
+                    sw_59animals.setChecked(false);
+                    sw_1015animals.setChecked(false);
+                    animals59 =0;
+                    animals1015=0;
+                }
             }
         });
 
@@ -93,6 +120,13 @@ public class FrmHome_Fluidity extends Fragment {
             @Override
             public void onClick(View v) {
                 checkAnimals59();
+                if (sw_59animals.isChecked()==true)
+                {
+                    sw_04animals.setChecked(false);
+                    sw_1015animals.setChecked(false);
+                    animals04 =0;
+                    animals1015=0;
+                }
             }
         });
 
@@ -100,6 +134,13 @@ public class FrmHome_Fluidity extends Fragment {
             @Override
             public void onClick(View v) {
                 checkAnimals1015();
+                if (sw_1015animals.isChecked()==true)
+                {
+                    sw_04animals.setChecked(false);
+                    sw_59animals.setChecked(false);
+                    animals04 =0;
+                    animals59=0;
+                }
             }
         });
         return view;

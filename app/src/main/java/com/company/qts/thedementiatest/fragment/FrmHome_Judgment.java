@@ -1,5 +1,6 @@
 package com.company.qts.thedementiatest.fragment;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,10 +14,11 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.company.qts.thedementiatest.R;
+import com.company.qts.thedementiatest.helper.QTSConstrains;
 import com.company.qts.thedementiatest.helper.QTSHelp;
 
 public class FrmHome_Judgment extends Fragment {
-    private TextView tv_next,tv_back;
+    private TextView tv_next,tv_back,tv_judgment,tv_ww1,tv_ww2,tv_ju;
     private ImageView img_next,img_back;
     private Switch sw_whatwould1,sw_whatwould2;
     private int whatwould1,whatwould2;
@@ -26,10 +28,24 @@ public class FrmHome_Judgment extends Fragment {
         View view = inflater.inflate(R.layout.frm_home_judgment, container, false);
         tv_next = (TextView) view.findViewById(R.id.tv_next);
         img_next = (ImageView) view.findViewById(R.id.img_next);
+        tv_judgment = (TextView) view.findViewById(R.id.tv_judgment);
+        Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),"fonts/Lato_Bold.ttf");
+        tv_judgment.setTypeface(customFontBold);
         tv_back = (TextView) view.findViewById(R.id.tv_back);
         img_back = (ImageView) view.findViewById(R.id.img_back);
         sw_whatwould1 = (Switch) view.findViewById(R.id.sw_whatwould1);
         sw_whatwould2 = (Switch) view.findViewById(R.id.sw_whatwould2);
+        tv_ww1 = (TextView) view.findViewById(R.id.tv_ww1);
+        tv_ww2 = (TextView) view.findViewById(R.id.tv_ww2);
+        tv_ju = (TextView) view.findViewById(R.id.tv_ju);
+
+        QTSHelp.setFontTV(getActivity(),tv_back, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_next, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_ww1, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_ww2, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_ju, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_whatwould1, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_whatwould2, QTSConstrains.FONT_LATO_REGULAR);
 
         backFrm();
 

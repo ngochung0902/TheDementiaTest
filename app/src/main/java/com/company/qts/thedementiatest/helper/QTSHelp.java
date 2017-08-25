@@ -8,15 +8,18 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.graphics.Typeface;
 import android.media.ExifInterface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.company.qts.thedementiatest.R;
@@ -434,6 +437,18 @@ public class QTSHelp {
                 + "[0-9]{1,2}|25[0-5]|2[0-4][0-9])){1}|"
                 + "([a-zA-Z]+[\\w-]+\\.)+[a-zA-Z]{2,4})$").matcher(email).matches();
     }
+
+    ///////// Set Font
+    public static void setFontTV(Context context, TextView tv, String font) {
+        try {
+            Typeface face = Typeface.createFromAsset(context
+                    .getAssets(), font);
+            tv.setTypeface(face);
+        } catch (Exception e) {
+            Log.d("ERROR set FONTS", e.getMessage());
+        }
+    }
+
 //Examination
     //Name
     public static void setName(Context context, String name) {

@@ -34,21 +34,24 @@
             android:text="@string/examination"
             android:textColor="@color/white"
             android:textSize="@dimen/s18"
-            android:id="@+id/textView" />
-        <TextView
-            android:id="@+id/tv_next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/next"
-            android:textSize="@dimen/s16"
-            android:textColor="@color/white"
-            />
-        <ImageView
-            android:id="@+id/img_next"
-            android:layout_margin="@dimen/s5"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@mipmap/btn_next"/>
+            android:id="@+id/tv_examination" />
+            <TextView
+                android:background="@drawable/custom_button_nextback"
+                android:id="@+id/tv_next"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="@string/next"
+                android:gravity="center|right"
+                android:textSize="@dimen/s16"
+                android:textColor="@color/white"
+                />
+            <ImageView
+                android:background="@drawable/custom_button_nextback"
+                android:id="@+id/img_next"
+                android:layout_margin="@dimen/s5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/btn_next"/>
     </LinearLayout>
 
     <LinearLayout
@@ -57,15 +60,34 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_ex"
+                android:textSize="@dimen/s16"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:layout_gravity="top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textex"
+                />
+        </LinearLayout>
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-
+                android:id="@+id/tv_showname"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="120dp"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/name"
@@ -91,15 +113,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/tv_showisperson"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="120dp"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/IsPersonAlert"
                 android:textSize="@dimen/s16" />
 
             <Switch
+                android:textOn="Yes"
+                android:textOff="No"
                 android:layout_marginLeft="@dimen/s10"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
@@ -112,15 +137,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/tv_showdate"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="120dp"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/Dateofbirth"
                 android:textSize="@dimen/s16" />
             <TextView
-                android:hint="@string/Dateofbirth"
+                android:hint="Date of birth"
                 android:textColor="@color/black"
                 android:gravity="center|left"
                 android:id="@+id/tv_dateofbirth"
@@ -138,9 +164,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/tv_showlovel"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="120dp"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/LevelofEducation"
@@ -164,20 +191,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/tv_showsex"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="120dp"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/sex"
                 android:textSize="@dimen/s16" />
             <Switch
+                android:textOn="Male"
+                android:textOff="Female"
                 android:layout_marginLeft="@dimen/s10"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/sw_sex" />
             <TextView
+                android:visibility="gone"
                 android:id="@+id/tv_sex"
                 android:layout_marginTop="@dimen/s10"
                 android:layout_marginBottom="@dimen/s10"
@@ -196,15 +227,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/tv_showethnicity"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="120dp"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/Ethnicity"
                 android:textSize="@dimen/s16" />
             <TextView
-                android:hint="@string/Ethnicity"
+                android:hint="Ethnicity"
                 android:textColor="@color/black"
                 android:gravity="center|left"
                 android:id="@+id/tv_ethnicity"
@@ -222,16 +254,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/tv_showage"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="120dp"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/Age"
                 android:textSize="@dimen/s16" />
-            <EditText
+            <TextView
                 android:id="@+id/edt_age"
-                android:hint="@string/Age"
+                android:hint="Age"
                 android:textColor="@color/black"
                 android:gravity="center|left"
                 android:padding="@dimen/s5"
@@ -239,10 +272,7 @@
                 android:layout_margin="@dimen/s10"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@mipmap/bg_textfield_h"
-                android:imeOptions="actionDone"
-                android:maxLines="1"
-                android:inputType="number"/>
+                android:background="@mipmap/bg_textfield_h"/>
         </LinearLayout>
 
         <LinearLayout
@@ -250,15 +280,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/tv_showwork"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="120dp"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/work"
                 android:textSize="@dimen/s16" />
             <TextView
-                android:hint="@string/work"
+                android:hint="Work"
                 android:textColor="@color/black"
                 android:gravity="center|left"
                 android:id="@+id/tv_work"

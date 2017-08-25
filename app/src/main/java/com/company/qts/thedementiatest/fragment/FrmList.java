@@ -1,11 +1,13 @@
 package com.company.qts.thedementiatest.fragment;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +20,7 @@ import com.company.qts.thedementiatest.R;
 import com.company.qts.thedementiatest.activity.ActList_ShowDetial;
 import com.company.qts.thedementiatest.adapter.AdapterUser;
 import com.company.qts.thedementiatest.database.SQLiteSource;
+import com.company.qts.thedementiatest.helper.QTSConstrains;
 import com.company.qts.thedementiatest.helper.QTSHelp;
 import com.company.qts.thedementiatest.object.User;
 
@@ -25,7 +28,7 @@ import java.util.ArrayList;
 
 public class FrmList extends Fragment {
     private ListView lv_list;
-    private TextView tv_noitem;
+    private TextView tv_noitem,tv_list;
     private SQLiteSource datasource;
     private ArrayList<User> arr = new ArrayList<>();
     @Nullable
@@ -34,7 +37,9 @@ public class FrmList extends Fragment {
         View view = inflater.inflate(R.layout.frm_list, container, false);
         lv_list = (ListView) view.findViewById(R.id.lv_list);
         tv_noitem = (TextView) view.findViewById(R.id.tv_noitem);
+        tv_list = (TextView) view.findViewById(R.id.tv_list);
         datasource = new SQLiteSource(getActivity());
+        QTSHelp.setFontTV(getActivity(),tv_list, QTSConstrains.FONT_LATO_BOLD);
         datasource.open();
 
         lv_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -52,7 +57,7 @@ public class FrmList extends Fragment {
                 intent.putExtra("count", arr.get(position).count);
                 intent.putExtra("textcount", arr.get(position).textcount);
                 intent.putExtra("work", arr.get(position).work);
-                Log.e("database",arr.get(position).id+"");
+                Log.e("database",arr.get(position).id +"");
                 Log.e("database",arr.get(position).name+"");
                 Log.e("database",arr.get(position).person+"");
                 Log.e("database",arr.get(position).dateofbirth+"");
@@ -69,9 +74,25 @@ public class FrmList extends Fragment {
 
         lv_list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, final long id) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("The Dementia Test");
+                builder.setMessage("Are you sure you want to delete?");
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        datasource.deleteNote(arr.get(position).id);
+                        viewAllNotes();
+                    }
+                });
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
 
-                return false;
+                    }
+                });
+                builder.show();
+                return true;
             }
         });
 

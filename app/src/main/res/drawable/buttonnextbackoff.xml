@@ -1,0 +1,9 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+
+    <gradient android:startColor="#FF008FC6"
+        android:centerColor="#FF0386B7"
+        android:endColor="#FF008FC6"
+        android:angle="90"/>
+    <!-- corners- bán kính bo tròn 4 góc -->
+    <!-- padding: các thuộc tính canh chỉnh trái, phải, trên, dưới -->
+</shape>

@@ -1,5 +1,6 @@
 package com.company.qts.thedementiatest.fragment;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,10 +15,11 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.company.qts.thedementiatest.R;
+import com.company.qts.thedementiatest.helper.QTSConstrains;
 import com.company.qts.thedementiatest.helper.QTSHelp;
 
 public class FrmHome_Abstract_Reasoning extends Fragment {
-    private TextView tv_back;
+    private TextView tv_back,tv_abs,tv_ab,tv_quater,tv_awatch,tv_click;
     private ImageView img_back;
     private Button bt_calculatescore;
     private Switch sw_awatch,sw_aqua;
@@ -29,8 +31,24 @@ public class FrmHome_Abstract_Reasoning extends Fragment {
         bt_calculatescore = (Button) view.findViewById(R.id.bt_calculatescore);
         tv_back = (TextView) view.findViewById(R.id.tv_back);
         img_back = (ImageView) view.findViewById(R.id.img_back);
+        tv_abs = (TextView) view.findViewById(R.id.tv_abs);
+        Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),"fonts/Lato_Bold.ttf");
+        bt_calculatescore.setTypeface(customFontBold);
+        tv_abs.setTypeface(customFontBold);
         sw_aqua = (Switch) view.findViewById(R.id.sw_aqua);
         sw_awatch = (Switch) view.findViewById(R.id.sw_awatch);
+        tv_ab = (TextView) view.findViewById(R.id.tv_ab);
+        tv_quater = (TextView) view.findViewById(R.id.tv_quater);
+        tv_awatch = (TextView) view.findViewById(R.id.tv_awatch);
+        tv_click = (TextView) view.findViewById(R.id.tv_click);
+
+        QTSHelp.setFontTV(getActivity(),tv_back, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_ab, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_quater, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_awatch, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_click, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_aqua, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_awatch, QTSConstrains.FONT_LATO_REGULAR);
 
         backFrm();
 
@@ -98,17 +116,19 @@ public class FrmHome_Abstract_Reasoning extends Fragment {
                 if (QTSHelp.getListento(getActivity())==1)
                     dem = dem +1;
 
+                if (QTSHelp.getBeginningWith(getActivity())==1)
+                    dem=dem+1;
                 if (QTSHelp.getTheCat(getActivity())==1)
                     dem = dem +1;
                 if (QTSHelp.getSteveis(getActivity())==1)
                     dem = dem +1;
 
                 if (QTSHelp.getAnimals04(getActivity())==1)
-                    dem = dem +1;
+                    dem = dem +0;
                 if (QTSHelp.getAnimals59(getActivity())==1)
                     dem = dem +1;
                 if (QTSHelp.getAnimals1015(getActivity())==1)
-                    dem = dem +1;
+                    dem = dem +2;
 
                 if (QTSHelp.getTamHai(getActivity())==1)
                     dem = dem +1;

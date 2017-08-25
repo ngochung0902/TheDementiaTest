@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Toast;
 
 import com.company.qts.thedementiatest.object.User;
 
@@ -56,7 +55,6 @@ public class SQLiteSource {
     public void deleteNote(int id)
     {
         sqLiteDatabase.delete(SQLite.TABLE_NAME, SQLite.COLUMN_ID + "=" + id,null);
-        Toast.makeText(this.context,"delete note success",Toast.LENGTH_LONG).show();
     }
 
 //    public void updatephone(int id, String new_phone){

@@ -2,12 +2,14 @@ package com.company.qts.thedementiatest.fragment;
 
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +20,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.company.qts.thedementiatest.R;
+import com.company.qts.thedementiatest.helper.QTSConstrains;
 import com.company.qts.thedementiatest.helper.QTSHelp;
 
 import java.text.SimpleDateFormat;
@@ -26,18 +29,40 @@ import java.util.Locale;
 
 public class FrmHome_Examination extends Fragment {
     private ImageView img_next;
-    private TextView tv_next,tv_dateofbirth,tv_Levelofeducation,tv_sex,tv_ethnicity,tv_work;
+    private TextView tv_next,tv_dateofbirth,tv_Levelofeducation,tv_sex,tv_ethnicity,tv_work,edt_age,
+            tv_examination,tv_ex,
+            tv_showname,tv_showisperson,tv_showdate,tv_showlovel,tv_showsex,tv_showethnicity,tv_showage,work;
     private Switch sw_sex,sw_person;
-    private EditText edt_name,edt_age;
-    private int sex ,ispeson ;
+    private EditText edt_name;
+    private int sex ,ispeson, myyear,yearmy;
+    private final int yearnow = Calendar.getInstance().get(Calendar.YEAR);
 
     private DatePickerDialog fromDatePickerDialog;
     private SimpleDateFormat dateFormatter;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.frm_home_examination, container, false);
         img_next = (ImageView) view.findViewById(R.id.img_next);
+        tv_examination = (TextView) view.findViewById(R.id.tv_examination);
+
+        Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),"fonts/Lato_Bold.ttf");
+        Typeface customFontR= Typeface.createFromAsset(getActivity().getAssets(),"fonts/Lato_Regular.ttf");
+        tv_examination.setTypeface(customFontBold);
+
+        tv_showname = (TextView) view.findViewById(R.id.tv_showname);
+        tv_showisperson = (TextView) view.findViewById(R.id.tv_showisperson);
+        tv_showdate = (TextView) view.findViewById(R.id.tv_showdate);
+        tv_showlovel = (TextView) view.findViewById(R.id.tv_showlovel);
+        tv_showsex = (TextView) view.findViewById(R.id.tv_showsex);
+        tv_showethnicity = (TextView) view.findViewById(R.id.tv_showethnicity);
+        tv_showage = (TextView) view.findViewById(R.id.tv_showage);
+        work = (TextView) view.findViewById(R.id.tv_showwork);
+
+
+
+
         tv_next = (TextView) view.findViewById(R.id.tv_next);
         tv_dateofbirth = (TextView) view.findViewById(R.id.tv_dateofbirth);
         tv_Levelofeducation = (TextView) view.findViewById(R.id.tv_Levelofeducation);
@@ -47,17 +72,45 @@ public class FrmHome_Examination extends Fragment {
         tv_ethnicity = (TextView) view.findViewById(R.id.tv_ethnicity);
         tv_work = (TextView) view.findViewById(R.id.tv_work);
         edt_name = (EditText) view.findViewById(R.id.edt_name);
-        edt_age = (EditText) view.findViewById(R.id.edt_age);
-        dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
+        edt_age = (TextView) view.findViewById(R.id.edt_age);
+        dateFormatter = new SimpleDateFormat("MM-dd-yyyy", Locale.US);
+        tv_ex = (TextView) view.findViewById(R.id.tv_ex);
         setDateTimeField();
+
+        tv_dateofbirth.setTypeface(customFontR);
+        tv_ethnicity.setTypeface(customFontR);
+        tv_Levelofeducation.setTypeface(customFontR);
+        tv_next.setTypeface(customFontR);
+        tv_sex.setTypeface(customFontR);
+        tv_work.setTypeface(customFontR);
+        tv_ex.setTypeface(customFontR);
+        edt_age.setTypeface(customFontR);
+        edt_name.setTypeface(customFontR);
+        sw_person.setTypeface(customFontR);
+        sw_sex.setTypeface(customFontR);
+
+        QTSHelp.setFontTV(getActivity(),tv_showname, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_showisperson, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_showdate, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_showlovel, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_showsex, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_showethnicity, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_showage, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),work, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_next, QTSConstrains.FONT_LATO_REGULAR);
+
         tv_dateofbirth.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                fromDatePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
                 fromDatePickerDialog.show();
+                yearmy =fromDatePickerDialog.getDatePicker().getYear();
             }
         });
 
         tv_sex.setText("Female");
+
 
         backFrm();
         img_next.setOnClickListener(new View.OnClickListener() {
@@ -126,6 +179,8 @@ public class FrmHome_Examination extends Fragment {
         tv_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.e("DateTime",myyear+"myyear");
+                Log.e("DateTime",yearmy+"yearmy");
                 if (edt_name.getText().toString().trim().length()==0)
                 {
                     QTSHelp.showpPopupMessage(getActivity(), getResources().getString(R.string.nameerror));
@@ -228,7 +283,11 @@ public class FrmHome_Examination extends Fragment {
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                 Calendar newDate = Calendar.getInstance();
                 newDate.set(year, monthOfYear, dayOfMonth);
+
                 tv_dateofbirth.setText(dateFormatter.format(newDate.getTime()));
+                myyear = year;
+                int b = yearnow - year;
+                edt_age.setText(b+"");
             }
 
         },newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
@@ -266,7 +325,7 @@ public class FrmHome_Examination extends Fragment {
     }
 
     private void selectEthnicity(){
-        final CharSequence[] itemEthnicity = {"White", "Black", "Yellow"};
+        final CharSequence[] itemEthnicity = {"Black","White","Hispanic","Asian/parafic Islander", "Native American","Other"};
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("SELECT ETHNICITY");
         builder.setItems(itemEthnicity, new DialogInterface.OnClickListener() {
