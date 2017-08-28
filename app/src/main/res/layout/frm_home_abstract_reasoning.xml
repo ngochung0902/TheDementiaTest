@@ -19,7 +19,6 @@
             android:src="@mipmap/btn_back"/>
 
         <TextView
-            android:background="@drawable/custom_button_nextback"
             android:id="@+id/tv_back"
             android:layout_width="50dp"
             android:layout_height="match_parent"

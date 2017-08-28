@@ -1,13 +1,17 @@
 package com.company.qts.thedementiatest.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.company.qts.thedementiatest.R;
+import com.company.qts.thedementiatest.helper.QTSConstrains;
 import com.company.qts.thedementiatest.object.User;
 
 import java.util.ArrayList;
@@ -46,7 +50,11 @@ public class AdapterUser extends BaseAdapter {
         View rowView = (View)inflater.inflate(R.layout.line_lv, parent, false);
 
         TextView tv_name = (TextView) rowView.findViewById(R.id.tv_name);
-
+        ImageView img = (ImageView) rowView.findViewById(R.id.img);
+        int color = Color.parseColor("#A8A8A8"); //The color u want
+        img.setColorFilter(color);
+        Typeface customFontBold= Typeface.createFromAsset(context.getAssets(), QTSConstrains.FONT_LATO_REGULAR);
+        tv_name.setTypeface(customFontBold);
         User model = arr.get(position);
         tv_name.setText(model.getName());
 

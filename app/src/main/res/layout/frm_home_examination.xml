@@ -36,7 +36,6 @@
             android:textSize="@dimen/s18"
             android:id="@+id/tv_examination" />
             <TextView
-                android:background="@drawable/custom_button_nextback"
                 android:id="@+id/tv_next"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
@@ -46,7 +45,6 @@
                 android:textColor="@color/white"
                 />
             <ImageView
-                android:background="@drawable/custom_button_nextback"
                 android:id="@+id/img_next"
                 android:layout_margin="@dimen/s5"
                 android:layout_width="wrap_content"
@@ -151,6 +149,7 @@
                 android:gravity="center|left"
                 android:id="@+id/tv_dateofbirth"
                 android:textSize="@dimen/s16"
+                android:maxLines="1"
                 android:layout_margin="@dimen/s10"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -173,6 +172,7 @@
                 android:text="@string/LevelofEducation"
                 android:textSize="@dimen/s16" />
             <TextView
+                android:maxLines="2"
                 android:hint="Level of Education"
                 android:textColor="@color/black"
                 android:gravity="center|left"
@@ -236,6 +236,7 @@
                 android:text="@string/Ethnicity"
                 android:textSize="@dimen/s16" />
             <TextView
+                android:maxLines="2"
                 android:hint="Ethnicity"
                 android:textColor="@color/black"
                 android:gravity="center|left"

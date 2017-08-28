@@ -12,7 +12,6 @@
         android:gravity="center"
         android:background="@color/colorPrimaryDark">
         <ImageView
-            android:background="@drawable/custom_button_nextback"
             android:id="@+id/img_back"
             android:layout_margin="@dimen/s5"
             android:layout_width="wrap_content"
@@ -20,7 +19,6 @@
             android:src="@mipmap/btn_back"/>
 
         <TextView
-            android:background="@drawable/custom_button_nextback"
             android:id="@+id/tv_back"
             android:layout_width="50dp"
             android:layout_height="match_parent"
@@ -78,7 +76,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/s30"
                     android:layout_marginLeft="@dimen/s30"
-                    android:layout_marginRight="@dimen/s10"
                     android:text="@string/yourscore"
                     android:textSize="@dimen/s18"
                     />
@@ -88,7 +85,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/s30"
-                    android:layout_marginLeft="@dimen/s20"
+                    android:layout_marginLeft="@dimen/s5"
                     android:layout_marginRight="@dimen/s10"
                     android:textSize="@dimen/s18"
                     android:text="Text"

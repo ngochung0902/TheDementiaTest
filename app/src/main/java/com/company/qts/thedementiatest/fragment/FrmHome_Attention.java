@@ -1,5 +1,7 @@
 package com.company.qts.thedementiatest.fragment;
 
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,8 +9,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -33,7 +37,7 @@ public class FrmHome_Attention extends Fragment {
         tv_imgoing = (TextView) view.findViewById(R.id.tv_imgoing);
         tv_nowsay = (TextView) view.findViewById(R.id.tv_nowsay);
         tv_serial = (TextView) view.findViewById(R.id.tv_serial);
-        Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),"fonts/Lato_Bold.ttf");
+        Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),QTSConstrains.FONT_LATO_BOLD);
         tv_attention.setTypeface(customFontBold);
         img_back = (ImageView) view.findViewById(R.id.img_back);
         sw_imgoing = (Switch) view.findViewById(R.id.sw_imgoing);
@@ -126,9 +130,23 @@ public class FrmHome_Attention extends Fragment {
             }
         });
 
+        sw_imgoing.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkImGoing();
+            }
+        });
+
         sw_nowsay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                checkNowSay();
+            }
+        });
+
+        sw_nowsay.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkNowSay();
             }
         });
@@ -140,9 +158,23 @@ public class FrmHome_Attention extends Fragment {
             }
         });
 
+        sw_93.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkChinBa();
+            }
+        });
+
         sw_72.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                checkBayHai();
+            }
+        });
+
+        sw_72.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkBayHai();
             }
         });
@@ -154,9 +186,23 @@ public class FrmHome_Attention extends Fragment {
             }
         });
 
+        sw_86.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkTamSau();
+            }
+        });
+
         sw_65.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                checkSauLam();
+            }
+        });
+
+        sw_65.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkSauLam();
             }
         });
@@ -165,6 +211,91 @@ public class FrmHome_Attention extends Fragment {
             @Override
             public void onClick(View v) {
                 checkBayChin();
+            }
+        });
+
+        sw_79.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkBayChin();
+            }
+        });
+
+        img_back.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        img_back.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        v.invalidate();
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        img_back.clearColorFilter();
+                        v.invalidate();
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
+
+        tv_back.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        int color = Color.parseColor("#A8A8A8");
+                        img_back.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
+                        v.invalidate();
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        img_back.clearColorFilter();
+                        v.invalidate();
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
+
+        img_next.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        img_next.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        v.invalidate();
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        img_next.clearColorFilter();
+                        v.invalidate();
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
+
+        tv_next.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        int color = Color.parseColor("#A8A8A8");
+                        img_next.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
+                        v.invalidate();
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        img_next.clearColorFilter();
+                        v.invalidate();
+                        break;
+                    }
+                }
+                return false;
             }
         });
 

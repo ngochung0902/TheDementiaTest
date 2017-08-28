@@ -32,6 +32,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/custom_bg_score">
             <TextView
+                android:id="@+id/tv_au"
                 android:textColorLink="@color/colorPrimaryDark"
                 android:autoLink="email|web"
                 android:textAppearance="?android:attr/textAppearanceSmall"

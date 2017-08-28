@@ -2,6 +2,8 @@ package com.company.qts.thedementiatest.fragment;
 
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,8 +13,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -47,8 +51,8 @@ public class FrmHome_Examination extends Fragment {
         img_next = (ImageView) view.findViewById(R.id.img_next);
         tv_examination = (TextView) view.findViewById(R.id.tv_examination);
 
-        Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),"fonts/Lato_Bold.ttf");
-        Typeface customFontR= Typeface.createFromAsset(getActivity().getAssets(),"fonts/Lato_Regular.ttf");
+        Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),QTSConstrains.FONT_LATO_BOLD);
+        Typeface customFontR= Typeface.createFromAsset(getActivity().getAssets(),QTSConstrains.FONT_LATO_REGULAR);
         tv_examination.setTypeface(customFontBold);
 
         tv_showname = (TextView) view.findViewById(R.id.tv_showname);
@@ -98,6 +102,10 @@ public class FrmHome_Examination extends Fragment {
         QTSHelp.setFontTV(getActivity(),tv_showage, QTSConstrains.FONT_LATO_REGULAR);
         QTSHelp.setFontTV(getActivity(),work, QTSConstrains.FONT_LATO_REGULAR);
         QTSHelp.setFontTV(getActivity(),tv_next, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tv_ex,QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_person,QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),sw_sex,QTSConstrains.FONT_LATO_REGULAR);
+
 
         tv_dateofbirth.setOnClickListener(new View.OnClickListener() {
 
@@ -247,6 +255,14 @@ public class FrmHome_Examination extends Fragment {
                 selectEducation();
             }
         });
+
+        sw_sex.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                selectSex();
+            }
+        });
+
         sw_sex.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -259,6 +275,13 @@ public class FrmHome_Examination extends Fragment {
                 isPerson();
             }
         });
+        sw_person.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                isPerson();
+            }
+        });
+
         tv_ethnicity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -270,6 +293,45 @@ public class FrmHome_Examination extends Fragment {
             @Override
             public void onClick(View v) {
                 selectWork();
+            }
+        });
+
+        img_next.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        img_next.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        v.invalidate();
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        img_next.clearColorFilter();
+                        v.invalidate();
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
+
+        tv_next.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        int color = Color.parseColor("#A8A8A8");
+                        img_next.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
+                        v.invalidate();
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        img_next.clearColorFilter();
+                        v.invalidate();
+                        break;
+                    }
+                }
+                return false;
             }
         });
 
@@ -294,7 +356,7 @@ public class FrmHome_Examination extends Fragment {
     }
 
     private void selectEducation() {
-        final CharSequence[] itemEducation = {"Preschool", "Primary education","Middle school","Secondary school","Post-secondary education"};
+        final CharSequence[] itemEducation = {"Less than High School", "High School","Some College and Technical","College Degree","Profestional Degree"};
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("SELECT EDUCATION");
         builder.setItems(itemEducation, new DialogInterface.OnClickListener() {
@@ -338,7 +400,7 @@ public class FrmHome_Examination extends Fragment {
     }
 
     private void selectWork(){
-        final CharSequence[] itemWork= {"Prof", "Tech", "Mgr","Cler","Saled","Skilled","SemiSkilled","Unskilled"};
+        final CharSequence[] itemWork= {"Profesion/Technical", "Managemnt", "Clerical","Sales","Skilled","Semi-Skilled","Unskilled"};
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("SELECT WORK");
         builder.setItems(itemWork, new DialogInterface.OnClickListener() {

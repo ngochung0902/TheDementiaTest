@@ -136,7 +136,7 @@ public class FrmList extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        datasource.close();
+        //datasource.close();
     }
 
     @Override

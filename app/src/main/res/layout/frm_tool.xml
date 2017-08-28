@@ -17,7 +17,7 @@
             android:layout_marginLeft="@dimen/s10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tool"
+            android:text="TOOL"
             android:textColor="@color/white"
             android:textSize="@dimen/s18"
             android:id="@+id/tv_tool" />
@@ -37,6 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent">
                 <TextView
+                    android:id="@+id/tv_to"
                     android:textColor="@color/black"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

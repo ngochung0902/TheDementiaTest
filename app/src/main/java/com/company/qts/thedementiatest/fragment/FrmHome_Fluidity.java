@@ -1,5 +1,7 @@
 package com.company.qts.thedementiatest.fragment;
 
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,8 +9,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -35,7 +39,7 @@ public class FrmHome_Fluidity extends Fragment {
         tv_59 = (TextView) view.findViewById(R.id.tv_59);
         tv_1015 = (TextView) view.findViewById(R.id.tv_1015);
 
-        Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),"fonts/Lato_Bold.ttf");
+        Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),QTSConstrains.FONT_LATO_BOLD);
         tv_fluidity.setTypeface(customFontBold);
         img_back = (ImageView) view.findViewById(R.id.img_back);
         sw_04animals = (Switch) view.findViewById(R.id.sw_04animals);
@@ -116,9 +120,37 @@ public class FrmHome_Fluidity extends Fragment {
             }
         });
 
+        sw_04animals.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkAnimals04();
+                if (sw_04animals.isChecked()==true)
+                {
+                    sw_59animals.setChecked(false);
+                    sw_1015animals.setChecked(false);
+                    animals59 =0;
+                    animals1015=0;
+                }
+            }
+        });
+
         sw_59animals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                checkAnimals59();
+                if (sw_59animals.isChecked()==true)
+                {
+                    sw_04animals.setChecked(false);
+                    sw_1015animals.setChecked(false);
+                    animals04 =0;
+                    animals1015=0;
+                }
+            }
+        });
+
+        sw_59animals.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkAnimals59();
                 if (sw_59animals.isChecked()==true)
                 {
@@ -143,6 +175,100 @@ public class FrmHome_Fluidity extends Fragment {
                 }
             }
         });
+
+
+        sw_1015animals.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkAnimals1015();
+                if (sw_1015animals.isChecked()==true)
+                {
+                    sw_04animals.setChecked(false);
+                    sw_59animals.setChecked(false);
+                    animals04 =0;
+                    animals59=0;
+                }
+            }
+        });
+
+        img_back.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        img_back.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        v.invalidate();
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        img_back.clearColorFilter();
+                        v.invalidate();
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
+
+        tv_back.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        int color = Color.parseColor("#A8A8A8");
+                        img_back.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
+                        v.invalidate();
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        img_back.clearColorFilter();
+                        v.invalidate();
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
+
+        img_next.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        img_next.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        v.invalidate();
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        img_next.clearColorFilter();
+                        v.invalidate();
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
+
+        tv_next.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        int color = Color.parseColor("#A8A8A8");
+                        img_next.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
+                        v.invalidate();
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        img_next.clearColorFilter();
+                        v.invalidate();
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
+
         return view;
     }
 

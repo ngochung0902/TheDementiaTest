@@ -12,7 +12,6 @@
         android:gravity="center"
         android:background="@color/colorPrimaryDark">
         <ImageView
-            android:background="@drawable/custom_button_nextback"
             android:id="@+id/img_back"
             android:layout_margin="@dimen/s5"
             android:layout_width="wrap_content"
@@ -20,7 +19,6 @@
             android:src="@mipmap/btn_back"/>
 
         <TextView
-            android:background="@drawable/custom_button_nextback"
             android:id="@+id/tv_back"
             android:layout_width="50dp"
             android:layout_height="match_parent"
@@ -41,7 +39,6 @@
             android:textSize="@dimen/s18"
             android:id="@+id/tv_language" />
         <TextView
-            android:background="@drawable/custom_button_nextback"
             android:id="@+id/tv_next"
             android:layout_width="50dp"
             android:layout_height="match_parent"
@@ -51,7 +48,6 @@
             android:textColor="@color/white"
             />
         <ImageView
-            android:background="@drawable/custom_button_nextback"
             android:id="@+id/img_next"
             android:layout_margin="@dimen/s5"
             android:layout_width="wrap_content"
