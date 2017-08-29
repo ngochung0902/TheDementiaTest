@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.company.qts.thedementiatest">
+    package="com.thedementiatest">
 
     <application
         android:allowBackup="true"
@@ -8,14 +8,14 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.ActSplash">
+        <activity android:name="thedementiatest.activity.ActSplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.ActHome" />
+        <activity android:name="thedementiatest.activity.ActHome" />
         <activity android:name=".fragment.FrmHome_Examination" />
         <activity android:name=".fragment.FrmHome_Orientation" />
         <activity android:name=".fragment.FrmHome_Attention" />
@@ -31,7 +31,7 @@
         <activity android:name=".fragment.FrmInstructions" />
         <activity android:name=".fragment.FrmTool" />
         <activity android:name=".fragment.FrmList" />
-        <activity android:name=".activity.ActList_ShowDetial"></activity>
+        <activity android:name="thedementiatest.activity.ActList_ShowDetial"></activity>
     </application>
 
 </manifest>

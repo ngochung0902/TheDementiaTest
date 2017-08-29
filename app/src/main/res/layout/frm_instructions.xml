@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.company.qts.thedementiatest.fragment.FrmInstructions">
+    tools:context="thedementiatest.fragment.FrmInstructions">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"

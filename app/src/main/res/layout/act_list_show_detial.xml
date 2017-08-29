@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/s20"
             android:layout_marginRight="@dimen/s20"
-            android:layout_marginTop="@dimen/s10"
+            android:layout_marginTop="@dimen/s20"
             android:layout_marginBottom="@dimen/s10"
             android:background="@drawable/custom_bg_score">
             <LinearLayout
@@ -89,6 +89,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/s16"
+                    android:layout_margin="@dimen/s5"
                     android:textColor="@color/black"
                     android:text="@string/name"/>
             </LinearLayout>
