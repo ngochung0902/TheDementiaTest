@@ -172,7 +172,7 @@
                 android:text="@string/LevelofEducation"
                 android:textSize="@dimen/s16" />
             <TextView
-                android:maxLines="2"
+                android:maxLines="1"
                 android:hint="Level of Education"
                 android:textColor="@color/black"
                 android:gravity="center|left"
@@ -236,7 +236,7 @@
                 android:text="@string/Ethnicity"
                 android:textSize="@dimen/s16" />
             <TextView
-                android:maxLines="2"
+                android:maxLines="1"
                 android:hint="Ethnicity"
                 android:textColor="@color/black"
                 android:gravity="center|left"
