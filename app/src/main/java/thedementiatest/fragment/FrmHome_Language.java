@@ -78,6 +78,7 @@ public class FrmHome_Language extends Fragment {
                 QTSHelp.setBeginningWith(getActivity(),beginningwith);
                 QTSHelp.setTheCat(getActivity(),thecat);
                 QTSHelp.setSteveis(getActivity(),steveis);
+                QTSHelp.setNum(getActivity(),5);
             }
         });
 
@@ -93,6 +94,7 @@ public class FrmHome_Language extends Fragment {
                 QTSHelp.setBeginningWith(getActivity(),beginningwith);
                 QTSHelp.setTheCat(getActivity(),thecat);
                 QTSHelp.setSteveis(getActivity(),steveis);
+                QTSHelp.setNum(getActivity(),5);
             }
         });
 
@@ -104,6 +106,7 @@ public class FrmHome_Language extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment3);
                 fragmentTransaction.commit();
+                QTSHelp.setNum(getActivity(),3);
             }
         });
 
@@ -115,6 +118,7 @@ public class FrmHome_Language extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment3);
                 fragmentTransaction.commit();
+                QTSHelp.setNum(getActivity(),3);
             }
         });
 

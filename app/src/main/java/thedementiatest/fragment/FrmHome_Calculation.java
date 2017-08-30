@@ -72,6 +72,7 @@ public class FrmHome_Calculation extends Fragment {
                 QTSHelp.setTamHai(getActivity(),tamhai);
                 QTSHelp.setAdd6(getActivity(),add6);
                 QTSHelp.setTake(getActivity(),take);
+                QTSHelp.setNum(getActivity(),7);
             }
         });
 
@@ -83,6 +84,7 @@ public class FrmHome_Calculation extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment7);
                 fragmentTransaction.commit();
+                QTSHelp.setNum(getActivity(),7);
             }
         });
 
@@ -94,6 +96,7 @@ public class FrmHome_Calculation extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment5);
                 fragmentTransaction.commit();
+                QTSHelp.setNum(getActivity(),5);
             }
         });
 
@@ -105,6 +108,7 @@ public class FrmHome_Calculation extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment5);
                 fragmentTransaction.commit();
+                QTSHelp.setNum(getActivity(),5);
             }
         });
 

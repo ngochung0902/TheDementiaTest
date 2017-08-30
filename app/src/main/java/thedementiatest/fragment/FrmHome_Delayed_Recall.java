@@ -82,6 +82,8 @@ public class FrmHome_Delayed_Recall extends Fragment {
                 QTSHelp.setChair(getActivity(),chair);
                 QTSHelp.setCar(getActivity(),car);
                 QTSHelp.setHouse(getActivity(),house);
+
+                QTSHelp.setNum(getActivity(),8);
             }
         });
 
@@ -99,6 +101,8 @@ public class FrmHome_Delayed_Recall extends Fragment {
                 QTSHelp.setChair(getActivity(),chair);
                 QTSHelp.setCar(getActivity(),car);
                 QTSHelp.setHouse(getActivity(),house);
+
+                QTSHelp.setNum(getActivity(),8);
             }
         });
 
@@ -110,6 +114,8 @@ public class FrmHome_Delayed_Recall extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment6);
                 fragmentTransaction.commit();
+
+                QTSHelp.setNum(getActivity(),6);
             }
         });
 
@@ -121,6 +127,8 @@ public class FrmHome_Delayed_Recall extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment6);
                 fragmentTransaction.commit();
+
+                QTSHelp.setNum(getActivity(),6);
             }
         });
 

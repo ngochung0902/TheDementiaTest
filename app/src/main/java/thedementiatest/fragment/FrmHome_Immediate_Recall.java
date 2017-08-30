@@ -57,6 +57,7 @@ public class FrmHome_Immediate_Recall extends Fragment {
                 fragmentTransaction.commit();
 
                 QTSHelp.setListento(getActivity(),listento);
+                QTSHelp.setNum(getActivity(),4);
             }
         });
 
@@ -70,6 +71,7 @@ public class FrmHome_Immediate_Recall extends Fragment {
                 fragmentTransaction.commit();
 
                 QTSHelp.setListento(getActivity(),listento);
+                QTSHelp.setNum(getActivity(),4);
             }
         });
 
@@ -81,6 +83,7 @@ public class FrmHome_Immediate_Recall extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment2);
                 fragmentTransaction.commit();
+                QTSHelp.setNum(getActivity(),2);
             }
         });
 
@@ -92,6 +95,7 @@ public class FrmHome_Immediate_Recall extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment2);
                 fragmentTransaction.commit();
+                QTSHelp.setNum(getActivity(),2);
 
             }
         });

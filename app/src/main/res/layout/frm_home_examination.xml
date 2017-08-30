@@ -290,6 +290,7 @@
                 android:text="@string/work"
                 android:textSize="@dimen/s16" />
             <TextView
+                android:maxLines="1"
                 android:hint="Work"
                 android:textColor="@color/black"
                 android:gravity="center|left"

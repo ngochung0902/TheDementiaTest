@@ -64,6 +64,7 @@ public class FrmHome_Abstract_Reasoning extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment8);
                 fragmentTransaction.commit();
+                QTSHelp.setNum(getActivity(),8);
 
             }
         });
@@ -76,6 +77,7 @@ public class FrmHome_Abstract_Reasoning extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment8);
                 fragmentTransaction.commit();
+                QTSHelp.setNum(getActivity(),8);
             }
         });
 
@@ -87,6 +89,8 @@ public class FrmHome_Abstract_Reasoning extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment10);
                 fragmentTransaction.commit();
+
+                QTSHelp.setNum(getActivity(),10);
 
                 QTSHelp.setAqua(getActivity(),aqua);
                 QTSHelp.setAwatch(getActivity(),awatch);

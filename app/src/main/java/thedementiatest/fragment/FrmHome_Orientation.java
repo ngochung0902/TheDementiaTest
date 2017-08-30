@@ -82,6 +82,8 @@ public class FrmHome_Orientation extends Fragment {
                 QTSHelp.setYear(getActivity(),year);
                 QTSHelp.setWhatSate(getActivity(),whatsate);
                 QTSHelp.setWhois(getActivity(),whois);
+
+                QTSHelp.setNum(getActivity(),2);
             }
         });
 
@@ -99,6 +101,7 @@ public class FrmHome_Orientation extends Fragment {
                 QTSHelp.setYear(getActivity(),year);
                 QTSHelp.setWhatSate(getActivity(),whatsate);
                 QTSHelp.setWhois(getActivity(),whois);
+                QTSHelp.setNum(getActivity(),2);
             }
         });
 
@@ -110,6 +113,8 @@ public class FrmHome_Orientation extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment);
                 fragmentTransaction.commit();
+                QTSHelp.setNum(getActivity(),0);
+
             }
         });
 
@@ -121,6 +126,7 @@ public class FrmHome_Orientation extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment);
                 fragmentTransaction.commit();
+                QTSHelp.setNum(getActivity(),0);
             }
         });
 
@@ -128,6 +134,10 @@ public class FrmHome_Orientation extends Fragment {
             @Override
             public void onClick(View v) {
                 checkWhatDay();
+                if (sw_whatday.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),whatday);
+                }
             }
         });
 
@@ -135,6 +145,10 @@ public class FrmHome_Orientation extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkWhatDay();
+                if (sw_whatday.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),whatday);
+                }
             }
         });
 
@@ -142,6 +156,10 @@ public class FrmHome_Orientation extends Fragment {
             @Override
             public void onClick(View v) {
                 checkWhatMonth();
+                if (sw_whatmonth.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),whatmonth);
+                }
             }
         });
 
@@ -149,6 +167,10 @@ public class FrmHome_Orientation extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkWhatMonth();
+                if (sw_whatmonth.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),whatmonth);
+                }
             }
         });
 
@@ -156,6 +178,11 @@ public class FrmHome_Orientation extends Fragment {
             @Override
             public void onClick(View v) {
                 checkYear();
+                if (sw_year.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),year);
+                }
+
             }
         });
 
@@ -163,6 +190,10 @@ public class FrmHome_Orientation extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkYear();
+                if (sw_year.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),year);
+                }
             }
         });
 
@@ -170,6 +201,10 @@ public class FrmHome_Orientation extends Fragment {
             @Override
             public void onClick(View v) {
                 checkWhatSate();
+                if (sw_whatstate.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),whatsate);
+                }
             }
         });
 
@@ -177,6 +212,11 @@ public class FrmHome_Orientation extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkWhatSate();
+                checkWhatSate();
+                if (sw_whatstate.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),whatsate);
+                }
             }
         });
 
@@ -184,6 +224,11 @@ public class FrmHome_Orientation extends Fragment {
             @Override
             public void onClick(View v) {
                 checkWhois();
+                checkWhatSate();
+                if (sw_whois.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),whois);
+                }
             }
         });
 
@@ -191,6 +236,10 @@ public class FrmHome_Orientation extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkWhois();
+                if (sw_whois.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),whois);
+                }
             }
         });
 
@@ -371,4 +420,6 @@ public class FrmHome_Orientation extends Fragment {
             whois=0;
         }
     }
+
+
 }

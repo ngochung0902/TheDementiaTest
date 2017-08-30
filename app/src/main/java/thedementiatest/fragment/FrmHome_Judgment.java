@@ -64,6 +64,8 @@ public class FrmHome_Judgment extends Fragment {
 
                 QTSHelp.setWhatWould1(getActivity(),whatwould1);
                 QTSHelp.setWhatWould2(getActivity(),whatwould2);
+
+                QTSHelp.setNum(getActivity(),9);
             }
         });
 
@@ -78,6 +80,8 @@ public class FrmHome_Judgment extends Fragment {
 
                 QTSHelp.setWhatWould1(getActivity(),whatwould1);
                 QTSHelp.setWhatWould2(getActivity(),whatwould2);
+
+                QTSHelp.setNum(getActivity(),9);
             }
         });
 
@@ -89,6 +93,8 @@ public class FrmHome_Judgment extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment7);
                 fragmentTransaction.commit();
+
+                QTSHelp.setNum(getActivity(),7);
             }
         });
 
@@ -100,6 +106,8 @@ public class FrmHome_Judgment extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment7);
                 fragmentTransaction.commit();
+
+                QTSHelp.setNum(getActivity(),7);
             }
         });
 

@@ -70,6 +70,7 @@ public class FrmHome_Fluidity extends Fragment {
                 QTSHelp.setAnimals04(getActivity(),animals04);
                 QTSHelp.setAnimals59(getActivity(),animals59);
                 QTSHelp.setAnimals1015(getActivity(),animals1015);
+                QTSHelp.setNum(getActivity(),6);
             }
         });
 
@@ -81,6 +82,7 @@ public class FrmHome_Fluidity extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment6);
                 fragmentTransaction.commit();
+                QTSHelp.setNum(getActivity(),6);
             }
         });
 
@@ -92,6 +94,7 @@ public class FrmHome_Fluidity extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment4);
                 fragmentTransaction.commit();
+                QTSHelp.setNum(getActivity(),4);
             }
         });
 
@@ -103,6 +106,7 @@ public class FrmHome_Fluidity extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment4);
                 fragmentTransaction.commit();
+                QTSHelp.setNum(getActivity(),4);
             }
         });
 

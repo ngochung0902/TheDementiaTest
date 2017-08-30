@@ -90,6 +90,8 @@ public class FrmHome_Score extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment9);
                 fragmentTransaction.commit();
+
+                QTSHelp.setNum(getActivity(),9);
             }
         });
 
@@ -101,6 +103,8 @@ public class FrmHome_Score extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment9);
                 fragmentTransaction.commit();
+
+                QTSHelp.setNum(getActivity(),9);
             }
         });
 
@@ -229,6 +233,8 @@ public class FrmHome_Score extends Fragment {
 
                 QTSHelp.setAqua(getActivity(),-1);
                 QTSHelp.setAwatch(getActivity(),-1);
+
+                QTSHelp.setNum(getActivity(),0);
             }
         });
 

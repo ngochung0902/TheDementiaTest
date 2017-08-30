@@ -18,10 +18,21 @@ import com.thedementiatest.R;
 import java.lang.reflect.Field;
 
 import thedementiatest.fragment.FrmAuthor;
+import thedementiatest.fragment.FrmHome_Abstract_Reasoning;
+import thedementiatest.fragment.FrmHome_Attention;
+import thedementiatest.fragment.FrmHome_Calculation;
+import thedementiatest.fragment.FrmHome_Delayed_Recall;
 import thedementiatest.fragment.FrmHome_Examination;
+import thedementiatest.fragment.FrmHome_Fluidity;
+import thedementiatest.fragment.FrmHome_Immediate_Recall;
+import thedementiatest.fragment.FrmHome_Judgment;
+import thedementiatest.fragment.FrmHome_Language;
+import thedementiatest.fragment.FrmHome_Orientation;
+import thedementiatest.fragment.FrmHome_Score;
 import thedementiatest.fragment.FrmInstructions;
 import thedementiatest.fragment.FrmList;
 import thedementiatest.fragment.FrmTool;
+import thedementiatest.helper.QTSHelp;
 
 public class ActHome extends AppCompatActivity {
     private Fragment fragment;
@@ -57,7 +68,50 @@ public class ActHome extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_home:
-                        fragment = new FrmHome_Examination();
+                        if (QTSHelp.getNum(ActHome.this)==0 )
+                        {
+                            fragment = new FrmHome_Examination();
+                        }
+                        if (QTSHelp.getNum(ActHome.this)==1 )
+                        {
+                            fragment = new FrmHome_Orientation();
+                        }
+                        if (QTSHelp.getNum(ActHome.this)==2 )
+                        {
+                            fragment = new FrmHome_Attention();
+                        }
+                        if (QTSHelp.getNum(ActHome.this)==3 )
+                        {
+                            fragment = new FrmHome_Immediate_Recall();
+                        }
+                        if (QTSHelp.getNum(ActHome.this)==4 )
+                        {
+                            fragment = new FrmHome_Language();
+                        }
+                        if (QTSHelp.getNum(ActHome.this)==5 )
+                        {
+                            fragment = new FrmHome_Fluidity();
+                        }
+                        if (QTSHelp.getNum(ActHome.this)==6 )
+                        {
+                            fragment = new FrmHome_Calculation();
+                        }
+                        if (QTSHelp.getNum(ActHome.this)==7 )
+                        {
+                            fragment = new FrmHome_Delayed_Recall();
+                        }
+                        if (QTSHelp.getNum(ActHome.this)==8 )
+                        {
+                            fragment = new FrmHome_Judgment();
+                        }
+                        if (QTSHelp.getNum(ActHome.this)==9 )
+                        {
+                            fragment = new FrmHome_Abstract_Reasoning();
+                        }
+                        if (QTSHelp.getNum(ActHome.this)==10 )
+                        {
+                            fragment = new FrmHome_Score();
+                        }
                         break;
                     case R.id.action_author:
                         fragment = new FrmAuthor();

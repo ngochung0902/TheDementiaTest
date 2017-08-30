@@ -24,12 +24,13 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.thedementiatest.R;
-import thedementiatest.helper.QTSConstrains;
-import thedementiatest.helper.QTSHelp;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+
+import thedementiatest.helper.QTSConstrains;
+import thedementiatest.helper.QTSHelp;
 
 public class FrmHome_Examination extends Fragment {
     private ImageView img_next;
@@ -63,9 +64,6 @@ public class FrmHome_Examination extends Fragment {
         tv_showethnicity = (TextView) view.findViewById(R.id.tv_showethnicity);
         tv_showage = (TextView) view.findViewById(R.id.tv_showage);
         work = (TextView) view.findViewById(R.id.tv_showwork);
-
-
-
 
         tv_next = (TextView) view.findViewById(R.id.tv_next);
         tv_dateofbirth = (TextView) view.findViewById(R.id.tv_dateofbirth);
@@ -260,6 +258,10 @@ public class FrmHome_Examination extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 selectSex();
+                if (sw_sex.isChecked()==true)
+                {
+                    QTSHelp.setSex(getActivity(),sex);
+                }
             }
         });
 
@@ -267,18 +269,30 @@ public class FrmHome_Examination extends Fragment {
             @Override
             public void onClick(View v) {
                 selectSex();
+                if (sw_sex.isChecked()==true)
+                {
+                    QTSHelp.setSex(getActivity(),sex);
+                }
             }
         });
         sw_person.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 isPerson();
+                if (sw_person.isChecked()==true)
+                {
+                    QTSHelp.setSex(getActivity(),ispeson);
+                }
             }
         });
         sw_person.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 isPerson();
+                if (sw_person.isChecked()==true)
+                {
+                    QTSHelp.setSex(getActivity(),ispeson);
+                }
             }
         });
 
@@ -299,6 +313,7 @@ public class FrmHome_Examination extends Fragment {
         img_next.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
+                QTSHelp.setNum(getActivity(),1);
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
                         img_next.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
@@ -318,6 +333,7 @@ public class FrmHome_Examination extends Fragment {
         tv_next.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
+                QTSHelp.setNum(getActivity(),1);
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
                         int color = Color.parseColor("#A8A8A8");
@@ -400,7 +416,7 @@ public class FrmHome_Examination extends Fragment {
     }
 
     private void selectWork(){
-        final CharSequence[] itemWork= {"Profesion/Technical", "Managemnt", "Clerical","Sales","Skilled","Semi-Skilled","Unskilled"};
+        final CharSequence[] itemWork= {"Profession/Technical", "Management", "Clerical","Sales","Skilled","Semi-Skilled","Unskilled"};
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("SELECT WORK");
         builder.setItems(itemWork, new DialogInterface.OnClickListener() {

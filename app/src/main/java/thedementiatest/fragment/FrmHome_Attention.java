@@ -79,6 +79,8 @@ public class FrmHome_Attention extends Fragment {
                 QTSHelp.set86(getActivity(),tamsau);
                 QTSHelp.set65(getActivity(),saulam);
                 QTSHelp.set79(getActivity(),baychin);
+
+                QTSHelp.setNum(getActivity(),3);
             }
         });
 
@@ -98,6 +100,8 @@ public class FrmHome_Attention extends Fragment {
                 QTSHelp.set86(getActivity(),tamsau);
                 QTSHelp.set65(getActivity(),saulam);
                 QTSHelp.set79(getActivity(),baychin);
+
+                QTSHelp.setNum(getActivity(),3);
             }
         });
 
@@ -109,6 +113,8 @@ public class FrmHome_Attention extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment1);
                 fragmentTransaction.commit();
+
+                QTSHelp.setNum(getActivity(),1);
             }
         });
 
@@ -120,6 +126,7 @@ public class FrmHome_Attention extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment1);
                 fragmentTransaction.commit();
+                QTSHelp.setNum(getActivity(),1);
             }
         });
 
@@ -127,6 +134,10 @@ public class FrmHome_Attention extends Fragment {
             @Override
             public void onClick(View v) {
                 checkImGoing();
+                if (sw_imgoing.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),imgoing);
+                }
             }
         });
 
@@ -134,6 +145,10 @@ public class FrmHome_Attention extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkImGoing();
+                if (sw_imgoing.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),imgoing);
+                }
             }
         });
 
@@ -141,6 +156,10 @@ public class FrmHome_Attention extends Fragment {
             @Override
             public void onClick(View v) {
                 checkNowSay();
+                if (sw_nowsay.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),nowsay);
+                }
             }
         });
 
@@ -148,6 +167,10 @@ public class FrmHome_Attention extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkNowSay();
+                if (sw_nowsay.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),nowsay);
+                }
             }
         });
 
@@ -155,6 +178,10 @@ public class FrmHome_Attention extends Fragment {
             @Override
             public void onClick(View v) {
                 checkChinBa();
+                if (sw_93.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),chinba);
+                }
             }
         });
 
@@ -162,6 +189,10 @@ public class FrmHome_Attention extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkChinBa();
+                if (sw_93.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),chinba);
+                }
             }
         });
 
@@ -169,6 +200,10 @@ public class FrmHome_Attention extends Fragment {
             @Override
             public void onClick(View v) {
                 checkBayHai();
+                if (sw_72.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),bayhai);
+                }
             }
         });
 
@@ -176,6 +211,10 @@ public class FrmHome_Attention extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkBayHai();
+                if (sw_72.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),bayhai);
+                }
             }
         });
 
@@ -183,6 +222,10 @@ public class FrmHome_Attention extends Fragment {
             @Override
             public void onClick(View v) {
                 checkTamSau();
+                if (sw_86.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),tamsau);
+                }
             }
         });
 
@@ -190,6 +233,10 @@ public class FrmHome_Attention extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkTamSau();
+                if (sw_86.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),tamsau);
+                }
             }
         });
 
@@ -197,6 +244,10 @@ public class FrmHome_Attention extends Fragment {
             @Override
             public void onClick(View v) {
                 checkSauLam();
+                if (sw_65.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),saulam);
+                }
             }
         });
 
@@ -204,6 +255,10 @@ public class FrmHome_Attention extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkSauLam();
+                if (sw_65.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),saulam);
+                }
             }
         });
 
@@ -211,6 +266,10 @@ public class FrmHome_Attention extends Fragment {
             @Override
             public void onClick(View v) {
                 checkBayChin();
+                if (sw_79.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),baychin);
+                }
             }
         });
 
@@ -218,6 +277,10 @@ public class FrmHome_Attention extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkBayChin();
+                if (sw_79.isChecked()==true)
+                {
+                    QTSHelp.setWhatday(getActivity(),baychin);
+                }
             }
         });
 
