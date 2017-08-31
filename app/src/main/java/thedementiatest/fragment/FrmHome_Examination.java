@@ -11,6 +11,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -36,7 +38,8 @@ public class FrmHome_Examination extends Fragment {
     private ImageView img_next;
     private TextView tv_next,tv_dateofbirth,tv_Levelofeducation,tv_sex,tv_ethnicity,tv_work,edt_age,
             tv_examination,tv_ex,
-            tv_showname,tv_showisperson,tv_showdate,tv_showlovel,tv_showsex,tv_showethnicity,tv_showage,work;
+            tv_showname,tv_showisperson,tv_showdate,tv_showlovel,tv_showsex,tv_showethnicity,tv_showage,work,
+            tvsw_isperson,tvsw_sex;
     private Switch sw_sex,sw_person;
     private EditText edt_name;
     private int sex ,ispeson, myyear,yearmy;
@@ -79,6 +82,9 @@ public class FrmHome_Examination extends Fragment {
         tv_ex = (TextView) view.findViewById(R.id.tv_ex);
         setDateTimeField();
 
+        tvsw_isperson = (TextView) view.findViewById(R.id.tvsw_isperson);
+        tvsw_sex = (TextView) view.findViewById(R.id.tvsw_sex);
+
         tv_dateofbirth.setTypeface(customFontR);
         tv_ethnicity.setTypeface(customFontR);
         tv_Levelofeducation.setTypeface(customFontR);
@@ -103,6 +109,8 @@ public class FrmHome_Examination extends Fragment {
         QTSHelp.setFontTV(getActivity(),tv_ex,QTSConstrains.FONT_LATO_REGULAR);
         QTSHelp.setFontTV(getActivity(),sw_person,QTSConstrains.FONT_LATO_REGULAR);
         QTSHelp.setFontTV(getActivity(),sw_sex,QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_isperson,QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_sex,QTSConstrains.FONT_LATO_REGULAR);
 
 
         tv_dateofbirth.setOnClickListener(new View.OnClickListener() {
@@ -117,6 +125,107 @@ public class FrmHome_Examination extends Fragment {
 
         tv_sex.setText("Female");
 
+        edt_name.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                QTSHelp.setName(getActivity(),edt_name.getText().toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        tv_dateofbirth.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                QTSHelp.setDateOfBirth(getActivity(),tv_dateofbirth.getText().toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        tv_Levelofeducation.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                QTSHelp.setLevelOfEducation(getActivity(),tv_Levelofeducation.getText().toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        tv_ethnicity.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                QTSHelp.setEthnicity(getActivity(),tv_ethnicity.getText().toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        tv_work.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                QTSHelp.setWork(getActivity(),tv_work.getText().toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        edt_age.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                QTSHelp.setAge(getActivity(),edt_age.getText().toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
         backFrm();
         img_next.setOnClickListener(new View.OnClickListener() {
@@ -124,37 +233,37 @@ public class FrmHome_Examination extends Fragment {
             public void onClick(View v) {
                 if (edt_name.getText().toString().trim().length()==0)
                 {
-                    QTSHelp.showpPopupMessage(getActivity(), String.valueOf(R.string.nameerror));
+                    QTSHelp.showpPopupMessage(getActivity(), getResources().getString(R.string.nameerror));
                 }
                 else
                 {
                     if(tv_dateofbirth.getText().toString().trim().length()==0)
                     {
-                        QTSHelp.showpPopupMessage(getActivity(), String.valueOf(R.string.dateofbirtherror));
+                        QTSHelp.showpPopupMessage(getActivity(), getResources().getString(R.string.dateofbirtherror));
                     }
                     else
                     {
                         if (tv_Levelofeducation.getText().toString().trim().length()==0)
                         {
-                            QTSHelp.showpPopupMessage(getActivity(), String.valueOf(R.string.LevelofEducationerror));
+                            QTSHelp.showpPopupMessage(getActivity(), getResources().getString(R.string.LevelofEducationerror));
                         }
                         else
                         {
                             if (tv_ethnicity.getText().toString().trim().length()==0)
                             {
-                                QTSHelp.showpPopupMessage(getActivity(), String.valueOf(R.string.Ethnicityerror));
+                                QTSHelp.showpPopupMessage(getActivity(), getResources().getString(R.string.Ethnicityerror));
                             }
                             else
                             {
                                 if (tv_work.getText().toString().trim().length()==0)
                                 {
-                                    QTSHelp.showpPopupMessage(getActivity(), String.valueOf(R.string.workerror));
+                                    QTSHelp.showpPopupMessage(getActivity(), getResources().getString(R.string.workerror));
                                 }
                                 else
                                 {
                                     if (edt_age.getText().toString().trim().length()==0)
                                     {
-                                        QTSHelp.showpPopupMessage(getActivity(), String.valueOf(R.string.ageerror));
+                                        QTSHelp.showpPopupMessage(getActivity(), getResources().getString(R.string.ageerror));
                                     }
                                     else
                                     {
@@ -261,6 +370,12 @@ public class FrmHome_Examination extends Fragment {
                 if (sw_sex.isChecked()==true)
                 {
                     QTSHelp.setSex(getActivity(),sex);
+                    tvsw_sex.setText("Male");
+                }
+                if (sw_sex.isChecked()==false)
+                {
+                    QTSHelp.setSex(getActivity(),sex);
+                    tvsw_sex.setText("Female");
                 }
             }
         });
@@ -272,6 +387,12 @@ public class FrmHome_Examination extends Fragment {
                 if (sw_sex.isChecked()==true)
                 {
                     QTSHelp.setSex(getActivity(),sex);
+                    tvsw_sex.setText("Male");
+                }
+                if (sw_sex.isChecked()==false)
+                {
+                    QTSHelp.setSex(getActivity(),sex);
+                    tvsw_sex.setText("Female");
                 }
             }
         });
@@ -281,7 +402,13 @@ public class FrmHome_Examination extends Fragment {
                 isPerson();
                 if (sw_person.isChecked()==true)
                 {
-                    QTSHelp.setSex(getActivity(),ispeson);
+                    QTSHelp.setIsPerSon(getActivity(),ispeson);
+                    tvsw_isperson.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_person.isChecked()==false)
+                {
+                    QTSHelp.setIsPerSon(getActivity(),ispeson);
+                    tvsw_isperson.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -291,7 +418,13 @@ public class FrmHome_Examination extends Fragment {
                 isPerson();
                 if (sw_person.isChecked()==true)
                 {
-                    QTSHelp.setSex(getActivity(),ispeson);
+                    QTSHelp.setIsPerSon(getActivity(),ispeson);
+                    tvsw_isperson.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_person.isChecked()==false)
+                {
+                    QTSHelp.setIsPerSon(getActivity(),ispeson);
+                    tvsw_isperson.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -316,7 +449,8 @@ public class FrmHome_Examination extends Fragment {
                 QTSHelp.setNum(getActivity(),1);
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        img_next.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        int color = Color.parseColor("#A8A8A8");
+                        img_next.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
                         v.invalidate();
                         break;
                     }
@@ -429,6 +563,22 @@ public class FrmHome_Examination extends Fragment {
     }
 
     private void backFrm(){
+        if (QTSHelp.getIsPerSon(getActivity())==1)
+        {
+            tvsw_isperson.setText(getResources().getString(R.string.yes));
+        }
+        if (QTSHelp.getIsPerSon(getActivity())==0)
+        {
+            tvsw_isperson.setText(getResources().getString(R.string.no));
+        }
+        if (QTSHelp.getSex(getActivity())==1)
+        {
+            tvsw_sex.setText("Male");
+        }
+        if (QTSHelp.getSex(getActivity())==0)
+        {
+            tvsw_sex.setText("Female");
+        }
         if (QTSHelp.getName(getActivity())!="null")
         {
             edt_name.setText(QTSHelp.getName(getActivity()));

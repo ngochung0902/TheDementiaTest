@@ -41,8 +41,7 @@
                 android:layout_height="match_parent"
                 android:text="@string/wstevensaunders"
                 android:textSize="@dimen/s16"
-                android:layout_margin="@dimen/s10"
-                />
+                android:layout_marginTop="@dimen/s10" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

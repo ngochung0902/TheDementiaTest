@@ -22,7 +22,7 @@ import thedementiatest.helper.QTSConstrains;
 import thedementiatest.helper.QTSHelp;
 
 public class FrmHome_Calculation extends Fragment {
-    private TextView tv_next,tv_back,tv_calculation,tv_iam,tv_82,tv_add6,tv_take,tv_click;
+    private TextView tv_next,tv_back,tv_calculation,tv_iam,tv_82,tv_add6,tv_take,tv_click,tvsw_tamhai,tvsw_add6,tvsw_take;
     private ImageView img_next,img_back;
     private Switch sw_tamhai,sw_add6,sw_take;
     private int tamhai,add6,take;
@@ -38,6 +38,10 @@ public class FrmHome_Calculation extends Fragment {
         tv_add6 = (TextView) view.findViewById(R.id.tv_add6);
         tv_take = (TextView) view.findViewById(R.id.tv_take);
         tv_click = (TextView) view.findViewById(R.id.tv_click);
+
+        tvsw_tamhai = (TextView) view.findViewById(R.id.tvsw_tamhai);
+        tvsw_add6 = (TextView) view.findViewById(R.id.tvsw_add6);
+        tvsw_take = (TextView) view.findViewById(R.id.tvsw_take);
 
         Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),QTSConstrains.FONT_LATO_BOLD);
         tv_calculation.setTypeface(customFontBold);
@@ -58,6 +62,10 @@ public class FrmHome_Calculation extends Fragment {
         QTSHelp.setFontTV(getActivity(),sw_take, QTSConstrains.FONT_LATO_REGULAR);
         QTSHelp.setFontTV(getActivity(),sw_tamhai, QTSConstrains.FONT_LATO_REGULAR);
 
+        QTSHelp.setFontTV(getActivity(),tvsw_add6, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_take, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_tamhai, QTSConstrains.FONT_LATO_REGULAR);
+
         backFrm();
 
         tv_next.setOnClickListener(new View.OnClickListener() {
@@ -69,9 +77,9 @@ public class FrmHome_Calculation extends Fragment {
                 fragmentTransaction.replace(R.id.main_container, fragment7);
                 fragmentTransaction.commit();
 
-                QTSHelp.setTamHai(getActivity(),tamhai);
-                QTSHelp.setAdd6(getActivity(),add6);
-                QTSHelp.setTake(getActivity(),take);
+//                QTSHelp.setTamHai(getActivity(),tamhai);
+//                QTSHelp.setAdd6(getActivity(),add6);
+//                QTSHelp.setTake(getActivity(),take);
                 QTSHelp.setNum(getActivity(),7);
             }
         });
@@ -96,7 +104,12 @@ public class FrmHome_Calculation extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment5);
                 fragmentTransaction.commit();
+
                 QTSHelp.setNum(getActivity(),5);
+
+                QTSHelp.setTamHai(getActivity(),0);
+                QTSHelp.setAdd6(getActivity(),0);
+                QTSHelp.setTake(getActivity(),0);
             }
         });
 
@@ -108,7 +121,12 @@ public class FrmHome_Calculation extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment5);
                 fragmentTransaction.commit();
+
                 QTSHelp.setNum(getActivity(),5);
+
+                QTSHelp.setTamHai(getActivity(),0);
+                QTSHelp.setAdd6(getActivity(),0);
+                QTSHelp.setTake(getActivity(),0);
             }
         });
 
@@ -116,6 +134,16 @@ public class FrmHome_Calculation extends Fragment {
             @Override
             public void onClick(View v) {
                 checkTamHai();
+                if (sw_tamhai.isChecked()==true)
+                {
+                    QTSHelp.setTamHai(getActivity(),tamhai);
+                    tvsw_tamhai.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_tamhai.isChecked()==false)
+                {
+                    QTSHelp.setTamHai(getActivity(),tamhai);
+                    tvsw_tamhai.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -123,6 +151,16 @@ public class FrmHome_Calculation extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkTamHai();
+                if (sw_tamhai.isChecked()==true)
+                {
+                    QTSHelp.setTamHai(getActivity(),tamhai);
+                    tvsw_tamhai.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_tamhai.isChecked()==false)
+                {
+                    QTSHelp.setTamHai(getActivity(),tamhai);
+                    tvsw_tamhai.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -130,6 +168,16 @@ public class FrmHome_Calculation extends Fragment {
             @Override
             public void onClick(View v) {
                 checkAdd6();
+                if (sw_add6.isChecked()==true)
+                {
+                    QTSHelp.setAdd6(getActivity(),add6);
+                    tvsw_add6.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_add6.isChecked()==false)
+                {
+                    QTSHelp.setAdd6(getActivity(),add6);
+                    tvsw_add6.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -137,6 +185,16 @@ public class FrmHome_Calculation extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkAdd6();
+                if (sw_add6.isChecked()==true)
+                {
+                    QTSHelp.setAdd6(getActivity(),add6);
+                    tvsw_add6.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_add6.isChecked()==false)
+                {
+                    QTSHelp.setAdd6(getActivity(),add6);
+                    tvsw_add6.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -144,6 +202,16 @@ public class FrmHome_Calculation extends Fragment {
             @Override
             public void onClick(View v) {
                 checkTake();
+                if (sw_take.isChecked()==true)
+                {
+                    QTSHelp.setTake(getActivity(),take);
+                    tvsw_take.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_take.isChecked()==false)
+                {
+                    QTSHelp.setTake(getActivity(),take);
+                    tvsw_take.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -151,6 +219,16 @@ public class FrmHome_Calculation extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkTake();
+                if (sw_take.isChecked()==true)
+                {
+                    QTSHelp.setTake(getActivity(),take);
+                    tvsw_take.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_take.isChecked()==false)
+                {
+                    QTSHelp.setTake(getActivity(),take);
+                    tvsw_take.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -159,7 +237,8 @@ public class FrmHome_Calculation extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        img_back.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        int color = Color.parseColor("#A8A8A8");
+                        img_back.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
                         v.invalidate();
                         break;
                     }
@@ -198,7 +277,8 @@ public class FrmHome_Calculation extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        img_next.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        int color = Color.parseColor("#A8A8A8");
+                        img_next.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
                         v.invalidate();
                         break;
                     }
@@ -264,33 +344,39 @@ public class FrmHome_Calculation extends Fragment {
         {
             sw_tamhai.setChecked(true);
             tamhai=1;
+            tvsw_tamhai.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getTamHai(getActivity())==0)
         {
             sw_tamhai.setChecked(false);
             tamhai=0;
+            tvsw_tamhai.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.getAdd6(getActivity())==1)
         {
             sw_add6.setChecked(true);
             add6=1;
+            tvsw_add6.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getAdd6(getActivity())==0)
         {
             sw_add6.setChecked(false);
             add6=0;
+            tvsw_add6.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.getTake(getActivity())==1)
         {
             sw_take.setChecked(true);
             take=1;
+            tvsw_take.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getTake(getActivity())==0)
         {
             sw_take.setChecked(false);
             take=0;
+            tvsw_take.setText(getResources().getString(R.string.no));
         }
     }
 }

@@ -22,7 +22,7 @@ import thedementiatest.helper.QTSConstrains;
 import thedementiatest.helper.QTSHelp;
 
 public class FrmHome_Fluidity extends Fragment {
-    private TextView tv_next,tv_back,tv_fluidity,tv_fl,tv_04,tv_59,tv_1015;
+    private TextView tv_next,tv_back,tv_fluidity,tv_fl,tv_04,tv_59,tv_1015,tvsw_04animals,tvsw_59animals,tvsw_1015animals;
     private ImageView img_next,img_back;
     private Switch sw_04animals,sw_59animals,sw_1015animals;
     private int animals04,animals59,animals1015;
@@ -38,6 +38,10 @@ public class FrmHome_Fluidity extends Fragment {
         tv_04 = (TextView) view.findViewById(R.id.tv_04);
         tv_59 = (TextView) view.findViewById(R.id.tv_59);
         tv_1015 = (TextView) view.findViewById(R.id.tv_1015);
+
+        tvsw_04animals = (TextView) view.findViewById(R.id.tvsw_04animals);
+        tvsw_59animals = (TextView) view.findViewById(R.id.tvsw_59animals);
+        tvsw_1015animals = (TextView) view.findViewById(R.id.tvsw_1015animals);
 
         Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),QTSConstrains.FONT_LATO_BOLD);
         tv_fluidity.setTypeface(customFontBold);
@@ -56,6 +60,10 @@ public class FrmHome_Fluidity extends Fragment {
         QTSHelp.setFontTV(getActivity(),sw_59animals, QTSConstrains.FONT_LATO_REGULAR);
         QTSHelp.setFontTV(getActivity(),sw_1015animals, QTSConstrains.FONT_LATO_REGULAR);
 
+        QTSHelp.setFontTV(getActivity(),tvsw_1015animals, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_04animals, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_59animals, QTSConstrains.FONT_LATO_REGULAR);
+
         backFrm();
 
         tv_next.setOnClickListener(new View.OnClickListener() {
@@ -67,9 +75,9 @@ public class FrmHome_Fluidity extends Fragment {
                 fragmentTransaction.replace(R.id.main_container, fragment6);
                 fragmentTransaction.commit();
 
-                QTSHelp.setAnimals04(getActivity(),animals04);
-                QTSHelp.setAnimals59(getActivity(),animals59);
-                QTSHelp.setAnimals1015(getActivity(),animals1015);
+//                QTSHelp.setAnimals04(getActivity(),animals04);
+//                QTSHelp.setAnimals59(getActivity(),animals59);
+//                QTSHelp.setAnimals1015(getActivity(),animals1015);
                 QTSHelp.setNum(getActivity(),6);
             }
         });
@@ -82,6 +90,7 @@ public class FrmHome_Fluidity extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment6);
                 fragmentTransaction.commit();
+
                 QTSHelp.setNum(getActivity(),6);
             }
         });
@@ -94,7 +103,12 @@ public class FrmHome_Fluidity extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment4);
                 fragmentTransaction.commit();
+
                 QTSHelp.setNum(getActivity(),4);
+
+                QTSHelp.setAnimals04(getActivity(),0);
+                QTSHelp.setAnimals59(getActivity(),0);
+                QTSHelp.setAnimals1015(getActivity(),0);
             }
         });
 
@@ -106,7 +120,12 @@ public class FrmHome_Fluidity extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment4);
                 fragmentTransaction.commit();
+
                 QTSHelp.setNum(getActivity(),4);
+
+                QTSHelp.setAnimals04(getActivity(),0);
+                QTSHelp.setAnimals59(getActivity(),0);
+                QTSHelp.setAnimals1015(getActivity(),0);
             }
         });
 
@@ -120,6 +139,13 @@ public class FrmHome_Fluidity extends Fragment {
                     sw_1015animals.setChecked(false);
                     animals59 =0;
                     animals1015=0;
+                    QTSHelp.setAnimals04(getActivity(),animals04);
+                    tvsw_04animals.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_04animals.isChecked()==false)
+                {
+                    QTSHelp.setAnimals04(getActivity(),animals04);
+                    tvsw_04animals.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -134,6 +160,13 @@ public class FrmHome_Fluidity extends Fragment {
                     sw_1015animals.setChecked(false);
                     animals59 =0;
                     animals1015=0;
+                    QTSHelp.setAnimals04(getActivity(),animals04);
+                    tvsw_04animals.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_04animals.isChecked()==false)
+                {
+                    QTSHelp.setAnimals04(getActivity(),animals04);
+                    tvsw_04animals.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -148,6 +181,13 @@ public class FrmHome_Fluidity extends Fragment {
                     sw_1015animals.setChecked(false);
                     animals04 =0;
                     animals1015=0;
+                    QTSHelp.setAnimals59(getActivity(),animals59);
+                    tvsw_59animals.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_59animals.isChecked()==false)
+                {
+                    QTSHelp.setAnimals59(getActivity(),animals59);
+                    tvsw_59animals.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -162,6 +202,13 @@ public class FrmHome_Fluidity extends Fragment {
                     sw_1015animals.setChecked(false);
                     animals04 =0;
                     animals1015=0;
+                    QTSHelp.setAnimals59(getActivity(),animals59);
+                    tvsw_59animals.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_59animals.isChecked()==false)
+                {
+                    QTSHelp.setAnimals59(getActivity(),animals59);
+                    tvsw_59animals.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -176,6 +223,13 @@ public class FrmHome_Fluidity extends Fragment {
                     sw_59animals.setChecked(false);
                     animals04 =0;
                     animals59=0;
+                    QTSHelp.setAnimals1015(getActivity(),animals1015);
+                    tvsw_1015animals.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_1015animals.isChecked()==false)
+                {
+                    QTSHelp.setAnimals1015(getActivity(),animals1015);
+                    tvsw_1015animals.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -191,6 +245,13 @@ public class FrmHome_Fluidity extends Fragment {
                     sw_59animals.setChecked(false);
                     animals04 =0;
                     animals59=0;
+                    QTSHelp.setAnimals1015(getActivity(),animals1015);
+                    tvsw_1015animals.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_1015animals.isChecked()==false)
+                {
+                    QTSHelp.setAnimals1015(getActivity(),animals1015);
+                    tvsw_1015animals.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -200,7 +261,8 @@ public class FrmHome_Fluidity extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        img_back.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        int color = Color.parseColor("#A8A8A8");
+                        img_back.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
                         v.invalidate();
                         break;
                     }
@@ -239,7 +301,8 @@ public class FrmHome_Fluidity extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        img_next.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        int color = Color.parseColor("#A8A8A8");
+                        img_next.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
                         v.invalidate();
                         break;
                     }
@@ -305,33 +368,39 @@ public class FrmHome_Fluidity extends Fragment {
         {
             sw_04animals.setChecked(true);
             animals04=1;
+            tvsw_04animals.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getAnimals04(getActivity())==0)
         {
             sw_04animals.setChecked(false);
             animals04=0;
+            tvsw_04animals.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.getAnimals59(getActivity())==1)
         {
             sw_59animals.setChecked(true);
             animals59=1;
+            tvsw_59animals.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getAnimals59(getActivity())==0)
         {
             sw_59animals.setChecked(false);
             animals59=0;
+            tvsw_59animals.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.getAnimals1015(getActivity())==1)
         {
             sw_1015animals.setChecked(true);
             animals1015=1;
+            tvsw_1015animals.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getAnimals1015(getActivity())==0)
         {
             sw_1015animals.setChecked(false);
             animals1015=0;
+            tvsw_1015animals.setText(getResources().getString(R.string.no));
         }
     }
 }

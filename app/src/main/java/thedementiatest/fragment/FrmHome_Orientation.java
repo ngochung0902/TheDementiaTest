@@ -23,7 +23,8 @@ import thedementiatest.helper.QTSHelp;
 
 public class FrmHome_Orientation extends Fragment {
     private TextView tv_next,tv_back,tv_orientation,
-            tv_ori,tv_whatday,tv_whatmonth,tv_year,tv_whatstate,tv_whois;
+            tv_ori,tv_whatday,tv_whatmonth,tv_year,tv_whatstate,tv_whois,
+            tvsw_whatday,tvsw_whatmonth,tvsw_year,tvsw_whatstate,tvsw_whois;
     private ImageView img_next,img_back;
     private Switch sw_whatday,sw_whatmonth,sw_year,sw_whatstate,sw_whois;
     private int whatday,whatmonth,year,whatsate,whois;
@@ -42,6 +43,12 @@ public class FrmHome_Orientation extends Fragment {
         tv_year = (TextView) view.findViewById(R.id.tv_year);
         tv_whatstate = (TextView) view.findViewById(R.id.tv_whatstate);
         tv_whois = (TextView) view.findViewById(R.id.tv_whois);
+
+        tvsw_whatday = (TextView) view.findViewById(R.id.tvsw_whatday);
+        tvsw_whatmonth = (TextView) view.findViewById(R.id.tvsw_whatmonth);
+        tvsw_year = (TextView) view.findViewById(R.id.tvsw_year);
+        tvsw_whatstate = (TextView) view.findViewById(R.id.tvsw_whatstate);
+        tvsw_whois = (TextView) view.findViewById(R.id.tvsw_whois);
 
         Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),QTSConstrains.FONT_LATO_BOLD);
         tv_orientation.setTypeface(customFontBold);
@@ -66,6 +73,12 @@ public class FrmHome_Orientation extends Fragment {
         QTSHelp.setFontTV(getActivity(),sw_whois, QTSConstrains.FONT_LATO_REGULAR);
         QTSHelp.setFontTV(getActivity(),sw_year, QTSConstrains.FONT_LATO_REGULAR);
 
+        QTSHelp.setFontTV(getActivity(),tvsw_year, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_whatday, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_whatmonth, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_whatstate, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_whois, QTSConstrains.FONT_LATO_REGULAR);
+
         backFrm();
 
         tv_next.setOnClickListener(new View.OnClickListener() {
@@ -77,11 +90,11 @@ public class FrmHome_Orientation extends Fragment {
                 fragmentTransaction.replace(R.id.main_container, fragment2);
                 fragmentTransaction.commit();
 
-                QTSHelp.setWhatday(getActivity(),whatday);
-                QTSHelp.setWhatMonth(getActivity(),whatmonth);
-                QTSHelp.setYear(getActivity(),year);
-                QTSHelp.setWhatSate(getActivity(),whatsate);
-                QTSHelp.setWhois(getActivity(),whois);
+//                QTSHelp.setWhatday(getActivity(),whatday);
+//                QTSHelp.setWhatMonth(getActivity(),whatmonth);
+//                QTSHelp.setYear(getActivity(),year);
+//                QTSHelp.setWhatSate(getActivity(),whatsate);
+//                QTSHelp.setWhois(getActivity(),whois);
 
                 QTSHelp.setNum(getActivity(),2);
             }
@@ -96,11 +109,11 @@ public class FrmHome_Orientation extends Fragment {
                 fragmentTransaction.replace(R.id.main_container, fragment2);
                 fragmentTransaction.commit();
 
-                QTSHelp.setWhatday(getActivity(),whatday);
-                QTSHelp.setWhatMonth(getActivity(),whatmonth);
-                QTSHelp.setYear(getActivity(),year);
-                QTSHelp.setWhatSate(getActivity(),whatsate);
-                QTSHelp.setWhois(getActivity(),whois);
+//                QTSHelp.setWhatday(getActivity(),whatday);
+//                QTSHelp.setWhatMonth(getActivity(),whatmonth);
+//                QTSHelp.setYear(getActivity(),year);
+//                QTSHelp.setWhatSate(getActivity(),whatsate);
+//                QTSHelp.setWhois(getActivity(),whois);
                 QTSHelp.setNum(getActivity(),2);
             }
         });
@@ -113,7 +126,14 @@ public class FrmHome_Orientation extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment);
                 fragmentTransaction.commit();
+
                 QTSHelp.setNum(getActivity(),0);
+
+                QTSHelp.setWhatday(getActivity(),0);
+                QTSHelp.setWhatMonth(getActivity(),0);
+                QTSHelp.setYear(getActivity(),0);
+                QTSHelp.setWhatSate(getActivity(),0);
+                QTSHelp.setWhois(getActivity(),0);
 
             }
         });
@@ -126,7 +146,14 @@ public class FrmHome_Orientation extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment);
                 fragmentTransaction.commit();
+
                 QTSHelp.setNum(getActivity(),0);
+
+                QTSHelp.setWhatday(getActivity(),0);
+                QTSHelp.setWhatMonth(getActivity(),0);
+                QTSHelp.setYear(getActivity(),0);
+                QTSHelp.setWhatSate(getActivity(),0);
+                QTSHelp.setWhois(getActivity(),0);
             }
         });
 
@@ -137,6 +164,12 @@ public class FrmHome_Orientation extends Fragment {
                 if (sw_whatday.isChecked()==true)
                 {
                     QTSHelp.setWhatday(getActivity(),whatday);
+                    tvsw_whatday.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_whatday.isChecked()==false)
+                {
+                    QTSHelp.setWhatday(getActivity(),whatday);
+                    tvsw_whatday.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -148,6 +181,12 @@ public class FrmHome_Orientation extends Fragment {
                 if (sw_whatday.isChecked()==true)
                 {
                     QTSHelp.setWhatday(getActivity(),whatday);
+                    tvsw_whatday.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_whatday.isChecked()==false)
+                {
+                    QTSHelp.setWhatday(getActivity(),whatday);
+                    tvsw_whatday.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -158,7 +197,13 @@ public class FrmHome_Orientation extends Fragment {
                 checkWhatMonth();
                 if (sw_whatmonth.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),whatmonth);
+                    QTSHelp.setWhatMonth(getActivity(),whatmonth);
+                    tvsw_whatmonth.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_whatmonth.isChecked()==false)
+                {
+                    QTSHelp.setWhatMonth(getActivity(),whatmonth);
+                    tvsw_whatmonth.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -169,7 +214,13 @@ public class FrmHome_Orientation extends Fragment {
                 checkWhatMonth();
                 if (sw_whatmonth.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),whatmonth);
+                    QTSHelp.setWhatMonth(getActivity(),whatmonth);
+                    tvsw_whatmonth.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_whatmonth.isChecked()==false)
+                {
+                    QTSHelp.setWhatMonth(getActivity(),whatmonth);
+                    tvsw_whatmonth.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -180,7 +231,13 @@ public class FrmHome_Orientation extends Fragment {
                 checkYear();
                 if (sw_year.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),year);
+                    QTSHelp.setYear(getActivity(),year);
+                    tvsw_year.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_year.isChecked()==false)
+                {
+                    QTSHelp.setYear(getActivity(),year);
+                    tvsw_year.setText(getResources().getString(R.string.no));
                 }
 
             }
@@ -192,7 +249,14 @@ public class FrmHome_Orientation extends Fragment {
                 checkYear();
                 if (sw_year.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),year);
+                    QTSHelp.setYear(getActivity(),year);
+                    tvsw_year.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_year.isChecked()==false)
+                {
+
+                    QTSHelp.setYear(getActivity(),year);
+                    tvsw_year.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -203,7 +267,13 @@ public class FrmHome_Orientation extends Fragment {
                 checkWhatSate();
                 if (sw_whatstate.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),whatsate);
+                    QTSHelp.setWhatSate(getActivity(),whatsate);
+                    tvsw_whatstate.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_whatstate.isChecked()==false)
+                {
+                    QTSHelp.setWhatSate(getActivity(),whatsate);
+                    tvsw_whatstate.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -215,7 +285,13 @@ public class FrmHome_Orientation extends Fragment {
                 checkWhatSate();
                 if (sw_whatstate.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),whatsate);
+                    QTSHelp.setWhatSate(getActivity(),whatsate);
+                    tvsw_whatstate.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_whatstate.isChecked()==false)
+                {
+                    QTSHelp.setWhatSate(getActivity(),whatsate);
+                    tvsw_whatstate.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -227,7 +303,13 @@ public class FrmHome_Orientation extends Fragment {
                 checkWhatSate();
                 if (sw_whois.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),whois);
+                    QTSHelp.setWhois(getActivity(),whois);
+                    tvsw_whois.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_whois.isChecked()==false)
+                {
+                    QTSHelp.setWhois(getActivity(),whois);
+                    tvsw_whois.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -238,7 +320,13 @@ public class FrmHome_Orientation extends Fragment {
                 checkWhois();
                 if (sw_whois.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),whois);
+                    QTSHelp.setWhois(getActivity(),whois);
+                    tvsw_whois.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_whois.isChecked()==false)
+                {
+                    QTSHelp.setWhois(getActivity(),whois);
+                    tvsw_whois.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -248,7 +336,8 @@ public class FrmHome_Orientation extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        img_back.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        int color = Color.parseColor("#A8A8A8");
+                        img_back.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
                         v.invalidate();
                         break;
                     }
@@ -287,7 +376,8 @@ public class FrmHome_Orientation extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        img_next.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        int color = Color.parseColor("#A8A8A8");
+                        img_next.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
                         v.invalidate();
                         break;
                     }
@@ -369,55 +459,65 @@ public class FrmHome_Orientation extends Fragment {
         {
             sw_whatday.setChecked(true);
             whatday=1;
+            tvsw_whatday.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getWhatday(getActivity())==0)
         {
             sw_whatday.setChecked(false);
             whatday=0;
+            tvsw_whatday.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.getWhatMonth(getActivity())==1)
         {
             sw_whatmonth.setChecked(true);
             whatmonth=1;
+            tvsw_whatmonth.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getWhatMonth(getActivity())==0)
         {
             sw_whatmonth.setChecked(false);
             whatmonth=0;
+            tvsw_whatmonth.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.getYear(getActivity())==1)
         {
             sw_year.setChecked(true);
             year=1;
+            tvsw_year.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getYear(getActivity())==0)
         {
             sw_year.setChecked(false);
             year=0;
+            tvsw_year.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.getWhatSate(getActivity())==1)
         {
             sw_whatstate.setChecked(true);
             whatsate=1;
+            tvsw_whatstate.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getWhatSate(getActivity())==0)
         {
             sw_whatstate.setChecked(false);
             whatsate=0;
+            tvsw_whatstate.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.getWhois(getActivity())==1)
         {
             sw_whois.setChecked(true);
             whois=1;
+            tvsw_whois.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getWhois(getActivity())==0)
         {
             sw_whois.setChecked(false);
             whois=0;
+            tvsw_whois.setText(getResources().getString(R.string.no));
         }
     }
 

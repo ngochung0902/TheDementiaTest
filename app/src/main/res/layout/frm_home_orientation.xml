@@ -80,23 +80,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:layout_weight="1"
                 android:id="@+id/tv_whatday"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="210dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/whatday"
                 android:textSize="@dimen/s16" />
 
-            <Switch
-                android:textOn="Yes"
-                android:textOff="No"
-                android:layout_marginLeft="@dimen/s10"
-                android:layout_gravity="center|right"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/sw_whatday" />
+                <Switch
+                    android:textOn="@string/space"
+                    android:textOff="@string/space"
+                    android:layout_marginLeft="@dimen/s10"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sw_whatday"
+                    android:layout_marginRight="5dp"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tvsw_whatday"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no"
+                    android:gravity="left"
+                    android:textSize="@dimen/s16"
+                    android:textColor="@color/black" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -105,23 +118,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:layout_weight="1"
                 android:id="@+id/tv_whatmonth"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="210dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/whatmonth"
                 android:textSize="@dimen/s16" />
 
-            <Switch
-                android:textOn="Yes"
-                android:textOff="No"
-                android:layout_marginLeft="@dimen/s10"
-                android:layout_gravity="center|right"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/sw_whatmonth" />
+                <Switch
+                    android:textOn="@string/space"
+                    android:textOff="@string/space"
+                    android:layout_marginLeft="@dimen/s10"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sw_whatmonth"
+                    android:layout_marginRight="5dp"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tvsw_whatmonth"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no"
+                    android:gravity="left"
+                    android:textSize="@dimen/s16"
+                    android:textColor="@color/black" />
         </LinearLayout>
 
 
@@ -131,25 +156,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:layout_weight="1"
                 android:id="@+id/tv_year"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="210dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/year"
                 android:textSize="@dimen/s16" />
 
-            <Switch
-                android:textOn="Yes"
-                android:textOff="No"
-                android:layout_marginLeft="@dimen/s10"
-                android:layout_gravity="center|right"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/sw_year" />
-        </LinearLayout>
+                <Switch
+                    android:textOn="@string/space"
+                    android:textOff="@string/space"
+                    android:layout_marginLeft="@dimen/s10"
+                    android:layout_gravity="center|"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sw_year"
+                    android:layout_marginRight="5dp"/>
 
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tvsw_year"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no"
+                    android:gravity="left"
+                    android:textSize="@dimen/s16"
+                    android:textColor="@color/black" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_margin="@dimen/s10"
@@ -157,23 +193,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:layout_weight="1"
                 android:id="@+id/tv_whatstate"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="210dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/whatsate"
                 android:textSize="@dimen/s16" />
 
-            <Switch
-                android:textOn="Yes"
-                android:textOff="No"
-                android:layout_marginLeft="@dimen/s10"
-                android:layout_gravity="center|right"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/sw_whatstate" />
+                <Switch
+                    android:textOn="@string/space"
+                    android:textOff="@string/space"
+                    android:layout_marginLeft="@dimen/s10"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sw_whatstate"
+                    android:layout_marginRight="5dp"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tvsw_whatstate"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no"
+                    android:gravity="left"
+                    android:textSize="@dimen/s16"
+                    android:textColor="@color/black" />
         </LinearLayout>
 
 
@@ -183,23 +231,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:layout_weight="1"
                 android:id="@+id/tv_whois"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/s10"
-                android:layout_width="210dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/Whoisthe"
                 android:textSize="@dimen/s16" />
 
-            <Switch
-                android:textOn="Yes"
-                android:textOff="No"
-                android:layout_marginLeft="@dimen/s10"
-                android:layout_gravity="center|right"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/sw_whois" />
+                <Switch
+                    android:textOn="@string/space"
+                    android:textOff="@string/space"
+                    android:layout_marginLeft="@dimen/s10"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sw_whois"
+                    android:layout_marginRight="5dp"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tvsw_whois"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no"
+                    android:gravity="left"
+                    android:textSize="@dimen/s16"
+                    android:textColor="@color/black" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

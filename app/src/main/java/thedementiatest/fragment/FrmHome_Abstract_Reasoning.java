@@ -23,7 +23,7 @@ import thedementiatest.helper.QTSConstrains;
 import thedementiatest.helper.QTSHelp;
 
 public class FrmHome_Abstract_Reasoning extends Fragment {
-    private TextView tv_back,tv_abs,tv_ab,tv_quater,tv_awatch,tv_click;
+    private TextView tv_back,tv_abs,tv_ab,tv_quater,tv_awatch,tv_click,tvsw_aqua,tvsw_awatch;
     private ImageView img_back;
     private Button bt_calculatescore;
     private Switch sw_awatch,sw_aqua;
@@ -45,6 +45,8 @@ public class FrmHome_Abstract_Reasoning extends Fragment {
         tv_quater = (TextView) view.findViewById(R.id.tv_quater);
         tv_awatch = (TextView) view.findViewById(R.id.tv_awatch);
         tv_click = (TextView) view.findViewById(R.id.tv_click);
+        tvsw_aqua = (TextView) view.findViewById(R.id.tvsw_aqua);
+        tvsw_awatch = (TextView) view.findViewById(R.id.tvsw_awatch);
 
         QTSHelp.setFontTV(getActivity(),tv_back, QTSConstrains.FONT_LATO_REGULAR);
         QTSHelp.setFontTV(getActivity(),tv_ab, QTSConstrains.FONT_LATO_REGULAR);
@@ -53,6 +55,8 @@ public class FrmHome_Abstract_Reasoning extends Fragment {
         QTSHelp.setFontTV(getActivity(),tv_click, QTSConstrains.FONT_LATO_REGULAR);
         QTSHelp.setFontTV(getActivity(),sw_aqua, QTSConstrains.FONT_LATO_REGULAR);
         QTSHelp.setFontTV(getActivity(),sw_awatch, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_aqua, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_awatch, QTSConstrains.FONT_LATO_REGULAR);
 
         backFrm();
 
@@ -64,8 +68,11 @@ public class FrmHome_Abstract_Reasoning extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment8);
                 fragmentTransaction.commit();
+
                 QTSHelp.setNum(getActivity(),8);
 
+                QTSHelp.setAqua(getActivity(),0);
+                QTSHelp.setAwatch(getActivity(),0);
             }
         });
 
@@ -77,7 +84,11 @@ public class FrmHome_Abstract_Reasoning extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment8);
                 fragmentTransaction.commit();
+
                 QTSHelp.setNum(getActivity(),8);
+
+                QTSHelp.setAqua(getActivity(),0);
+                QTSHelp.setAwatch(getActivity(),0);
             }
         });
 
@@ -174,6 +185,16 @@ public class FrmHome_Abstract_Reasoning extends Fragment {
             @Override
             public void onClick(View v) {
                 checkAqua();
+                if (sw_aqua.isChecked()==true)
+                {
+                    QTSHelp.setAqua(getActivity(),aqua);
+                    tvsw_aqua.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_aqua.isChecked()==false)
+                {
+                    QTSHelp.setAqua(getActivity(),aqua);
+                    tvsw_aqua.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -181,6 +202,16 @@ public class FrmHome_Abstract_Reasoning extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkAqua();
+                if (sw_aqua.isChecked()==true)
+                {
+                    QTSHelp.setAqua(getActivity(),aqua);
+                    tvsw_aqua.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_aqua.isChecked()==false)
+                {
+                    QTSHelp.setAqua(getActivity(),aqua);
+                    tvsw_aqua.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -188,6 +219,16 @@ public class FrmHome_Abstract_Reasoning extends Fragment {
             @Override
             public void onClick(View v) {
                 checkAwatch();
+                if (sw_awatch.isChecked()==true)
+                {
+                    QTSHelp.setAwatch(getActivity(),awatch);
+                    tvsw_awatch.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_awatch.isChecked()==false)
+                {
+                    QTSHelp.setAwatch(getActivity(),awatch);
+                    tvsw_awatch.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -195,6 +236,16 @@ public class FrmHome_Abstract_Reasoning extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkAwatch();
+                if (sw_awatch.isChecked()==true)
+                {
+                    QTSHelp.setAwatch(getActivity(),awatch);
+                    tvsw_awatch.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_awatch.isChecked()==false)
+                {
+                    QTSHelp.setAwatch(getActivity(),awatch);
+                    tvsw_awatch.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -203,7 +254,8 @@ public class FrmHome_Abstract_Reasoning extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        img_back.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        int color = Color.parseColor("#A8A8A8");
+                        img_back.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
                         v.invalidate();
                         break;
                     }
@@ -259,19 +311,23 @@ public class FrmHome_Abstract_Reasoning extends Fragment {
         if (QTSHelp.getAqua(getActivity()) == 1) {
             sw_aqua.setChecked(true);
             aqua = 1;
+            tvsw_aqua.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getAqua(getActivity()) == 0) {
             sw_aqua.setChecked(false);
             aqua = 0;
+            tvsw_aqua.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.getAwatch(getActivity()) == 1) {
             sw_awatch.setChecked(true);
             awatch = 1;
+            tvsw_awatch.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getAwatch(getActivity()) == 0) {
             sw_awatch.setChecked(false);
             awatch = 0;
+            tvsw_awatch.setText(getResources().getString(R.string.no));
         }
     }
 

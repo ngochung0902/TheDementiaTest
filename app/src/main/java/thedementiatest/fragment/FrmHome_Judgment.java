@@ -22,7 +22,7 @@ import thedementiatest.helper.QTSConstrains;
 import thedementiatest.helper.QTSHelp;
 
 public class FrmHome_Judgment extends Fragment {
-    private TextView tv_next,tv_back,tv_judgment,tv_ww1,tv_ww2,tv_ju;
+    private TextView tv_next,tv_back,tv_judgment,tv_ww1,tv_ww2,tv_ju,tvsw_whatwould1,tvsw_whatwould2;
     private ImageView img_next,img_back;
     private Switch sw_whatwould1,sw_whatwould2;
     private int whatwould1,whatwould2;
@@ -42,6 +42,8 @@ public class FrmHome_Judgment extends Fragment {
         tv_ww1 = (TextView) view.findViewById(R.id.tv_ww1);
         tv_ww2 = (TextView) view.findViewById(R.id.tv_ww2);
         tv_ju = (TextView) view.findViewById(R.id.tv_ju);
+        tvsw_whatwould1 = (TextView) view.findViewById(R.id.tvsw_whatwould1);
+        tvsw_whatwould2 = (TextView) view.findViewById(R.id.tvsw_whatwould2);
 
         QTSHelp.setFontTV(getActivity(),tv_back, QTSConstrains.FONT_LATO_REGULAR);
         QTSHelp.setFontTV(getActivity(),tv_next, QTSConstrains.FONT_LATO_REGULAR);
@@ -50,7 +52,8 @@ public class FrmHome_Judgment extends Fragment {
         QTSHelp.setFontTV(getActivity(),tv_ju, QTSConstrains.FONT_LATO_REGULAR);
         QTSHelp.setFontTV(getActivity(),sw_whatwould1, QTSConstrains.FONT_LATO_REGULAR);
         QTSHelp.setFontTV(getActivity(),sw_whatwould2, QTSConstrains.FONT_LATO_REGULAR);
-
+        QTSHelp.setFontTV(getActivity(),tvsw_whatwould1, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_whatwould2, QTSConstrains.FONT_LATO_REGULAR);
         backFrm();
 
         tv_next.setOnClickListener(new View.OnClickListener() {
@@ -61,9 +64,6 @@ public class FrmHome_Judgment extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment9);
                 fragmentTransaction.commit();
-
-                QTSHelp.setWhatWould1(getActivity(),whatwould1);
-                QTSHelp.setWhatWould2(getActivity(),whatwould2);
 
                 QTSHelp.setNum(getActivity(),9);
             }
@@ -77,9 +77,6 @@ public class FrmHome_Judgment extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment9);
                 fragmentTransaction.commit();
-
-                QTSHelp.setWhatWould1(getActivity(),whatwould1);
-                QTSHelp.setWhatWould2(getActivity(),whatwould2);
 
                 QTSHelp.setNum(getActivity(),9);
             }
@@ -95,6 +92,9 @@ public class FrmHome_Judgment extends Fragment {
                 fragmentTransaction.commit();
 
                 QTSHelp.setNum(getActivity(),7);
+
+                QTSHelp.setWhatWould1(getActivity(),0);
+                QTSHelp.setWhatWould2(getActivity(),0);
             }
         });
 
@@ -108,6 +108,9 @@ public class FrmHome_Judgment extends Fragment {
                 fragmentTransaction.commit();
 
                 QTSHelp.setNum(getActivity(),7);
+
+                QTSHelp.setWhatWould1(getActivity(),0);
+                QTSHelp.setWhatWould2(getActivity(),0);
             }
         });
 
@@ -115,6 +118,16 @@ public class FrmHome_Judgment extends Fragment {
             @Override
             public void onClick(View v) {
                 checkWhatWould1();
+                if (sw_whatwould1.isChecked()==true)
+                {
+                    QTSHelp.setWhatWould1(getActivity(),whatwould1);
+                    tvsw_whatwould1.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_whatwould1.isChecked()==false)
+                {
+                    QTSHelp.setWhatWould1(getActivity(),whatwould1);
+                    tvsw_whatwould1.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -122,6 +135,16 @@ public class FrmHome_Judgment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkWhatWould1();
+                if (sw_whatwould1.isChecked()==true)
+                {
+                    QTSHelp.setWhatWould1(getActivity(),whatwould1);
+                    tvsw_whatwould1.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_whatwould1.isChecked()==false)
+                {
+                    QTSHelp.setWhatWould1(getActivity(),whatwould1);
+                    tvsw_whatwould1.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -129,6 +152,16 @@ public class FrmHome_Judgment extends Fragment {
             @Override
             public void onClick(View v) {
                 checkWhatWould2();
+                if (sw_whatwould2.isChecked()==true)
+                {
+                    QTSHelp.setWhatWould2(getActivity(),whatwould2);
+                    tvsw_whatwould2.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_whatwould2.isChecked()==false)
+                {
+                    QTSHelp.setWhatWould2(getActivity(),whatwould2);
+                    tvsw_whatwould2.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -136,6 +169,16 @@ public class FrmHome_Judgment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkWhatWould2();
+                if (sw_whatwould2.isChecked()==true)
+                {
+                    QTSHelp.setWhatWould2(getActivity(),whatwould2);
+                    tvsw_whatwould2.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_whatwould2.isChecked()==false)
+                {
+                    QTSHelp.setWhatWould2(getActivity(),whatwould2);
+                    tvsw_whatwould2.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -144,7 +187,8 @@ public class FrmHome_Judgment extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        img_back.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        int color = Color.parseColor("#A8A8A8");
+                        img_back.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
                         v.invalidate();
                         break;
                     }
@@ -183,7 +227,8 @@ public class FrmHome_Judgment extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        img_next.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        int color = Color.parseColor("#A8A8A8");
+                        img_next.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
                         v.invalidate();
                         break;
                     }
@@ -240,19 +285,23 @@ public class FrmHome_Judgment extends Fragment {
         if (QTSHelp.getWhatWould1(getActivity()) == 1) {
             sw_whatwould1.setChecked(true);
             whatwould1 = 1;
+            tvsw_whatwould1.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getWhatWould1(getActivity()) == 0) {
             sw_whatwould1.setChecked(false);
             whatwould1 = 0;
+            tvsw_whatwould1.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.getWhatWould2(getActivity()) == 1) {
             sw_whatwould2.setChecked(true);
             whatwould2 = 1;
+            tvsw_whatwould2.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getWhatWould2(getActivity()) == 0) {
             sw_whatwould2.setChecked(false);
             whatwould2 = 0;
+            tvsw_whatwould2.setText(getResources().getString(R.string.no));
         }
     }
 }

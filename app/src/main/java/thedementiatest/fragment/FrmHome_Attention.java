@@ -22,7 +22,8 @@ import thedementiatest.helper.QTSConstrains;
 import thedementiatest.helper.QTSHelp;
 
 public class FrmHome_Attention extends Fragment {
-    private TextView tv_next,tv_back,tv_attention,tv_imgoing,tv_nowsay,tv_serial;
+    private TextView tv_next,tv_back,tv_attention,tv_imgoing,tv_nowsay,tv_serial,
+            tvsw_imgoing,tvsw_nowsay,tvsw_93,tvsw_79,tvsw_65,tvsw_86,tvsw_72;
     private ImageView img_next,img_back;
     private Switch sw_imgoing,sw_nowsay,sw_93,sw_72,sw_86,sw_65,sw_79;
     private int imgoing,nowsay,chinba,bayhai,tamsau,saulam,baychin;
@@ -37,6 +38,15 @@ public class FrmHome_Attention extends Fragment {
         tv_imgoing = (TextView) view.findViewById(R.id.tv_imgoing);
         tv_nowsay = (TextView) view.findViewById(R.id.tv_nowsay);
         tv_serial = (TextView) view.findViewById(R.id.tv_serial);
+
+        tvsw_imgoing = (TextView) view.findViewById(R.id.tvsw_imgoing);
+        tvsw_nowsay = (TextView) view.findViewById(R.id.tvsw_nowsay);
+        tvsw_93 = (TextView) view.findViewById(R.id.tvsw_93);
+        tvsw_79 = (TextView) view.findViewById(R.id.tvsw_79);
+        tvsw_65 = (TextView) view.findViewById(R.id.tvsw_65);
+        tvsw_86 = (TextView) view.findViewById(R.id.tvsw_86);
+        tvsw_72 = (TextView) view.findViewById(R.id.tvsw_72);
+
         Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),QTSConstrains.FONT_LATO_BOLD);
         tv_attention.setTypeface(customFontBold);
         img_back = (ImageView) view.findViewById(R.id.img_back);
@@ -61,6 +71,14 @@ public class FrmHome_Attention extends Fragment {
         QTSHelp.setFontTV(getActivity(),sw_imgoing, QTSConstrains.FONT_LATO_REGULAR);
         QTSHelp.setFontTV(getActivity(),sw_nowsay, QTSConstrains.FONT_LATO_REGULAR);
 
+        QTSHelp.setFontTV(getActivity(),tvsw_65, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_72, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_79, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_86, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_93, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_imgoing, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_nowsay, QTSConstrains.FONT_LATO_REGULAR);
+
         backFrm();
 
         tv_next.setOnClickListener(new View.OnClickListener() {
@@ -72,13 +90,13 @@ public class FrmHome_Attention extends Fragment {
                 fragmentTransaction.replace(R.id.main_container, fragment3);
                 fragmentTransaction.commit();
 
-                QTSHelp.setImGoing(getActivity(),imgoing);
-                QTSHelp.setNowSay(getActivity(),nowsay);
-                QTSHelp.set93(getActivity(),chinba);
-                QTSHelp.set72(getActivity(),bayhai);
-                QTSHelp.set86(getActivity(),tamsau);
-                QTSHelp.set65(getActivity(),saulam);
-                QTSHelp.set79(getActivity(),baychin);
+//                QTSHelp.setImGoing(getActivity(),imgoing);
+//                QTSHelp.setNowSay(getActivity(),nowsay);
+//                QTSHelp.set93(getActivity(),chinba);
+//                QTSHelp.set72(getActivity(),bayhai);
+//                QTSHelp.set86(getActivity(),tamsau);
+//                QTSHelp.set65(getActivity(),saulam);
+//                QTSHelp.set79(getActivity(),baychin);
 
                 QTSHelp.setNum(getActivity(),3);
             }
@@ -93,13 +111,13 @@ public class FrmHome_Attention extends Fragment {
                 fragmentTransaction.replace(R.id.main_container, fragment3);
                 fragmentTransaction.commit();
 
-                QTSHelp.setImGoing(getActivity(),imgoing);
-                QTSHelp.setNowSay(getActivity(),nowsay);
-                QTSHelp.set93(getActivity(),chinba);
-                QTSHelp.set72(getActivity(),bayhai);
-                QTSHelp.set86(getActivity(),tamsau);
-                QTSHelp.set65(getActivity(),saulam);
-                QTSHelp.set79(getActivity(),baychin);
+//                QTSHelp.setImGoing(getActivity(),imgoing);
+//                QTSHelp.setNowSay(getActivity(),nowsay);
+//                QTSHelp.set93(getActivity(),chinba);
+//                QTSHelp.set72(getActivity(),bayhai);
+//                QTSHelp.set86(getActivity(),tamsau);
+//                QTSHelp.set65(getActivity(),saulam);
+//                QTSHelp.set79(getActivity(),baychin);
 
                 QTSHelp.setNum(getActivity(),3);
             }
@@ -115,6 +133,14 @@ public class FrmHome_Attention extends Fragment {
                 fragmentTransaction.commit();
 
                 QTSHelp.setNum(getActivity(),1);
+
+                QTSHelp.setImGoing(getActivity(),0);
+                QTSHelp.setNowSay(getActivity(),0);
+                QTSHelp.set93(getActivity(),0);
+                QTSHelp.set72(getActivity(),0);
+                QTSHelp.set86(getActivity(),0);
+                QTSHelp.set65(getActivity(),0);
+                QTSHelp.set79(getActivity(),0);
             }
         });
 
@@ -127,6 +153,14 @@ public class FrmHome_Attention extends Fragment {
                 fragmentTransaction.replace(R.id.main_container, fragment1);
                 fragmentTransaction.commit();
                 QTSHelp.setNum(getActivity(),1);
+
+                QTSHelp.setImGoing(getActivity(),0);
+                QTSHelp.setNowSay(getActivity(),0);
+                QTSHelp.set93(getActivity(),0);
+                QTSHelp.set72(getActivity(),0);
+                QTSHelp.set86(getActivity(),0);
+                QTSHelp.set65(getActivity(),0);
+                QTSHelp.set79(getActivity(),0);
             }
         });
 
@@ -136,7 +170,13 @@ public class FrmHome_Attention extends Fragment {
                 checkImGoing();
                 if (sw_imgoing.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),imgoing);
+                    QTSHelp.setImGoing(getActivity(),imgoing);
+                    tvsw_imgoing.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_imgoing.isChecked()==false)
+                {
+                    QTSHelp.setImGoing(getActivity(),imgoing);
+                    tvsw_imgoing.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -147,7 +187,13 @@ public class FrmHome_Attention extends Fragment {
                 checkImGoing();
                 if (sw_imgoing.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),imgoing);
+                    QTSHelp.setImGoing(getActivity(),imgoing);
+                    tvsw_imgoing.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_imgoing.isChecked()==false)
+                {
+                    QTSHelp.setImGoing(getActivity(),imgoing);
+                    tvsw_imgoing.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -158,7 +204,13 @@ public class FrmHome_Attention extends Fragment {
                 checkNowSay();
                 if (sw_nowsay.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),nowsay);
+                    QTSHelp.setNowSay(getActivity(),nowsay);
+                    tvsw_nowsay.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_nowsay.isChecked()==false)
+                {
+                    QTSHelp.setNowSay(getActivity(),nowsay);
+                    tvsw_nowsay.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -169,7 +221,13 @@ public class FrmHome_Attention extends Fragment {
                 checkNowSay();
                 if (sw_nowsay.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),nowsay);
+                    QTSHelp.setNowSay(getActivity(),nowsay);
+                    tvsw_nowsay.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_nowsay.isChecked()==false)
+                {
+                    QTSHelp.setNowSay(getActivity(),nowsay);
+                    tvsw_nowsay.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -180,7 +238,13 @@ public class FrmHome_Attention extends Fragment {
                 checkChinBa();
                 if (sw_93.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),chinba);
+                    QTSHelp.set93(getActivity(),chinba);
+                    tvsw_93.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_93.isChecked()==false)
+                {
+                    QTSHelp.set93(getActivity(),chinba);
+                    tvsw_93.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -191,7 +255,13 @@ public class FrmHome_Attention extends Fragment {
                 checkChinBa();
                 if (sw_93.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),chinba);
+                    QTSHelp.set93(getActivity(),chinba);
+                    tvsw_93.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_93.isChecked()==false)
+                {
+                    QTSHelp.set93(getActivity(),chinba);
+                    tvsw_93.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -202,7 +272,13 @@ public class FrmHome_Attention extends Fragment {
                 checkBayHai();
                 if (sw_72.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),bayhai);
+                    QTSHelp.set72(getActivity(),bayhai);
+                    tvsw_72.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_72.isChecked()==false)
+                {
+                    QTSHelp.set72(getActivity(),bayhai);
+                    tvsw_72.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -213,7 +289,13 @@ public class FrmHome_Attention extends Fragment {
                 checkBayHai();
                 if (sw_72.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),bayhai);
+                    QTSHelp.set72(getActivity(),bayhai);
+                    tvsw_72.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_72.isChecked()==false)
+                {
+                    QTSHelp.set72(getActivity(),bayhai);
+                    tvsw_72.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -224,7 +306,13 @@ public class FrmHome_Attention extends Fragment {
                 checkTamSau();
                 if (sw_86.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),tamsau);
+                    QTSHelp.set86(getActivity(),tamsau);
+                    tvsw_86.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_86.isChecked()==false)
+                {
+                    QTSHelp.set86(getActivity(),tamsau);
+                    tvsw_86.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -235,7 +323,13 @@ public class FrmHome_Attention extends Fragment {
                 checkTamSau();
                 if (sw_86.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),tamsau);
+                    QTSHelp.set86(getActivity(),tamsau);
+                    tvsw_86.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_86.isChecked()==false)
+                {
+                    QTSHelp.set86(getActivity(),tamsau);
+                    tvsw_86.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -246,7 +340,13 @@ public class FrmHome_Attention extends Fragment {
                 checkSauLam();
                 if (sw_65.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),saulam);
+                    QTSHelp.set65(getActivity(),saulam);
+                    tvsw_65.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_65.isChecked()==false)
+                {
+                    QTSHelp.set65(getActivity(),saulam);
+                    tvsw_65.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -257,7 +357,13 @@ public class FrmHome_Attention extends Fragment {
                 checkSauLam();
                 if (sw_65.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),saulam);
+                    QTSHelp.set65(getActivity(),saulam);
+                    tvsw_65.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_65.isChecked()==false)
+                {
+                    QTSHelp.set65(getActivity(),saulam);
+                    tvsw_65.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -268,7 +374,13 @@ public class FrmHome_Attention extends Fragment {
                 checkBayChin();
                 if (sw_79.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),baychin);
+                    QTSHelp.set79(getActivity(),baychin);
+                    tvsw_79.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_79.isChecked()==false)
+                {
+                    QTSHelp.set79(getActivity(),baychin);
+                    tvsw_79.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -279,7 +391,13 @@ public class FrmHome_Attention extends Fragment {
                 checkBayChin();
                 if (sw_79.isChecked()==true)
                 {
-                    QTSHelp.setWhatday(getActivity(),baychin);
+                    QTSHelp.set79(getActivity(),baychin);
+                    tvsw_79.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_79.isChecked()==false)
+                {
+                    QTSHelp.set79(getActivity(),baychin);
+                    tvsw_79.setText(getResources().getString(R.string.no));
                 }
             }
         });
@@ -289,7 +407,8 @@ public class FrmHome_Attention extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        img_back.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        int color = Color.parseColor("#A8A8A8");
+                        img_back.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
                         v.invalidate();
                         break;
                     }
@@ -328,7 +447,8 @@ public class FrmHome_Attention extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        img_next.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        int color = Color.parseColor("#A8A8A8");
+                        img_next.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
                         v.invalidate();
                         break;
                     }
@@ -426,77 +546,91 @@ public class FrmHome_Attention extends Fragment {
         {
             sw_imgoing.setChecked(true);
             imgoing=1;
+            tvsw_imgoing.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getImGoing(getActivity())==0)
         {
             sw_imgoing.setChecked(false);
             imgoing=0;
+            tvsw_imgoing.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.getNowSay(getActivity())==1)
         {
             sw_nowsay.setChecked(true);
             nowsay=1;
+            tvsw_nowsay.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getNowSay(getActivity())==0)
         {
             sw_nowsay.setChecked(false);
             nowsay=0;
+            tvsw_nowsay.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.get93(getActivity())==1)
         {
             sw_93.setChecked(true);
             chinba=1;
+            tvsw_93.setText(getResources().getString(R.string.yes));
         }
-        if (QTSHelp.getWhatday(getActivity())==0)
+        if (QTSHelp.get93(getActivity())==0)
         {
             sw_93.setChecked(false);
             chinba=0;
+            tvsw_93.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.get72(getActivity())==1)
         {
             sw_72.setChecked(true);
             bayhai=1;
+            tvsw_72.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.get72(getActivity())==0)
         {
             sw_72.setChecked(false);
             bayhai=0;
+            tvsw_72.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.get86(getActivity())==1)
         {
             sw_86.setChecked(true);
             tamsau=1;
+            tvsw_86.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.get86(getActivity())==0)
         {
             sw_86.setChecked(false);
             tamsau=0;
+            tvsw_86.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.get65(getActivity())==1)
         {
             sw_65.setChecked(true);
             saulam=1;
+            tvsw_65.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.get65(getActivity())==0)
         {
             sw_65.setChecked(false);
             saulam=0;
+            tvsw_65.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.get79(getActivity())==1)
         {
             sw_79.setChecked(true);
             baychin=1;
+            tvsw_79.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.get79(getActivity())==0)
         {
             sw_79.setChecked(false);
             baychin=0;
+            tvsw_79.setText(getResources().getString(R.string.no));
         }
     }
 }

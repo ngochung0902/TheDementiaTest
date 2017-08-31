@@ -76,6 +76,8 @@ public class ActSplash extends AppCompatActivity {
 
                         QTSHelp.setAqua(ActSplash.this,-1);
                         QTSHelp.setAwatch(ActSplash.this,-1);
+
+                        QTSHelp.setNum(ActSplash.this,0);
                             finish();
                     }
                 } catch (InterruptedException ex) {

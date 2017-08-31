@@ -22,7 +22,7 @@ import thedementiatest.helper.QTSConstrains;
 import thedementiatest.helper.QTSHelp;
 
 public class FrmHome_Immediate_Recall extends Fragment {
-    private TextView tv_next,tv_back,tv_recall,tv_listen;
+    private TextView tv_next,tv_back,tv_recall,tv_listen,tvsw_listento;
     private ImageView img_next,img_back;
     private Switch sw_listento;
     private int listento;
@@ -34,6 +34,7 @@ public class FrmHome_Immediate_Recall extends Fragment {
         img_next = (ImageView) view.findViewById(R.id.img_next);
         tv_recall = (TextView) view.findViewById(R.id.tv_recall);
         tv_listen = (TextView) view.findViewById(R.id.tv_listen);
+        tvsw_listento = (TextView) view.findViewById(R.id.tvsw_listento);
         Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),QTSConstrains.FONT_LATO_BOLD);
         tv_recall.setTypeface(customFontBold);
         tv_back = (TextView) view.findViewById(R.id.tv_back);
@@ -44,6 +45,7 @@ public class FrmHome_Immediate_Recall extends Fragment {
         QTSHelp.setFontTV(getActivity(),tv_back, QTSConstrains.FONT_LATO_REGULAR);
         QTSHelp.setFontTV(getActivity(),tv_listen, QTSConstrains.FONT_LATO_REGULAR);
         QTSHelp.setFontTV(getActivity(),sw_listento, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_listento, QTSConstrains.FONT_LATO_REGULAR);
 
         backFrm();
 
@@ -56,7 +58,7 @@ public class FrmHome_Immediate_Recall extends Fragment {
                 fragmentTransaction.replace(R.id.main_container, fragment4);
                 fragmentTransaction.commit();
 
-                QTSHelp.setListento(getActivity(),listento);
+//                QTSHelp.setListento(getActivity(),listento);
                 QTSHelp.setNum(getActivity(),4);
             }
         });
@@ -70,7 +72,7 @@ public class FrmHome_Immediate_Recall extends Fragment {
                 fragmentTransaction.replace(R.id.main_container, fragment4);
                 fragmentTransaction.commit();
 
-                QTSHelp.setListento(getActivity(),listento);
+//                QTSHelp.setListento(getActivity(),listento);
                 QTSHelp.setNum(getActivity(),4);
             }
         });
@@ -83,7 +85,10 @@ public class FrmHome_Immediate_Recall extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment2);
                 fragmentTransaction.commit();
+
                 QTSHelp.setNum(getActivity(),2);
+
+                QTSHelp.setListento(getActivity(),0);
             }
         });
 
@@ -95,8 +100,10 @@ public class FrmHome_Immediate_Recall extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment2);
                 fragmentTransaction.commit();
+
                 QTSHelp.setNum(getActivity(),2);
 
+                QTSHelp.setListento(getActivity(),0);
             }
         });
 
@@ -104,6 +111,16 @@ public class FrmHome_Immediate_Recall extends Fragment {
             @Override
             public void onClick(View v) {
                 checkListento();
+                if (sw_listento.isChecked()==true)
+                {
+                    QTSHelp.setListento(getActivity(),listento);
+                    tvsw_listento.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_listento.isChecked()==false)
+                {
+                    QTSHelp.setListento(getActivity(),listento);
+                    tvsw_listento.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -111,6 +128,16 @@ public class FrmHome_Immediate_Recall extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkListento();
+                if (sw_listento.isChecked()==true)
+                {
+                    QTSHelp.setListento(getActivity(),listento);
+                    tvsw_listento.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_listento.isChecked()==false)
+                {
+                    QTSHelp.setListento(getActivity(),listento);
+                    tvsw_listento.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -119,7 +146,8 @@ public class FrmHome_Immediate_Recall extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        img_back.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        int color = Color.parseColor("#A8A8A8");
+                        img_back.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
                         v.invalidate();
                         break;
                     }
@@ -158,7 +186,8 @@ public class FrmHome_Immediate_Recall extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        img_next.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        int color = Color.parseColor("#A8A8A8");
+                        img_next.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
                         v.invalidate();
                         break;
                     }
@@ -207,11 +236,13 @@ public class FrmHome_Immediate_Recall extends Fragment {
         {
             sw_listento.setChecked(true);
             listento=1;
+            tvsw_listento.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getListento(getActivity())==0)
         {
             sw_listento.setChecked(false);
             listento=0;
+            tvsw_listento.setText(getResources().getString(R.string.no));
         }
     }
 }

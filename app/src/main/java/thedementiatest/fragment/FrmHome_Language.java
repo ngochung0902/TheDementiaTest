@@ -22,7 +22,8 @@ import thedementiatest.helper.QTSConstrains;
 import thedementiatest.helper.QTSHelp;
 
 public class FrmHome_Language extends Fragment {
-    private TextView tv_next,tv_back,tv_language,tv_la,tv_begin,tv_repeat1,tv_repeat2,tv_thecat,tv_steve;
+    private TextView tv_next,tv_back,tv_language,tv_la,tv_begin,tv_repeat1,tv_repeat2,tv_thecat,tv_steve,
+            tvsw_beginningwith,tvsw_thecat,tvsw_steveis;
     private ImageView img_next,img_back;
     private Switch sw_beginningwith,sw_thecat,sw_steveis;
     private int beginningwith,thecat,steveis;
@@ -40,6 +41,10 @@ public class FrmHome_Language extends Fragment {
         tv_repeat2 = (TextView) view.findViewById(R.id.tv_repeat2);
         tv_thecat = (TextView) view.findViewById(R.id.tv_thecat);
         tv_steve = (TextView) view.findViewById(R.id.tv_steve);
+
+        tvsw_beginningwith = (TextView) view.findViewById(R.id.tvsw_beginningwith);
+        tvsw_thecat = (TextView) view.findViewById(R.id.tvsw_thecat);
+        tvsw_steveis = (TextView) view.findViewById(R.id.tvsw_steveis);
 
         Typeface customFontBold= Typeface.createFromAsset(getActivity().getAssets(),QTSConstrains.FONT_LATO_BOLD);
         tv_language.setTypeface(customFontBold);
@@ -61,6 +66,10 @@ public class FrmHome_Language extends Fragment {
         QTSHelp.setFontTV(getActivity(),sw_steveis, QTSConstrains.FONT_LATO_REGULAR);
         QTSHelp.setFontTV(getActivity(),sw_thecat, QTSConstrains.FONT_LATO_REGULAR);
 
+        QTSHelp.setFontTV(getActivity(),tvsw_thecat, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_beginningwith, QTSConstrains.FONT_LATO_REGULAR);
+        QTSHelp.setFontTV(getActivity(),tvsw_steveis, QTSConstrains.FONT_LATO_REGULAR);
+
 //        sw_steveis.setVisibility(View.INVISIBLE);
 //        sw_thecat.setVisibility(View.INVISIBLE);
 
@@ -75,9 +84,9 @@ public class FrmHome_Language extends Fragment {
                 fragmentTransaction.replace(R.id.main_container, fragment5);
                 fragmentTransaction.commit();
 
-                QTSHelp.setBeginningWith(getActivity(),beginningwith);
-                QTSHelp.setTheCat(getActivity(),thecat);
-                QTSHelp.setSteveis(getActivity(),steveis);
+//                QTSHelp.setBeginningWith(getActivity(),beginningwith);
+//                QTSHelp.setTheCat(getActivity(),thecat);
+//                QTSHelp.setSteveis(getActivity(),steveis);
                 QTSHelp.setNum(getActivity(),5);
             }
         });
@@ -91,9 +100,9 @@ public class FrmHome_Language extends Fragment {
                 fragmentTransaction.replace(R.id.main_container, fragment5);
                 fragmentTransaction.commit();
 
-                QTSHelp.setBeginningWith(getActivity(),beginningwith);
-                QTSHelp.setTheCat(getActivity(),thecat);
-                QTSHelp.setSteveis(getActivity(),steveis);
+//                QTSHelp.setBeginningWith(getActivity(),beginningwith);
+//                QTSHelp.setTheCat(getActivity(),thecat);
+//                QTSHelp.setSteveis(getActivity(),steveis);
                 QTSHelp.setNum(getActivity(),5);
             }
         });
@@ -106,7 +115,12 @@ public class FrmHome_Language extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment3);
                 fragmentTransaction.commit();
+
                 QTSHelp.setNum(getActivity(),3);
+
+                QTSHelp.setBeginningWith(getActivity(),0);
+                QTSHelp.setTheCat(getActivity(),0);
+                QTSHelp.setSteveis(getActivity(),0);
             }
         });
 
@@ -118,7 +132,12 @@ public class FrmHome_Language extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_container, fragment3);
                 fragmentTransaction.commit();
+
                 QTSHelp.setNum(getActivity(),3);
+
+                QTSHelp.setBeginningWith(getActivity(),0);
+                QTSHelp.setTheCat(getActivity(),0);
+                QTSHelp.setSteveis(getActivity(),0);
             }
         });
 
@@ -126,23 +145,16 @@ public class FrmHome_Language extends Fragment {
             @Override
             public void onClick(View v) {
                 checkBeginningWith();
-//                if (sw_beginningwith.isChecked()==true)
-//                {
-//                    sw_steveis.setVisibility(View.VISIBLE);
-//                    sw_thecat.setVisibility(View.VISIBLE);
-//                }
-//                else
-//                {
-//                    if (sw_beginningwith.isChecked()==false)
-//                    {
-//                        sw_steveis.setChecked(false);
-//                        sw_thecat.setChecked(false);
-//                        sw_steveis.setVisibility(View.INVISIBLE);
-//                        sw_thecat.setVisibility(View.INVISIBLE);
-//                        steveis=0;
-//                        thecat=0;
-//                    }
-//                }
+                if (sw_beginningwith.isChecked()==true)
+                {
+                    QTSHelp.setBeginningWith(getActivity(),beginningwith);
+                    tvsw_beginningwith.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_beginningwith.isChecked()==false)
+                {
+                    QTSHelp.setBeginningWith(getActivity(),beginningwith);
+                    tvsw_beginningwith.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -150,6 +162,16 @@ public class FrmHome_Language extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkBeginningWith();
+                if (sw_beginningwith.isChecked()==true)
+                {
+                    QTSHelp.setBeginningWith(getActivity(),beginningwith);
+                    tvsw_beginningwith.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_beginningwith.isChecked()==false)
+                {
+                    QTSHelp.setBeginningWith(getActivity(),beginningwith);
+                    tvsw_beginningwith.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -157,6 +179,16 @@ public class FrmHome_Language extends Fragment {
             @Override
             public void onClick(View v) {
                 checkTheCat();
+                if (sw_thecat.isChecked()==true)
+                {
+                    QTSHelp.setTheCat(getActivity(),thecat);
+                    tvsw_thecat.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_thecat.isChecked()==false)
+                {
+                    QTSHelp.setTheCat(getActivity(),thecat);
+                    tvsw_thecat.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -164,6 +196,16 @@ public class FrmHome_Language extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkTheCat();
+                if (sw_thecat.isChecked()==true)
+                {
+                    QTSHelp.setTheCat(getActivity(),thecat);
+                    tvsw_thecat.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_thecat.isChecked()==false)
+                {
+                    QTSHelp.setTheCat(getActivity(),thecat);
+                    tvsw_thecat.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -171,6 +213,16 @@ public class FrmHome_Language extends Fragment {
             @Override
             public void onClick(View v) {
                 checkSteveis();
+                if (sw_steveis.isChecked()==true)
+                {
+                    QTSHelp.setSteveis(getActivity(),steveis);
+                    tvsw_steveis.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_steveis.isChecked()==false)
+                {
+                    QTSHelp.setSteveis(getActivity(),steveis);
+                    tvsw_steveis.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -178,6 +230,16 @@ public class FrmHome_Language extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkSteveis();
+                if (sw_steveis.isChecked()==true)
+                {
+                    QTSHelp.setSteveis(getActivity(),steveis);
+                    tvsw_steveis.setText(getResources().getString(R.string.yes));
+                }
+                if (sw_steveis.isChecked()==false)
+                {
+                    QTSHelp.setSteveis(getActivity(),steveis);
+                    tvsw_steveis.setText(getResources().getString(R.string.no));
+                }
             }
         });
 
@@ -186,7 +248,8 @@ public class FrmHome_Language extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        img_back.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        int color = Color.parseColor("#A8A8A8");
+                        img_back.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
                         v.invalidate();
                         break;
                     }
@@ -225,7 +288,8 @@ public class FrmHome_Language extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        img_next.setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        int color = Color.parseColor("#A8A8A8");
+                        img_next.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
                         v.invalidate();
                         break;
                     }
@@ -288,35 +352,39 @@ public class FrmHome_Language extends Fragment {
         {
             sw_beginningwith.setChecked(true);
             beginningwith=1;
-//            sw_steveis.setVisibility(View.VISIBLE);
-//            sw_thecat.setVisibility(View.VISIBLE);
+            tvsw_beginningwith.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getBeginningWith(getActivity())==0)
         {
             sw_beginningwith.setChecked(false);
             beginningwith=0;
+            tvsw_beginningwith.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.getTheCat(getActivity())==1)
         {
             sw_thecat.setChecked(true);
             thecat=1;
+            tvsw_thecat.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getTheCat(getActivity())==0)
         {
             sw_thecat.setChecked(false);
             thecat=0;
+            tvsw_thecat.setText(getResources().getString(R.string.no));
         }
 
         if (QTSHelp.getSteveis(getActivity())==1)
         {
             sw_steveis.setChecked(true);
             steveis=1;
+            tvsw_steveis.setText(getResources().getString(R.string.yes));
         }
         if (QTSHelp.getSteveis(getActivity())==0)
         {
             sw_steveis.setChecked(false);
             steveis=0;
+            tvsw_steveis.setText(getResources().getString(R.string.no));
         }
     }
 }

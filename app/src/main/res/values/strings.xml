@@ -26,7 +26,7 @@
     <string name="Whoisthe">Who is the current President of the United Stated</string>
 
     <string name="ATTENTION">ATTENTION</string>
-    <string name="Iamgoing">I’m going to say some numbers. Repeat them just as I said them. 3 2 9 6 5</string>
+    <string name="Iamgoing">I’m going to say some numbers. Repeat them just as I said them.\n3 2 9 6 5</string>
     <string name="Nowsay">Now say these numbers backwards 8 5 3</string>
     <string name="Serialsevens">Serial Sevens-Subtract 7 from 100, then subtract 7 from that answer, and continue subtracting 7 from each answer until I tell you to stop.</string>
 
@@ -114,4 +114,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="space">"      "</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>
